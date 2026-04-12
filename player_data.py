@@ -1,0 +1,500 @@
+#!/usr/bin/env python3
+"""
+player_data.py — Pipeline de données pour le scouting football
+
+Récupère les infos d'un joueur depuis :
+  1. Understat  → stats offensives + coordonnées de tirs
+  2. Transfermarkt → profil (âge, club, valeur marchande, etc.)
+
+Usage :
+    python3 player_data.py                          # joueur par défaut (Kvaratskhelia)
+    python3 player_data.py "Ousmane Dembélé"        # autre joueur
+"""
+
+import sys
+import unicodedata
+import re
+from typing import Optional
+
+import requests
+from bs4 import BeautifulSoup
+from understatapi import UnderstatClient
+
+
+# ─────────────────────────────────────────────
+# UTILITAIRES COMMUNS
+# ─────────────────────────────────────────────
+
+def normalize_name(name: str) -> str:
+    """
+    Normalise un nom de joueur pour faciliter la comparaison :
+    - supprime les accents (é → e, ü → u, etc.)
+    - met tout en minuscules
+    - supprime les espaces en début/fin
+
+    Exemple : "Khvicha Kvaratskhelia" → "khvicha kvaratskhelia"
+    """
+    # NFKD décompose les caractères accentués (é → e + ´)
+    nfkd = unicodedata.normalize("NFKD", name)
+    # On ne garde que les caractères ASCII (les accents sont abandonnés)
+    ascii_name = nfkd.encode("ASCII", "ignore").decode("ASCII")
+    return ascii_name.lower().strip()
+
+
+# ─────────────────────────────────────────────
+# SOURCE 1 : UNDERSTAT
+# ─────────────────────────────────────────────
+
+# Mapping des noms de ligue lisibles → codes acceptés par understatapi
+LEAGUE_MAP = {
+    "ligue 1":   "Ligue_1",
+    "premier league": "EPL",
+    "la liga":   "La_Liga",
+    "bundesliga": "Bundesliga",
+    "serie a":   "Serie_A",
+    "rfpl":      "RFPL",
+}
+
+
+def _compute_games(games: int, minutes: int) -> int:
+    if games > 0:
+        return games
+    if minutes > 0:
+        return max(1, round(minutes / 75))
+    return 0
+
+
+def fetch_understat_data(player_name: str,
+                         league: str = "Ligue_1",
+                         season: str = "2024") -> dict:
+    """
+    Récupère les statistiques Understat d'un joueur.
+
+    Étapes :
+      1. Télécharge la liste de tous les joueurs de la ligue + saison donnée.
+      2. Trouve le joueur par correspondance de nom (normalisé).
+      3. Récupère ses tirs individuels (coordonnées, xG, résultat).
+
+    Paramètres :
+        player_name : nom du joueur (ex: "Khvicha Kvaratskhelia")
+        league      : code ligue understat (ex: "Ligue_1")
+        season      : année de début de saison (ex: "2024" pour 2024/25)
+
+    Retourne un dict avec toutes les stats, ou lève une exception si introuvable.
+    """
+    normalized_search = normalize_name(player_name)
+
+    print(f"  Connexion à Understat ({league}, saison {season})...")
+
+    # Le client understatapi est utilisé comme un "context manager" (bloc with)
+    # Il gère automatiquement la session HTTP et la fermeture propre
+    with UnderstatClient() as understat:
+
+        # ── Étape 1 : liste de tous les joueurs de la ligue ──────────────────
+        try:
+            all_players = understat.league(league=league).get_player_data(season=season)
+        except Exception as e:
+            raise ValueError(
+                f"Impossible de récupérer les joueurs de {league} saison {season}.\n"
+                f"  Vérifiez le nom de ligue (valides : {list(LEAGUE_MAP.values())}).\n"
+                f"  Erreur technique : {e}"
+            )
+
+        # ── Étape 2 : trouver le joueur par son nom ───────────────────────────
+        player_stats = None
+        player_id    = None
+
+        # Correspondance exacte d'abord
+        for p in all_players:
+            if normalize_name(p.get("player_name", "")) == normalized_search:
+                player_stats = p
+                player_id    = p.get("id")
+                break
+
+        # Si pas trouvé, tentative de correspondance partielle
+        # (utile si le nom entré est abrégé ou légèrement différent)
+        if player_stats is None:
+            for p in all_players:
+                pname = normalize_name(p.get("player_name", ""))
+                if normalized_search in pname or pname in normalized_search:
+                    player_stats = p
+                    player_id    = p.get("id")
+                    print(f"  ⚠ Correspondance partielle trouvée : {p.get('player_name')}")
+                    break
+
+        if player_stats is None:
+            raise ValueError(
+                f"Joueur '{player_name}' introuvable dans {league} saison {season}.\n"
+                f"  Astuce : vérifiez l'orthographe ou la ligue/saison."
+            )
+
+        print(f"  Joueur trouvé : {player_stats.get('player_name')} (ID {player_id})")
+
+        # ── Étape 3 : tirs individuels (x, y, xG, résultat) ──────────────────
+        shot_coords = []
+
+        if player_id:
+            try:
+                # get_shot_data() retourne TOUS les tirs du joueur (toutes saisons)
+                all_shots = understat.player(player=str(player_id)).get_shot_data()
+
+                # On filtre pour ne garder que la saison demandée
+                season_shots = [s for s in all_shots if s.get("season") == season]
+
+                # On extrait les champs utiles pour chaque tir
+                shot_coords = [
+                    {
+                        "x":         float(s.get("X", 0)),
+                        "y":         float(s.get("Y", 0)),
+                        "xG":        float(s.get("xG", 0)),
+                        "result":    s.get("result", ""),
+                        "situation": s.get("situation", ""),
+                        "minute":    s.get("minute", ""),
+                        # Contexte match — déjà présent dans get_shot_data()
+                        "h_team":    s.get("h_team", ""),   # équipe domicile
+                        "a_team":    s.get("a_team", ""),   # équipe extérieur
+                        "h_goals":   s.get("h_goals"),      # score final dom.
+                        "a_goals":   s.get("a_goals"),      # score final ext.
+                        "h_a":       s.get("h_a", ""),      # "h" si joueur dom., "a" si ext.
+                    }
+                    for s in season_shots
+                ]
+
+                print(f"  {len(shot_coords)} tirs récupérés pour la saison {season}")
+
+            except Exception as e:
+                # On ne plante pas si les tirs sont indisponibles — ce n'est pas critique
+                print(f"  ⚠ Tirs individuels indisponibles : {e}")
+
+    # ── Construction du résultat ─────────────────────────────────────────────
+    return {
+        "player_name": player_stats.get("player_name"),
+        "player_id":   player_id,
+        "league":      league,
+        "season":      season,
+
+        # Stats offensives attendues (expected)
+        "xG":        float(player_stats.get("xG", 0)),        # expected goals
+        "npxG":      float(player_stats.get("npxG", 0)),      # xG hors penalties
+        "xA":        float(player_stats.get("xA", 0)),        # expected assists
+        "xGChain":   float(player_stats.get("xGChain", 0)),   # xG des actions où il participe
+        "xGBuildup": float(player_stats.get("xGBuildup", 0)), # xG construction de jeu
+
+        # Compteurs bruts
+        "shots":   int(player_stats.get("shots", 0)),
+        "goals":   int(player_stats.get("goals", 0)),
+        "assists": int(player_stats.get("assists", 0)),
+        "minutes": int(player_stats.get("time", 0)),
+        "games":   _compute_games(
+                       int(player_stats.get("games", 0)),
+                       int(player_stats.get("time", 0)),
+                   ),
+
+        # Tirs au niveau individuel
+        "shot_coords": shot_coords,
+    }
+
+
+# ─────────────────────────────────────────────
+# SOURCE 2 : TRANSFERMARKT
+# ─────────────────────────────────────────────
+
+# En-têtes HTTP qui imitent un navigateur réel
+# (nécessaire pour que Transfermarkt ne bloque pas la requête)
+TM_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Referer": "https://www.transfermarkt.com/",
+}
+
+TM_BASE = "https://www.transfermarkt.com"
+
+
+def _tm_get(url: str, params: dict = None) -> BeautifulSoup:
+    """
+    Effectue une requête GET sur Transfermarkt et retourne le HTML parsé.
+    Gère les erreurs réseau (timeout, code HTTP d'erreur).
+    """
+    try:
+        resp = requests.get(url, params=params, headers=TM_HEADERS, timeout=12)
+        resp.raise_for_status()  # lève une exception si code HTTP 4xx ou 5xx
+    except requests.Timeout:
+        raise ConnectionError(f"Timeout lors de la connexion à {url}")
+    except requests.HTTPError as e:
+        raise ConnectionError(f"Erreur HTTP {e.response.status_code} sur {url}")
+    except requests.RequestException as e:
+        raise ConnectionError(f"Erreur réseau : {e}")
+
+    return BeautifulSoup(resp.text, "lxml")
+
+
+def search_transfermarkt(player_name: str) -> Optional[str]:
+    """
+    Cherche un joueur sur Transfermarkt via la barre de recherche.
+    Retourne l'URL du profil du joueur, ou None si rien n'est trouvé.
+    """
+    normalized_search = normalize_name(player_name)
+
+    soup = _tm_get(
+        f"{TM_BASE}/schnellsuche/ergebnis/schnellsuche",
+        params={"query": player_name}
+    )
+
+    # Les résultats de joueurs contiennent des liens vers /profil/spieler/
+    # On les cherche dans les cellules "hauptlink" des tableaux de résultats
+    candidate_links = soup.select(
+        "table.items td.hauptlink a[href*='/profil/spieler/']"
+    )
+
+    if not candidate_links:
+        return None
+
+    # Correspondance exacte par nom normalisé
+    for link in candidate_links:
+        if normalize_name(link.get_text()) == normalized_search:
+            return TM_BASE + link["href"]
+
+    # Si pas de correspondance exacte, on prend le premier résultat
+    return TM_BASE + candidate_links[0]["href"]
+
+
+def scrape_tm_profile(profile_url: str) -> dict:
+    """
+    Scrape la page de profil d'un joueur sur Transfermarkt.
+    Extrait : nom, âge, nationalité, poste, club, valeur, contrat, photo.
+
+    Structure HTML actuelle de Transfermarkt :
+    - Infos joueur : div.info-table avec des paires de span
+        span.info-table__content--regular  → label  (ex: "Date of birth/Age:")
+        span.info-table__content--bold     → valeur  (ex: "12/02/2001 (25)")
+    - Valeur marchande : a.data-header__market-value-wrapper
+    - Photo : img.data-header__profile-image
+    """
+    soup = _tm_get(profile_url)
+
+    # ── Nom complet ───────────────────────────────────────────────────────────
+    name_el = soup.select_one("h1.data-header__headline-wrapper")
+    if name_el:
+        # Supprime le numéro de maillot et les badges imbriqués
+        for badge in name_el.select("[class]"):
+            badge.decompose()
+        full_name = re.sub(r"\s+", " ", name_el.get_text(" ", strip=True)).strip()
+    else:
+        full_name = "N/A"
+
+    # ── Table d'informations ──────────────────────────────────────────────────
+    # Transfermarkt utilise des paires de span dans un div.info-table
+    # Les spans alternent : label (--regular) / valeur (--bold)
+    info = {}
+    info_div = soup.select_one("div.info-table")
+    if info_div:
+        spans = info_div.select("span.info-table__content")
+        # On parcourt les spans deux par deux
+        for i in range(0, len(spans) - 1, 2):
+            label = spans[i].get_text(strip=True).rstrip(":")
+            value = spans[i + 1].get_text(" ", strip=True)
+            value = re.sub(r"\s+", " ", value).strip()
+            info[label] = value
+
+    # ── Valeur marchande ──────────────────────────────────────────────────────
+    market_value = "N/A"
+    mv_el = soup.select_one("a.data-header__market-value-wrapper")
+    if mv_el:
+        raw = mv_el.get_text(" ", strip=True)
+        market_value = re.split(r"last update", raw, flags=re.IGNORECASE)[0].strip()
+
+    # ── Photo du joueur ───────────────────────────────────────────────────────
+    photo_el = soup.select_one("img.data-header__profile-image")
+    photo_url = photo_el.get("src", "N/A") if photo_el else "N/A"
+
+    # ── Logo du club ──────────────────────────────────────────────────────────
+    # Le logo est dans un <img> à l'intérieur du span "Current club" de l'info-table
+    club_logo_url = "N/A"
+    if info_div:
+        spans_all = info_div.select("span.info-table__content")
+        for i in range(0, len(spans_all) - 1, 2):
+            if spans_all[i].get_text(strip=True).rstrip(":") == "Current club":
+                img_el = spans_all[i + 1].select_one("img")
+                if img_el:
+                    src = img_el.get("src") or img_el.get("data-src", "N/A")
+                    club_logo_url = src or "N/A"
+                break
+
+    return {
+        "full_name":       full_name,
+        "dob_age":         info.get("Date of birth/Age", "N/A"),
+        "nationality":     info.get("Citizenship", "N/A"),
+        "position":        info.get("Position", "N/A"),
+        "club":            info.get("Current club", "N/A"),
+        "club_logo_url":   club_logo_url,
+        "market_value":    market_value,
+        "contract_expiry": info.get("Contract expires", "N/A"),
+        "photo_url":       photo_url,
+        "profile_url":     profile_url,
+    }
+
+
+def fetch_transfermarkt_data(player_name: str) -> dict:
+    """
+    Point d'entrée principal pour les données Transfermarkt.
+    Lance la recherche puis scrape le profil trouvé.
+    """
+    print(f"  Recherche de '{player_name}' sur Transfermarkt...")
+
+    profile_url = search_transfermarkt(player_name)
+
+    if profile_url is None:
+        raise ValueError(
+            f"Joueur '{player_name}' introuvable sur Transfermarkt.\n"
+            f"  Astuce : essayez le nom anglais ou une orthographe alternative."
+        )
+
+    print(f"  Profil trouvé : {profile_url}")
+    return scrape_tm_profile(profile_url)
+
+
+# ─────────────────────────────────────────────
+# AFFICHAGE DU RAPPORT
+# ─────────────────────────────────────────────
+
+def print_report(understat: Optional[dict], tm: Optional[dict]) -> None:
+    """
+    Affiche un résumé propre et lisible dans le terminal.
+    Fonctionne même si l'une des deux sources a échoué.
+    """
+    SEP = "═" * 62
+
+    # Titre du rapport (on prend le nom disponible)
+    display_name = (
+        (tm or {}).get("full_name")
+        or (understat or {}).get("player_name")
+        or "Joueur inconnu"
+    )
+
+    print(f"\n{SEP}")
+    print(f"  RAPPORT DE SCOUTING — {display_name}")
+    print(SEP)
+
+    # ── Profil Transfermarkt ──────────────────────────────────────────────────
+    if tm:
+        print("\n  PROFIL  (Transfermarkt)")
+        print(f"  {'─' * 40}")
+        print(f"  Age / Naissance : {tm.get('dob_age', 'N/A')}")
+        print(f"  Nationalité     : {tm.get('nationality', 'N/A')}")
+        print(f"  Club actuel     : {tm.get('club', 'N/A')}")
+        print(f"  Poste           : {tm.get('position', 'N/A')}")
+        print(f"  Valeur marchande: {tm.get('market_value', 'N/A')}")
+        print(f"  Fin de contrat  : {tm.get('contract_expiry', 'N/A')}")
+        if tm.get("photo_url") and tm["photo_url"] != "N/A":
+            print(f"  Photo           : {tm.get('photo_url')}")
+        print(f"  Fiche complète  : {tm.get('profile_url', 'N/A')}")
+    else:
+        print("\n  PROFIL  → données Transfermarkt indisponibles")
+
+    # ── Stats Understat ───────────────────────────────────────────────────────
+    if understat:
+        print(f"\n  STATS SAISON {understat['season']}  (Understat — {understat['league']})")
+        print(f"  {'─' * 40}")
+        print(f"  Minutes jouées  : {understat['minutes']}")
+        print(f"  Buts            : {understat['goals']}")
+        print(f"  Passes déc.     : {understat['assists']}")
+        print(f"  Tirs tentés     : {understat['shots']}")
+        print()
+        print(f"  xG              : {understat['xG']:.2f}   (buts attendus)")
+        print(f"  npxG            : {understat['npxG']:.2f}   (xG hors pénaltys)")
+        print(f"  xA              : {understat['xA']:.2f}   (passes décisives attendues)")
+        print(f"  xGChain         : {understat['xGChain']:.2f}   (implication dans les actions)")
+        print(f"  xGBuildup       : {understat['xGBuildup']:.2f}   (construction de jeu)")
+
+        # ── Tirs individuels ──────────────────────────────────────────────────
+        shots = understat.get("shot_coords", [])
+        if shots:
+            goals_scored = [s for s in shots if s["result"] == "Goal"]
+            print(f"\n  CARTOGRAPHIE DES TIRS  ({len(shots)} tirs, {len(goals_scored)} buts)")
+            print(f"  {'─' * 40}")
+            print(f"  {'X':>6}  {'Y':>6}  {'xG':>6}  {'Résultat':<18}  Situation")
+            print(f"  {'─'*6}  {'─'*6}  {'─'*6}  {'─'*18}  {'─'*15}")
+
+            # On affiche au maximum 15 tirs pour ne pas surcharger l'écran
+            display_shots = shots[:15]
+            for s in display_shots:
+                print(
+                    f"  {s['x']:>6.3f}  {s['y']:>6.3f}  {s['xG']:>6.3f}"
+                    f"  {s['result']:<18}  {s.get('situation', '')}"
+                )
+            if len(shots) > 15:
+                print(f"  … et {len(shots) - 15} tirs supplémentaires (non affichés)")
+        else:
+            print("\n  Aucun tir individuel disponible pour cette saison.")
+    else:
+        print("\n  STATS → données Understat indisponibles")
+
+    print(f"\n{SEP}\n")
+
+
+# ─────────────────────────────────────────────
+# POINT D'ENTRÉE PRINCIPAL
+# ─────────────────────────────────────────────
+
+def main(player_name: str) -> None:
+    """
+    Orchestre la récupération des données depuis les deux sources
+    et affiche le rapport final.
+    """
+    print(f"\n{'─' * 62}")
+    print(f"  Football Scouting Pipeline")
+    print(f"  Joueur : {player_name}")
+    print(f"{'─' * 62}")
+
+    # ── Source 1 : Understat ──────────────────────────────────────────────────
+    print("\n[1/2] Understat ...")
+    understat_data = None
+    try:
+        understat_data = fetch_understat_data(
+            player_name,
+            league="Ligue_1",
+            season="2025"
+        )
+        print("  OK")
+    except ValueError as e:
+        # Joueur introuvable ou ligue invalide
+        print(f"  ERREUR : {e}")
+    except ConnectionError as e:
+        print(f"  ERREUR RESEAU : {e}")
+    except Exception as e:
+        print(f"  ERREUR INATTENDUE : {type(e).__name__}: {e}")
+
+    # ── Source 2 : Transfermarkt ──────────────────────────────────────────────
+    print("\n[2/2] Transfermarkt ...")
+    tm_data = None
+    try:
+        tm_data = fetch_transfermarkt_data(player_name)
+        print("  OK")
+    except ValueError as e:
+        print(f"  ERREUR : {e}")
+    except ConnectionError as e:
+        print(f"  ERREUR RESEAU : {e}")
+    except Exception as e:
+        print(f"  ERREUR INATTENDUE : {type(e).__name__}: {e}")
+
+    # ── Rapport final ─────────────────────────────────────────────────────────
+    if understat_data is None and tm_data is None:
+        print("\n  Aucune donnée récupérée. Vérifiez le nom du joueur et votre connexion.")
+        sys.exit(1)
+
+    print_report(understat_data, tm_data)
+
+
+if __name__ == "__main__":
+    # Lecture du nom depuis la ligne de commande, ou valeur par défaut
+    if len(sys.argv) > 1:
+        player = " ".join(sys.argv[1:])
+    else:
+        player = "Khvicha Kvaratskhelia"
+
+    main(player)
