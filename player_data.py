@@ -12,13 +12,40 @@ Usage :
 """
 
 import sys
+import json
 import unicodedata
 import re
+from datetime import datetime, timezone
+from pathlib import Path
 from typing import Optional
 
 import requests
 from bs4 import BeautifulSoup
 from understatapi import UnderstatClient
+
+# ─────────────────────────────────────────────
+# TM CACHE
+# ─────────────────────────────────────────────
+
+_CACHE_PATH = Path(__file__).parent / "tm_cache.json"
+
+
+def _load_tm_cache() -> dict:
+    try:
+        return json.loads(_CACHE_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _save_tm_cache(cache: dict) -> None:
+    _CACHE_PATH.write_text(
+        json.dumps(cache, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+
+def _cache_key(name: str) -> str:
+    return normalize_name(name)
 
 
 # ─────────────────────────────────────────────
@@ -28,12 +55,30 @@ from understatapi import UnderstatClient
 def normalize_name(name: str) -> str:
     """
     Normalise un nom de joueur pour faciliter la comparaison :
-    - supprime les accents (é → e, ü → u, etc.)
-    - met tout en minuscules
-    - supprime les espaces en début/fin
+    - décode les entités HTML (&#039; → ')
+    - translittère les caractères non-ASCII que NFKD ne décompose pas
+      (ø→o, æ→ae, ð→d, þ→th, ß→ss, œ→oe, ł→l, …)
+    - supprime les accents (é → e, ü → u, etc.) via NFKD
+    - met tout en minuscules et supprime les espaces en début/fin
 
-    Exemple : "Khvicha Kvaratskhelia" → "khvicha kvaratskhelia"
+    Exemple : "Pierre-Emile Højbjerg" → "pierre-emile hojbjerg"
     """
+    import html as _html
+    # Décode les entités HTML (&#039; m'bala → 'm'bala)
+    name = _html.unescape(name)
+
+    # Translittération manuelle pour les caractères que NFKD ne décompose pas
+    _TRANSLIT = str.maketrans({
+        "ø": "o",  "Ø": "O",
+        "æ": "ae", "Æ": "AE",
+        "ð": "d",  "Ð": "D",
+        "þ": "th", "Þ": "TH",
+        "ß": "ss",
+        "œ": "oe", "Œ": "OE",
+        "ł": "l",  "Ł": "L",
+    })
+    name = name.translate(_TRANSLIT)
+
     # NFKD décompose les caractères accentués (é → e + ´)
     nfkd = unicodedata.normalize("NFKD", name)
     # On ne garde que les caractères ASCII (les accents sont abandonnés)
@@ -342,8 +387,16 @@ def scrape_tm_profile(profile_url: str) -> dict:
 def fetch_transfermarkt_data(player_name: str) -> dict:
     """
     Point d'entrée principal pour les données Transfermarkt.
-    Lance la recherche puis scrape le profil trouvé.
+    Vérifie d'abord le cache local, puis tente de scraper le profil.
     """
+    # ── 1. Check local cache first ───────────────────────────────────────────
+    key   = _cache_key(player_name)
+    cache = _load_tm_cache()
+    if key in cache:
+        print(f"  Cache hit pour '{player_name}'")
+        return cache[key]
+
+    # ── 2. Cache miss — try live scraping ────────────────────────────────────
     print(f"  Recherche de '{player_name}' sur Transfermarkt...")
 
     profile_url = search_transfermarkt(player_name)
@@ -355,7 +408,33 @@ def fetch_transfermarkt_data(player_name: str) -> dict:
         )
 
     print(f"  Profil trouvé : {profile_url}")
-    return scrape_tm_profile(profile_url)
+    data = scrape_tm_profile(profile_url)
+
+    # ── 3. Store in cache ────────────────────────────────────────────────────
+    cache[key] = data
+    cache[key]["_cached_at"] = datetime.now(timezone.utc).isoformat()
+    _save_tm_cache(cache)
+    print(f"  Données mises en cache pour '{player_name}'")
+
+    return data
+
+
+def cache_tm_player(player_name: str, data: dict) -> None:
+    """
+    Stores TM data for a player in the local cache.
+    Called by build_tm_cache.py after fetching via browser.
+    """
+    key   = _cache_key(player_name)
+    cache = _load_tm_cache()
+    cache[key] = data
+    cache[key]["_cached_at"] = datetime.now(timezone.utc).isoformat()
+    _save_tm_cache(cache)
+
+
+def get_tm_cache_entry(player_name: str) -> dict | None:
+    """Returns the cached TM entry for a player, or None if not cached."""
+    cache = _load_tm_cache()
+    return cache.get(_cache_key(player_name))
 
 
 # ─────────────────────────────────────────────

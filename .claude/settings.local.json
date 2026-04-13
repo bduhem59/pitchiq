@@ -3,7 +3,13 @@
     "allow": [
       "Bash(pip3 install:*)",
       "Skill(claude-api)",
-      "Skill(claude-api:*)"
+      "Skill(claude-api:*)",
+      "Bash(python3 percentiles.py EPL percentiles_epl.json)",
+      "Bash(pkill -f \"uvicorn api:app\")",
+      "Bash(uvicorn api:app --reload --port 8000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8000/league/logo/EPL)",
+      "Bash(curl -s \"http://127.0.0.1:8000/player/Raphinha?league=La_Liga\")",
+      "Bash(python3 -c ':*)"
     ]
   }
 }

@@ -1,0 +1,7 @@
+{
+  "_comment": "Maps normalized Understat player names → direct TM profile URL. Bypasses search entirely.",
+  "jean-daniel akpa-akpro": "https://www.transfermarkt.com/jean-daniel-akpa-akpro/profil/spieler/170481",
+  "marc-oliver kempf":      "https://www.transfermarkt.com/marc-oliver-kempf/profil/spieler/160938",
+  "mohamed ali-cho":        "https://www.transfermarkt.com/mohamed-ali-cho/profil/spieler/670847",
+  "youssef el-arabi":       "https://www.transfermarkt.com/youssef-el-arabi/profil/spieler/96533"
+}

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-percentiles.py — Calcul des percentiles de joueurs de Ligue 1
-
-Télécharge tous les joueurs de Ligue 1 (saison 2024), calcule les métriques
-par 90 minutes et les percentiles par poste.
+percentiles.py — Calcul des percentiles de joueurs (multi-ligues)
 
 Usage :
-    python3 percentiles.py                      # calcule + sauvegarde percentiles.json
-    python3 percentiles.py "Ousmane Dembélé"    # affiche le résumé d'un autre joueur
+    python3 percentiles.py                              # Ligue_1 → percentiles.json
+    python3 percentiles.py EPL percentiles_epl.json
+    python3 percentiles.py La_Liga percentiles_laliga.json
+    python3 percentiles.py Bundesliga percentiles_bundesliga.json
+    python3 percentiles.py Serie_A percentiles_seriea.json
 """
 
 import json
@@ -227,9 +227,13 @@ def print_player_summary(player_name: str, records: list[dict]) -> None:
 # POINT D'ENTRÉE
 # ─────────────────────────────────────────────
 
-def main(test_player: str = "Khvicha Kvaratskhelia") -> None:
+def main(league: str = LEAGUE, output_file: str = OUTPUT_FILE) -> None:
+    print(f"\n{'═'*58}")
+    print(f"  xScout percentiles — {league}  →  {output_file}")
+    print(f"{'═'*58}")
+
     # 1. Téléchargement
-    raw_players = fetch_all_players()
+    raw_players = fetch_all_players(league=league)
 
     # 2. Construction des enregistrements (filtre + /90)
     print("\nCalcul des métriques /90...")
@@ -246,13 +250,16 @@ def main(test_player: str = "Khvicha Kvaratskhelia") -> None:
 
     # 4. Sauvegarde JSON
     print(f"\nSauvegarde...")
-    save_json(records)
+    save_json(records, path=output_file)
 
-    # 5. Résumé test
-    print(f"\nRésumé pour '{test_player}' :")
-    print_player_summary(test_player, records)
+    print(f"\n  Terminé. {len(records)} joueurs dans '{output_file}'.\n")
 
 
 if __name__ == "__main__":
-    player = " ".join(sys.argv[1:]) if len(sys.argv) > 1 else "Khvicha Kvaratskhelia"
-    main(test_player=player)
+    args = sys.argv[1:]
+    if len(args) >= 2:
+        main(league=args[0], output_file=args[1])
+    elif len(args) == 1:
+        main(league=args[0], output_file=f"percentiles_{args[0].lower()}.json")
+    else:
+        main()  # defaults: Ligue_1, percentiles.json

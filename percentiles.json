@@ -20,11 +20,11 @@
     "xGChain_90": 0.5986,
     "xGBuildup_90": 0.1583,
     "percentiles": {
-      "npxG_90": 78.2,
-      "xG_90": 85.6,
-      "xA_90": 38.4,
-      "xGChain_90": 65.3,
-      "xGBuildup_90": 48.6
+      "npxG_90": 77.5,
+      "xG_90": 85.8,
+      "xA_90": 39.9,
+      "xGChain_90": 64.7,
+      "xGBuildup_90": 47.2
     }
   },
   {
@@ -48,11 +48,11 @@
     "xGChain_90": 0.5342,
     "xGBuildup_90": 0.1183,
     "percentiles": {
-      "npxG_90": 75.5,
-      "xG_90": 80.1,
-      "xA_90": 19.0,
-      "xGChain_90": 56.0,
-      "xGBuildup_90": 31.0
+      "npxG_90": 74.8,
+      "xG_90": 80.3,
+      "xA_90": 19.7,
+      "xGChain_90": 55.5,
+      "xGBuildup_90": 29.8
     }
   },
   {
@@ -76,11 +76,11 @@
     "xGChain_90": 0.8547,
     "xGBuildup_90": 0.4479,
     "percentiles": {
-      "npxG_90": 57.9,
-      "xG_90": 82.9,
-      "xA_90": 91.2,
+      "npxG_90": 57.3,
+      "xG_90": 83.0,
+      "xA_90": 91.3,
       "xGChain_90": 89.4,
-      "xGBuildup_90": 94.9
+      "xGBuildup_90": 95.0
     }
   },
   {
@@ -104,11 +104,11 @@
     "xGChain_90": 0.7411,
     "xGBuildup_90": 0.1702,
     "percentiles": {
-      "npxG_90": 90.3,
-      "xG_90": 90.3,
-      "xA_90": 29.2,
-      "xGChain_90": 81.0,
-      "xGBuildup_90": 56.9
+      "npxG_90": 90.4,
+      "xG_90": 90.4,
+      "xA_90": 29.8,
+      "xGChain_90": 81.2,
+      "xGBuildup_90": 56.4
     }
   },
   {
@@ -132,11 +132,11 @@
     "xGChain_90": 0.7178,
     "xGBuildup_90": 0.0897,
     "percentiles": {
-      "npxG_90": 85.6,
-      "xG_90": 86.6,
-      "xA_90": 66.2,
-      "xGChain_90": 78.2,
-      "xGBuildup_90": 19.0
+      "npxG_90": 85.8,
+      "xG_90": 86.7,
+      "xA_90": 67.4,
+      "xGChain_90": 77.5,
+      "xGBuildup_90": 18.8
     }
   },
   {
@@ -160,11 +160,11 @@
     "xGChain_90": 0.9058,
     "xGBuildup_90": 0.4585,
     "percentiles": {
-      "npxG_90": 73.6,
-      "xG_90": 88.4,
+      "npxG_90": 72.0,
+      "xG_90": 88.5,
       "xA_90": 99.5,
-      "xGChain_90": 92.1,
-      "xGBuildup_90": 95.8
+      "xGChain_90": 92.2,
+      "xGBuildup_90": 95.9
     }
   },
   {
@@ -188,11 +188,11 @@
     "xGChain_90": 0.9305,
     "xGBuildup_90": 0.3784,
     "percentiles": {
-      "npxG_90": 95.4,
-      "xG_90": 96.4,
+      "npxG_90": 95.5,
+      "xG_90": 96.5,
       "xA_90": 94.4,
-      "xGChain_90": 96.4,
-      "xGBuildup_90": 71.9
+      "xGChain_90": 96.5,
+      "xGBuildup_90": 71.2
     }
   },
   {
@@ -217,10 +217,10 @@
     "xGBuildup_90": 0.3977,
     "percentiles": {
       "npxG_90": 94.0,
-      "xG_90": 92.1,
+      "xG_90": 92.2,
       "xA_90": 94.0,
-      "xGChain_90": 95.8,
-      "xGBuildup_90": 92.1
+      "xGChain_90": 95.9,
+      "xGBuildup_90": 92.2
     }
   },
   {
@@ -244,11 +244,11 @@
     "xGChain_90": 0.8318,
     "xGBuildup_90": 0.2842,
     "percentiles": {
-      "npxG_90": 84.7,
-      "xG_90": 79.2,
-      "xA_90": 72.7,
-      "xGChain_90": 87.5,
-      "xGBuildup_90": 81.0
+      "npxG_90": 83.9,
+      "xG_90": 77.5,
+      "xA_90": 72.9,
+      "xGChain_90": 87.6,
+      "xGBuildup_90": 80.3
     }
   },
   {
@@ -273,10 +273,10 @@
     "xGBuildup_90": 0.1761,
     "percentiles": {
       "npxG_90": 89.4,
-      "xG_90": 84.7,
+      "xG_90": 84.9,
       "xA_90": 89.4,
-      "xGChain_90": 88.4,
-      "xGBuildup_90": 58.8
+      "xGChain_90": 88.5,
+      "xGBuildup_90": 58.3
     }
   },
   {
@@ -300,11 +300,39 @@
     "xGChain_90": 0.8698,
     "xGBuildup_90": 0.3515,
     "percentiles": {
-      "npxG_90": 89.3,
+      "npxG_90": 89.4,
       "xG_90": 93.4,
-      "xA_90": 96.4,
-      "xGChain_90": 95.4,
-      "xGBuildup_90": 68.9
+      "xA_90": 96.5,
+      "xGChain_90": 95.5,
+      "xGBuildup_90": 68.2
+    }
+  },
+  {
+    "player_name": "Corentin Tolisso",
+    "player_id": "3603",
+    "team": "Lyon",
+    "position_raw": "F M S",
+    "position_group": "attaquants",
+    "minutes": 2021,
+    "games": 26,
+    "goals": 8,
+    "assists": 1,
+    "npxG": 7.161098062992096,
+    "xG": 8.681288301944733,
+    "xA": 3.440444047562778,
+    "xGChain": 16.924227906391025,
+    "xGBuildup": 9.169374614953995,
+    "npxG_90": 0.3189,
+    "xG_90": 0.3866,
+    "xA_90": 0.1532,
+    "xGChain_90": 0.7537,
+    "xGBuildup_90": 0.4083,
+    "percentiles": {
+      "npxG_90": 55.5,
+      "xG_90": 61.9,
+      "xA_90": 55.5,
+      "xGChain_90": 83.0,
+      "xGBuildup_90": 93.1
     }
   },
   {
@@ -328,11 +356,11 @@
     "xGChain_90": 0.4466,
     "xGBuildup_90": 0.228,
     "percentiles": {
-      "npxG_90": 5.1,
-      "xG_90": 46.8,
-      "xA_90": 82.9,
-      "xGChain_90": 36.6,
-      "xGBuildup_90": 74.5
+      "npxG_90": 5.0,
+      "xG_90": 46.3,
+      "xA_90": 83.0,
+      "xGChain_90": 37.2,
+      "xGBuildup_90": 73.9
     }
   },
   {
@@ -356,11 +384,11 @@
     "xGChain_90": 0.4188,
     "xGBuildup_90": 0.1507,
     "percentiles": {
-      "npxG_90": 26.4,
-      "xG_90": 21.8,
-      "xA_90": 41.2,
-      "xGChain_90": 31.0,
-      "xGBuildup_90": 45.8
+      "npxG_90": 27.1,
+      "xG_90": 22.5,
+      "xA_90": 41.7,
+      "xGChain_90": 31.7,
+      "xGBuildup_90": 44.5
     }
   },
   {
@@ -386,9 +414,9 @@
     "percentiles": {
       "npxG_90": 99.5,
       "xG_90": 99.5,
-      "xA_90": 74.5,
+      "xA_90": 74.8,
       "xGChain_90": 98.6,
-      "xGBuildup_90": 91.2
+      "xGBuildup_90": 91.3
     }
   },
   {
@@ -397,26 +425,26 @@
     "team": "Lorient",
     "position_raw": "F S",
     "position_group": "attaquants",
-    "minutes": 840,
-    "games": 16,
+    "minutes": 922,
+    "games": 17,
     "goals": 8,
     "assists": 1,
-    "npxG": 5.92460535466671,
-    "xG": 6.684700474143028,
+    "npxG": 6.680649027228355,
+    "xG": 7.440744146704674,
     "xA": 1.150337222032249,
-    "xGChain": 5.037904527038336,
+    "xGChain": 5.793948199599981,
     "xGBuildup": 1.3384522683918476,
-    "npxG_90": 0.6348,
-    "xG_90": 0.7162,
-    "xA_90": 0.1233,
-    "xGChain_90": 0.5398,
-    "xGBuildup_90": 0.1434,
+    "npxG_90": 0.6521,
+    "xG_90": 0.7263,
+    "xA_90": 0.1123,
+    "xGChain_90": 0.5656,
+    "xGBuildup_90": 0.1307,
     "percentiles": {
       "npxG_90": 93.1,
-      "xG_90": 94.9,
-      "xA_90": 39.4,
-      "xGChain_90": 57.9,
-      "xGBuildup_90": 38.0
+      "xG_90": 95.0,
+      "xA_90": 32.6,
+      "xGChain_90": 61.0,
+      "xGBuildup_90": 34.4
     }
   },
   {
@@ -440,11 +468,11 @@
     "xGChain_90": 0.5213,
     "xGBuildup_90": 0.2941,
     "percentiles": {
-      "npxG_90": 18.1,
-      "xG_90": 31.0,
-      "xA_90": 61.6,
-      "xGChain_90": 52.3,
-      "xGBuildup_90": 82.9
+      "npxG_90": 18.8,
+      "xG_90": 30.7,
+      "xA_90": 62.8,
+      "xGChain_90": 51.8,
+      "xGBuildup_90": 82.1
     }
   },
   {
@@ -453,26 +481,26 @@
     "team": "Lorient",
     "position_raw": "F M S",
     "position_group": "attaquants",
-    "minutes": 1374,
-    "games": 22,
+    "minutes": 1464,
+    "games": 23,
     "goals": 8,
     "assists": 2,
-    "npxG": 5.287927003577352,
-    "xG": 6.048022152855992,
-    "xA": 2.8143614269793034,
-    "xGChain": 7.811308180913329,
+    "npxG": 5.424852954223752,
+    "xG": 6.184948103502393,
+    "xA": 3.562000308185816,
+    "xGChain": 8.202480828389525,
     "xGBuildup": 2.2762949205935,
-    "npxG_90": 0.3464,
-    "xG_90": 0.3962,
-    "xA_90": 0.1843,
-    "xGChain_90": 0.5117,
-    "xGBuildup_90": 0.1491,
+    "npxG_90": 0.3335,
+    "xG_90": 0.3802,
+    "xA_90": 0.219,
+    "xGChain_90": 0.5043,
+    "xGBuildup_90": 0.1399,
     "percentiles": {
-      "npxG_90": 66.2,
-      "xG_90": 64.4,
-      "xA_90": 68.1,
-      "xGChain_90": 49.5,
-      "xGBuildup_90": 44.9
+      "npxG_90": 63.8,
+      "xG_90": 61.0,
+      "xA_90": 78.4,
+      "xGChain_90": 49.1,
+      "xGBuildup_90": 36.2
     }
   },
   {
@@ -496,11 +524,11 @@
     "xGChain_90": 0.8624,
     "xGBuildup_90": 0.2437,
     "percentiles": {
-      "npxG_90": 97.4,
-      "xG_90": 97.4,
-      "xA_90": 53.6,
+      "npxG_90": 97.5,
+      "xG_90": 97.5,
+      "xA_90": 54.0,
       "xGChain_90": 93.4,
-      "xGBuildup_90": 45.4
+      "xGBuildup_90": 44.4
     }
   },
   {
@@ -524,39 +552,11 @@
     "xGChain_90": 0.5125,
     "xGBuildup_90": 0.1281,
     "percentiles": {
-      "npxG_90": 58.8,
-      "xG_90": 81.0,
-      "xA_90": 30.1,
-      "xGChain_90": 50.5,
-      "xGBuildup_90": 33.8
-    }
-  },
-  {
-    "player_name": "Corentin Tolisso",
-    "player_id": "3603",
-    "team": "Lyon",
-    "position_raw": "F M S",
-    "position_group": "attaquants",
-    "minutes": 1979,
-    "games": 25,
-    "goals": 7,
-    "assists": 1,
-    "npxG": 6.619492411613464,
-    "xG": 8.139682650566101,
-    "xA": 3.440444047562778,
-    "xGChain": 16.35686386935413,
-    "xGBuildup": 9.143616268411279,
-    "npxG_90": 0.301,
-    "xG_90": 0.3702,
-    "xA_90": 0.1565,
-    "xGChain_90": 0.7439,
-    "xGBuildup_90": 0.4158,
-    "percentiles": {
-      "npxG_90": 49.5,
-      "xG_90": 59.7,
-      "xA_90": 55.1,
-      "xGChain_90": 81.9,
-      "xGBuildup_90": 93.1
+      "npxG_90": 58.3,
+      "xG_90": 81.2,
+      "xA_90": 30.7,
+      "xGChain_90": 50.9,
+      "xGBuildup_90": 32.6
     }
   },
   {
@@ -580,11 +580,11 @@
     "xGChain_90": 0.5805,
     "xGBuildup_90": 0.2053,
     "percentiles": {
-      "npxG_90": 69.0,
-      "xG_90": 60.6,
-      "xA_90": 20.8,
-      "xGChain_90": 64.4,
-      "xGBuildup_90": 69.0
+      "npxG_90": 68.3,
+      "xG_90": 59.2,
+      "xA_90": 21.6,
+      "xGChain_90": 63.8,
+      "xGBuildup_90": 68.3
     }
   },
   {
@@ -608,11 +608,11 @@
     "xGChain_90": 0.8191,
     "xGBuildup_90": 0.1636,
     "percentiles": {
-      "npxG_90": 86.6,
-      "xG_90": 83.8,
-      "xA_90": 92.1,
-      "xGChain_90": 86.6,
-      "xGBuildup_90": 52.3
+      "npxG_90": 86.7,
+      "xG_90": 83.9,
+      "xA_90": 92.2,
+      "xGChain_90": 85.8,
+      "xGBuildup_90": 51.8
     }
   },
   {
@@ -636,11 +636,11 @@
     "xGChain_90": 0.5757,
     "xGBuildup_90": 0.2573,
     "percentiles": {
-      "npxG_90": 36.6,
-      "xG_90": 52.3,
-      "xA_90": 52.3,
-      "xGChain_90": 63.4,
-      "xGBuildup_90": 78.2
+      "npxG_90": 36.2,
+      "xG_90": 51.8,
+      "xA_90": 52.8,
+      "xGChain_90": 62.8,
+      "xGBuildup_90": 77.5
     }
   },
   {
@@ -664,11 +664,11 @@
     "xGChain_90": 0.5601,
     "xGBuildup_90": 0.1913,
     "percentiles": {
-      "npxG_90": 59.7,
-      "xG_90": 54.2,
-      "xA_90": 35.2,
-      "xGChain_90": 58.8,
-      "xGBuildup_90": 65.3
+      "npxG_90": 59.2,
+      "xG_90": 53.7,
+      "xA_90": 36.7,
+      "xGChain_90": 57.3,
+      "xGBuildup_90": 64.7
     }
   },
   {
@@ -692,11 +692,11 @@
     "xGChain_90": 0.4687,
     "xGBuildup_90": 0.1031,
     "percentiles": {
-      "npxG_90": 63.4,
-      "xG_90": 75.5,
-      "xA_90": 53.2,
-      "xGChain_90": 42.1,
-      "xGBuildup_90": 25.5
+      "npxG_90": 62.8,
+      "xG_90": 74.8,
+      "xA_90": 53.7,
+      "xGChain_90": 42.7,
+      "xGBuildup_90": 24.3
     }
   },
   {
@@ -720,11 +720,11 @@
     "xGChain_90": 0.7235,
     "xGBuildup_90": 0.3625,
     "percentiles": {
-      "npxG_90": 52.3,
-      "xG_90": 48.6,
-      "xA_90": 56.9,
-      "xGChain_90": 80.1,
-      "xGBuildup_90": 87.5
+      "npxG_90": 50.9,
+      "xG_90": 48.2,
+      "xA_90": 57.3,
+      "xGChain_90": 80.3,
+      "xGBuildup_90": 87.6
     }
   },
   {
@@ -748,11 +748,11 @@
     "xGChain_90": 0.6943,
     "xGBuildup_90": 0.2539,
     "percentiles": {
-      "npxG_90": 72.7,
-      "xG_90": 71.8,
-      "xA_90": 76.4,
-      "xGChain_90": 76.4,
-      "xGBuildup_90": 77.3
+      "npxG_90": 71.1,
+      "xG_90": 71.1,
+      "xA_90": 76.6,
+      "xGChain_90": 75.7,
+      "xGBuildup_90": 76.6
     }
   },
   {
@@ -776,11 +776,11 @@
     "xGChain_90": 0.3453,
     "xGBuildup_90": 0.1646,
     "percentiles": {
-      "npxG_90": 11.6,
-      "xG_90": 33.8,
-      "xA_90": 60.6,
-      "xGChain_90": 19.9,
-      "xGBuildup_90": 53.2
+      "npxG_90": 12.4,
+      "xG_90": 33.5,
+      "xA_90": 61.9,
+      "xGChain_90": 19.7,
+      "xGBuildup_90": 53.7
     }
   },
   {
@@ -804,11 +804,11 @@
     "xGChain_90": 0.7727,
     "xGBuildup_90": 0.3675,
     "percentiles": {
-      "npxG_90": 44.0,
-      "xG_90": 39.4,
-      "xA_90": 67.1,
-      "xGChain_90": 85.6,
-      "xGBuildup_90": 88.4
+      "npxG_90": 43.6,
+      "xG_90": 39.0,
+      "xA_90": 68.3,
+      "xGChain_90": 84.9,
+      "xGBuildup_90": 88.5
     }
   },
   {
@@ -832,11 +832,11 @@
     "xGChain_90": 0.5734,
     "xGBuildup_90": 0.185,
     "percentiles": {
-      "npxG_90": 87.5,
+      "npxG_90": 87.6,
       "xG_90": 89.4,
-      "xA_90": 33.8,
-      "xGChain_90": 62.5,
-      "xGBuildup_90": 62.5
+      "xA_90": 35.3,
+      "xGChain_90": 61.9,
+      "xGBuildup_90": 61.9
     }
   },
   {
@@ -860,11 +860,11 @@
     "xGChain_90": 0.444,
     "xGBuildup_90": 0.104,
     "percentiles": {
-      "npxG_90": 60.6,
-      "xG_90": 67.1,
-      "xA_90": 44.9,
-      "xGChain_90": 35.6,
-      "xGBuildup_90": 26.4
+      "npxG_90": 60.1,
+      "xG_90": 66.5,
+      "xA_90": 45.4,
+      "xGChain_90": 36.2,
+      "xGBuildup_90": 26.1
     }
   },
   {
@@ -891,8 +891,8 @@
       "npxG_90": 98.6,
       "xG_90": 97.5,
       "xA_90": 75.8,
-      "xGChain_90": 89.7,
-      "xGBuildup_90": 68.1
+      "xGChain_90": 89.2,
+      "xGBuildup_90": 68.6
     }
   },
   {
@@ -916,11 +916,11 @@
     "xGChain_90": 0.6081,
     "xGBuildup_90": 0.25,
     "percentiles": {
-      "npxG_90": 83.2,
-      "xG_90": 82.1,
-      "xA_90": 59.7,
-      "xGChain_90": 69.9,
-      "xGBuildup_90": 48.5
+      "npxG_90": 83.3,
+      "xG_90": 82.3,
+      "xA_90": 60.1,
+      "xGChain_90": 70.2,
+      "xGBuildup_90": 47.0
     }
   },
   {
@@ -972,11 +972,11 @@
     "xGChain_90": 0.3794,
     "xGBuildup_90": 0.1176,
     "percentiles": {
-      "npxG_90": 31.0,
-      "xG_90": 36.6,
-      "xA_90": 48.6,
-      "xGChain_90": 24.5,
-      "xGBuildup_90": 29.2
+      "npxG_90": 31.7,
+      "xG_90": 36.2,
+      "xA_90": 49.1,
+      "xGChain_90": 25.2,
+      "xGBuildup_90": 28.0
     }
   },
   {
@@ -1000,11 +1000,11 @@
     "xGChain_90": 0.6694,
     "xGBuildup_90": 0.2731,
     "percentiles": {
-      "npxG_90": 82.1,
-      "xG_90": 81.1,
-      "xA_90": 78.1,
-      "xGChain_90": 76.0,
-      "xGBuildup_90": 54.6
+      "npxG_90": 82.3,
+      "xG_90": 81.3,
+      "xA_90": 78.3,
+      "xGChain_90": 76.3,
+      "xGBuildup_90": 53.0
     }
   },
   {
@@ -1028,11 +1028,11 @@
     "xGChain_90": 0.2417,
     "xGBuildup_90": 0.0749,
     "percentiles": {
-      "npxG_90": 35.2,
-      "xG_90": 43.1,
-      "xA_90": 13.4,
+      "npxG_90": 35.3,
+      "xG_90": 42.7,
+      "xA_90": 14.2,
       "xGChain_90": 6.9,
-      "xGBuildup_90": 16.2
+      "xGBuildup_90": 16.1
     }
   },
   {
@@ -1056,8 +1056,8 @@
     "xGChain_90": 1.1332,
     "xGBuildup_90": 0.4806,
     "percentiles": {
-      "npxG_90": 88.4,
-      "xG_90": 91.2,
+      "npxG_90": 88.5,
+      "xG_90": 91.3,
       "xA_90": 93.1,
       "xGChain_90": 96.8,
       "xGBuildup_90": 96.8
@@ -1084,11 +1084,11 @@
     "xGChain_90": 0.7017,
     "xGBuildup_90": 0.1521,
     "percentiles": {
-      "npxG_90": 69.9,
-      "xG_90": 61.6,
-      "xA_90": 83.8,
-      "xGChain_90": 77.3,
-      "xGBuildup_90": 46.8
+      "npxG_90": 69.3,
+      "xG_90": 60.1,
+      "xA_90": 83.9,
+      "xGChain_90": 76.6,
+      "xGBuildup_90": 45.4
     }
   },
   {
@@ -1112,11 +1112,11 @@
     "xGChain_90": 0.6621,
     "xGBuildup_90": 0.4867,
     "percentiles": {
-      "npxG_90": 77.0,
-      "xG_90": 76.0,
-      "xA_90": 68.9,
-      "xGChain_90": 75.0,
-      "xGBuildup_90": 89.3
+      "npxG_90": 77.3,
+      "xG_90": 76.3,
+      "xA_90": 69.2,
+      "xGChain_90": 75.3,
+      "xGBuildup_90": 89.4
     }
   },
   {
@@ -1142,9 +1142,9 @@
     "percentiles": {
       "npxG_90": 98.6,
       "xG_90": 98.6,
-      "xA_90": 10.6,
+      "xA_90": 11.5,
       "xGChain_90": 94.0,
-      "xGBuildup_90": 68.1
+      "xGBuildup_90": 67.4
     }
   },
   {
@@ -1170,7 +1170,7 @@
     "percentiles": {
       "npxG_90": 97.7,
       "xG_90": 97.7,
-      "xA_90": 51.4,
+      "xA_90": 51.8,
       "xGChain_90": 99.5,
       "xGBuildup_90": 98.6
     }
@@ -1196,11 +1196,11 @@
     "xGChain_90": 0.4376,
     "xGBuildup_90": 0.0686,
     "percentiles": {
-      "npxG_90": 77.3,
-      "xG_90": 69.0,
-      "xA_90": 31.0,
-      "xGChain_90": 34.7,
-      "xGBuildup_90": 15.3
+      "npxG_90": 76.6,
+      "xG_90": 68.3,
+      "xA_90": 31.7,
+      "xGChain_90": 35.3,
+      "xGBuildup_90": 15.1
     }
   },
   {
@@ -1224,11 +1224,11 @@
     "xGChain_90": 0.3144,
     "xGBuildup_90": 0.0831,
     "percentiles": {
-      "npxG_90": 39.4,
-      "xG_90": 41.2,
-      "xA_90": 6.9,
-      "xGChain_90": 15.3,
-      "xGBuildup_90": 18.1
+      "npxG_90": 39.0,
+      "xG_90": 40.8,
+      "xA_90": 7.8,
+      "xGChain_90": 15.1,
+      "xGBuildup_90": 17.9
     }
   },
   {
@@ -1252,10 +1252,10 @@
     "xGChain_90": 1.0695,
     "xGBuildup_90": 0.5264,
     "percentiles": {
-      "npxG_90": 76.4,
-      "xG_90": 68.1,
+      "npxG_90": 75.7,
+      "xG_90": 67.4,
       "xA_90": 98.6,
-      "xGChain_90": 94.9,
+      "xGChain_90": 95.0,
       "xGBuildup_90": 99.5
     }
   },
@@ -1280,11 +1280,11 @@
     "xGChain_90": 0.5114,
     "xGBuildup_90": 0.1456,
     "percentiles": {
-      "npxG_90": 81.0,
-      "xG_90": 72.7,
-      "xA_90": 31.9,
-      "xGChain_90": 48.6,
-      "xGBuildup_90": 41.2
+      "npxG_90": 80.3,
+      "xG_90": 72.0,
+      "xA_90": 33.5,
+      "xGChain_90": 50.0,
+      "xGBuildup_90": 40.8
     }
   },
   {
@@ -1310,9 +1310,9 @@
     "percentiles": {
       "npxG_90": 94.4,
       "xG_90": 94.4,
-      "xA_90": 44.4,
-      "xGChain_90": 40.3,
-      "xGBuildup_90": 9.7
+      "xA_90": 44.9,
+      "xGChain_90": 39.9,
+      "xGBuildup_90": 9.6
     }
   },
   {
@@ -1336,11 +1336,11 @@
     "xGChain_90": 0.565,
     "xGBuildup_90": 0.2895,
     "percentiles": {
-      "npxG_90": 33.8,
-      "xG_90": 29.2,
-      "xA_90": 77.3,
-      "xGChain_90": 61.6,
-      "xGBuildup_90": 81.9
+      "npxG_90": 34.4,
+      "xG_90": 29.8,
+      "xA_90": 77.5,
+      "xGChain_90": 60.1,
+      "xGBuildup_90": 81.2
     }
   },
   {
@@ -1364,11 +1364,11 @@
     "xGChain_90": 0.534,
     "xGBuildup_90": 0.1446,
     "percentiles": {
-      "npxG_90": 68.1,
-      "xG_90": 58.8,
-      "xA_90": 21.8,
-      "xGChain_90": 55.1,
-      "xGBuildup_90": 40.3
+      "npxG_90": 67.4,
+      "xG_90": 58.3,
+      "xA_90": 22.5,
+      "xGChain_90": 54.6,
+      "xGBuildup_90": 39.9
     }
   },
   {
@@ -1392,11 +1392,11 @@
     "xGChain_90": 0.8266,
     "xGBuildup_90": 0.4255,
     "percentiles": {
-      "npxG_90": 81.1,
-      "xG_90": 80.1,
-      "xA_90": 89.3,
-      "xGChain_90": 88.8,
-      "xGBuildup_90": 79.1
+      "npxG_90": 81.3,
+      "xG_90": 80.3,
+      "xA_90": 89.4,
+      "xGChain_90": 88.9,
+      "xGBuildup_90": 79.3
     }
   },
   {
@@ -1433,8 +1433,8 @@
     "team": "Lorient",
     "position_raw": "F S",
     "position_group": "attaquants",
-    "minutes": 865,
-    "games": 27,
+    "minutes": 873,
+    "games": 28,
     "goals": 4,
     "assists": 2,
     "npxG": 6.047218482941389,
@@ -1442,16 +1442,16 @@
     "xA": 1.8067509941756725,
     "xGChain": 5.822775289416313,
     "xGBuildup": 0.3803564552217722,
-    "npxG_90": 0.6292,
-    "xG_90": 0.7083,
-    "xA_90": 0.188,
-    "xGChain_90": 0.6058,
-    "xGBuildup_90": 0.0396,
+    "npxG_90": 0.6234,
+    "xG_90": 0.7018,
+    "xA_90": 0.1863,
+    "xGChain_90": 0.6003,
+    "xGBuildup_90": 0.0392,
     "percentiles": {
-      "npxG_90": 92.1,
+      "npxG_90": 92.2,
       "xG_90": 93.1,
-      "xA_90": 69.0,
-      "xGChain_90": 67.1,
+      "xA_90": 69.3,
+      "xGChain_90": 65.6,
       "xGBuildup_90": 3.2
     }
   },
@@ -1476,8 +1476,8 @@
     "xGChain_90": 0.5346,
     "xGBuildup_90": 0.2554,
     "percentiles": {
-      "npxG_90": 92.5,
-      "xG_90": 91.4,
+      "npxG_90": 93.1,
+      "xG_90": 91.9,
       "xA_90": 89.2,
       "xGChain_90": 84.7,
       "xGBuildup_90": 50.3
@@ -1504,11 +1504,11 @@
     "xGChain_90": 0.3143,
     "xGBuildup_90": 0.1531,
     "percentiles": {
-      "npxG_90": 13.4,
-      "xG_90": 11.6,
-      "xA_90": 27.3,
-      "xGChain_90": 14.4,
-      "xGBuildup_90": 47.7
+      "npxG_90": 14.2,
+      "xG_90": 12.4,
+      "xA_90": 28.0,
+      "xGChain_90": 14.2,
+      "xGBuildup_90": 46.3
     }
   },
   {
@@ -1534,9 +1534,9 @@
     "percentiles": {
       "npxG_90": 96.8,
       "xG_90": 96.8,
-      "xA_90": 94.9,
+      "xA_90": 95.0,
       "xGChain_90": 93.1,
-      "xGBuildup_90": 22.7
+      "xGBuildup_90": 21.6
     }
   },
   {
@@ -1564,7 +1564,7 @@
       "xG_90": 94.7,
       "xA_90": 94.7,
       "xGChain_90": 66.4,
-      "xGBuildup_90": 35.3
+      "xGBuildup_90": 34.7
     }
   },
   {
@@ -1573,8 +1573,8 @@
     "team": "Lorient",
     "position_raw": "F M S",
     "position_group": "attaquants",
-    "minutes": 906,
-    "games": 21,
+    "minutes": 921,
+    "games": 22,
     "goals": 4,
     "assists": 0,
     "npxG": 4.497183812782168,
@@ -1582,17 +1582,17 @@
     "xA": 0.9823329150676727,
     "xGChain": 4.925429869443178,
     "xGBuildup": 0.4303169213235378,
-    "npxG_90": 0.4467,
-    "xG_90": 0.5222,
-    "xA_90": 0.0976,
-    "xGChain_90": 0.4893,
-    "xGBuildup_90": 0.0427,
+    "npxG_90": 0.4395,
+    "xG_90": 0.5137,
+    "xA_90": 0.096,
+    "xGChain_90": 0.4813,
+    "xGBuildup_90": 0.0421,
     "percentiles": {
-      "npxG_90": 82.9,
-      "xG_90": 81.9,
-      "xA_90": 24.5,
-      "xGChain_90": 45.8,
-      "xGBuildup_90": 5.1
+      "npxG_90": 81.2,
+      "xG_90": 82.1,
+      "xA_90": 24.3,
+      "xGChain_90": 46.3,
+      "xGBuildup_90": 5.0
     }
   },
   {
@@ -1616,11 +1616,11 @@
     "xGChain_90": 0.4318,
     "xGBuildup_90": 0.1931,
     "percentiles": {
-      "npxG_90": 29.2,
-      "xG_90": 25.5,
-      "xA_90": 9.7,
-      "xGChain_90": 33.8,
-      "xGBuildup_90": 66.2
+      "npxG_90": 29.8,
+      "xG_90": 26.1,
+      "xA_90": 10.6,
+      "xGChain_90": 34.4,
+      "xGBuildup_90": 65.6
     }
   },
   {
@@ -1644,9 +1644,9 @@
     "xGChain_90": 1.1598,
     "xGBuildup_90": 0.5146,
     "percentiles": {
-      "npxG_90": 94.9,
+      "npxG_90": 95.0,
       "xG_90": 94.0,
-      "xA_90": 88.4,
+      "xA_90": 88.5,
       "xGChain_90": 97.7,
       "xGBuildup_90": 97.7
     }
@@ -1672,11 +1672,11 @@
     "xGChain_90": 0.5621,
     "xGBuildup_90": 0.0459,
     "percentiles": {
-      "npxG_90": 81.9,
-      "xG_90": 74.5,
-      "xA_90": 19.9,
-      "xGChain_90": 59.7,
-      "xGBuildup_90": 8.8
+      "npxG_90": 82.1,
+      "xG_90": 73.9,
+      "xA_90": 20.6,
+      "xGChain_90": 58.3,
+      "xGBuildup_90": 8.7
     }
   },
   {
@@ -1700,11 +1700,11 @@
     "xGChain_90": 0.4656,
     "xGBuildup_90": 0.1584,
     "percentiles": {
-      "npxG_90": 50.5,
-      "xG_90": 45.8,
-      "xA_90": 54.2,
-      "xGChain_90": 41.2,
-      "xGBuildup_90": 49.5
+      "npxG_90": 49.1,
+      "xG_90": 45.4,
+      "xA_90": 54.6,
+      "xGChain_90": 41.7,
+      "xGBuildup_90": 48.2
     }
   },
   {
@@ -1728,11 +1728,11 @@
     "xGChain_90": 0.2639,
     "xGBuildup_90": 0.0485,
     "percentiles": {
-      "npxG_90": 64.4,
-      "xG_90": 66.2,
-      "xA_90": 12.5,
-      "xGChain_90": 9.7,
-      "xGBuildup_90": 9.7
+      "npxG_90": 64.7,
+      "xG_90": 65.6,
+      "xA_90": 13.3,
+      "xGChain_90": 9.6,
+      "xGBuildup_90": 9.6
     }
   },
   {
@@ -1756,11 +1756,11 @@
     "xGChain_90": 0.2406,
     "xGBuildup_90": 0.1916,
     "percentiles": {
-      "npxG_90": 61.4,
+      "npxG_90": 60.8,
       "xG_90": 86.4,
-      "xA_90": 65.8,
+      "xA_90": 65.3,
       "xGChain_90": 33.6,
-      "xGBuildup_90": 37.5
+      "xGBuildup_90": 36.4
     }
   },
   {
@@ -1769,26 +1769,26 @@
     "team": "Lorient",
     "position_raw": "F M S",
     "position_group": "attaquants",
-    "minutes": 1448,
-    "games": 25,
+    "minutes": 1523,
+    "games": 26,
     "goals": 3,
     "assists": 2,
-    "npxG": 2.478024361655116,
-    "xG": 2.478024361655116,
-    "xA": 1.1592184556648135,
-    "xGChain": 4.884247420355678,
+    "npxG": 2.5729282777756453,
+    "xG": 2.5729282777756453,
+    "xA": 1.220399378798902,
+    "xGChain": 5.040332255885005,
     "xGBuildup": 2.7040914110839367,
-    "npxG_90": 0.154,
-    "xG_90": 0.154,
+    "npxG_90": 0.152,
+    "xG_90": 0.152,
     "xA_90": 0.0721,
-    "xGChain_90": 0.3036,
-    "xGBuildup_90": 0.1681,
+    "xGChain_90": 0.2979,
+    "xGBuildup_90": 0.1598,
     "percentiles": {
-      "npxG_90": 19.9,
-      "xG_90": 17.1,
-      "xA_90": 17.1,
-      "xGChain_90": 12.5,
-      "xGBuildup_90": 55.1
+      "npxG_90": 20.6,
+      "xG_90": 17.9,
+      "xA_90": 17.9,
+      "xGChain_90": 12.4,
+      "xGBuildup_90": 50.0
     }
   },
   {
@@ -1812,11 +1812,11 @@
     "xGChain_90": 0.7367,
     "xGBuildup_90": 0.4733,
     "percentiles": {
-      "npxG_90": 76.0,
-      "xG_90": 75.0,
-      "xA_90": 55.6,
-      "xGChain_90": 80.1,
-      "xGBuildup_90": 87.2
+      "npxG_90": 76.3,
+      "xG_90": 75.3,
+      "xA_90": 56.1,
+      "xGChain_90": 80.3,
+      "xGBuildup_90": 87.4
     }
   },
   {
@@ -1840,11 +1840,11 @@
     "xGChain_90": 0.605,
     "xGBuildup_90": 0.2114,
     "percentiles": {
-      "npxG_90": 61.6,
-      "xG_90": 55.1,
-      "xA_90": 58.8,
-      "xGChain_90": 66.2,
-      "xGBuildup_90": 70.8
+      "npxG_90": 61.0,
+      "xG_90": 54.6,
+      "xA_90": 60.1,
+      "xGChain_90": 66.5,
+      "xGBuildup_90": 70.2
     }
   },
   {
@@ -1868,11 +1868,11 @@
     "xGChain_90": 0.4097,
     "xGBuildup_90": 0.0898,
     "percentiles": {
-      "npxG_90": 67.1,
-      "xG_90": 73.6,
-      "xA_90": 8.8,
-      "xGChain_90": 29.2,
-      "xGBuildup_90": 19.9
+      "npxG_90": 66.5,
+      "xG_90": 72.9,
+      "xA_90": 9.6,
+      "xGChain_90": 29.8,
+      "xGBuildup_90": 19.7
     }
   },
   {
@@ -1924,11 +1924,11 @@
     "xGChain_90": 0.492,
     "xGBuildup_90": 0.3748,
     "percentiles": {
-      "npxG_90": 60.0,
-      "xG_90": 60.0,
-      "xA_90": 87.5,
+      "npxG_90": 59.4,
+      "xG_90": 59.4,
+      "xA_90": 88.1,
       "xGChain_90": 81.4,
-      "xGBuildup_90": 78.1
+      "xGBuildup_90": 78.6
     }
   },
   {
@@ -1952,11 +1952,11 @@
     "xGChain_90": 0.4616,
     "xGBuildup_90": 0.1935,
     "percentiles": {
-      "npxG_90": 15.3,
-      "xG_90": 13.4,
-      "xA_90": 75.5,
-      "xGChain_90": 40.3,
-      "xGBuildup_90": 67.1
+      "npxG_90": 16.1,
+      "xG_90": 14.2,
+      "xA_90": 75.7,
+      "xGChain_90": 40.8,
+      "xGBuildup_90": 66.5
     }
   },
   {
@@ -2008,11 +2008,11 @@
     "xGChain_90": 0.6279,
     "xGBuildup_90": 0.1482,
     "percentiles": {
-      "npxG_90": 54.2,
-      "xG_90": 50.5,
-      "xA_90": 70.8,
-      "xGChain_90": 69.0,
-      "xGBuildup_90": 42.1
+      "npxG_90": 52.8,
+      "xG_90": 50.0,
+      "xA_90": 71.1,
+      "xGChain_90": 68.3,
+      "xGBuildup_90": 41.7
     }
   },
   {
@@ -2039,8 +2039,8 @@
       "npxG_90": 86.4,
       "xG_90": 84.7,
       "xA_90": 44.7,
-      "xGChain_90": 21.9,
-      "xGBuildup_90": 21.4
+      "xGChain_90": 21.4,
+      "xGBuildup_90": 20.8
     }
   },
   {
@@ -2064,10 +2064,10 @@
     "xGChain_90": 0.2497,
     "xGBuildup_90": 0.0169,
     "percentiles": {
-      "npxG_90": 41.2,
-      "xG_90": 35.6,
-      "xA_90": 22.7,
-      "xGChain_90": 8.8,
+      "npxG_90": 40.8,
+      "xG_90": 35.3,
+      "xA_90": 23.4,
+      "xGChain_90": 8.7,
       "xGBuildup_90": 0.5
     }
   },
@@ -2077,26 +2077,26 @@
     "team": "Lyon",
     "position_raw": "D F M S",
     "position_group": "défenseurs",
-    "minutes": 1642,
-    "games": 20,
+    "minutes": 1732,
+    "games": 21,
     "goals": 3,
     "assists": 0,
     "npxG": 2.0356894209980965,
     "xG": 2.0356894209980965,
-    "xA": 1.4949017148464918,
-    "xGChain": 10.05231773853302,
-    "xGBuildup": 6.897126372903585,
-    "npxG_90": 0.1116,
-    "xG_90": 0.1116,
-    "xA_90": 0.0819,
-    "xGChain_90": 0.551,
-    "xGBuildup_90": 0.378,
+    "xA": 1.928679196164012,
+    "xGChain": 10.527097880840302,
+    "xGBuildup": 6.938129018992186,
+    "npxG_90": 0.1058,
+    "xG_90": 0.1058,
+    "xA_90": 0.1002,
+    "xGChain_90": 0.547,
+    "xGBuildup_90": 0.3605,
     "percentiles": {
-      "npxG_90": 81.9,
-      "xG_90": 80.6,
-      "xA_90": 65.3,
+      "npxG_90": 79.7,
+      "xG_90": 78.1,
+      "xA_90": 70.8,
       "xGChain_90": 85.8,
-      "xGBuildup_90": 80.3
+      "xGBuildup_90": 75.8
     }
   },
   {
@@ -2123,7 +2123,7 @@
       "npxG_90": 97.5,
       "xG_90": 96.4,
       "xA_90": 94.2,
-      "xGChain_90": 87.5,
+      "xGChain_90": 86.9,
       "xGBuildup_90": 42.2
     }
   },
@@ -2176,11 +2176,11 @@
     "xGChain_90": 0.6017,
     "xGBuildup_90": 0.3692,
     "percentiles": {
-      "npxG_90": 71.9,
-      "xG_90": 70.8,
-      "xA_90": 97.5,
-      "xGChain_90": 90.3,
-      "xGBuildup_90": 76.4
+      "npxG_90": 71.4,
+      "xG_90": 70.3,
+      "xA_90": 96.9,
+      "xGChain_90": 89.7,
+      "xGBuildup_90": 76.9
     }
   },
   {
@@ -2204,11 +2204,11 @@
     "xGChain_90": 0.682,
     "xGBuildup_90": 0.1616,
     "percentiles": {
-      "npxG_90": 79.2,
-      "xG_90": 69.9,
-      "xA_90": 85.6,
-      "xGChain_90": 74.5,
-      "xGBuildup_90": 51.4
+      "npxG_90": 78.4,
+      "xG_90": 69.3,
+      "xA_90": 85.8,
+      "xGChain_90": 73.9,
+      "xGBuildup_90": 50.9
     }
   },
   {
@@ -2232,10 +2232,10 @@
     "xGChain_90": 0.5271,
     "xGBuildup_90": 0.3752,
     "percentiles": {
-      "npxG_90": 14.4,
-      "xG_90": 12.5,
-      "xA_90": 37.5,
-      "xGChain_90": 54.2,
+      "npxG_90": 15.1,
+      "xG_90": 13.3,
+      "xA_90": 39.0,
+      "xGChain_90": 53.7,
       "xGBuildup_90": 89.4
     }
   },
@@ -2264,7 +2264,7 @@
       "xG_90": 96.9,
       "xA_90": 93.6,
       "xGChain_90": 95.8,
-      "xGBuildup_90": 60.3
+      "xGBuildup_90": 59.7
     }
   },
   {
@@ -2273,26 +2273,26 @@
     "team": "Lyon",
     "position_raw": "F M S",
     "position_group": "attaquants",
-    "minutes": 782,
-    "games": 10,
+    "minutes": 824,
+    "games": 11,
     "goals": 3,
-    "assists": 4,
-    "npxG": 3.388903511688113,
-    "xG": 4.148998631164432,
-    "xA": 2.5510462149977684,
-    "xGChain": 6.6611833944916725,
-    "xGBuildup": 0.9333811551332474,
-    "npxG_90": 0.39,
-    "xG_90": 0.4775,
-    "xA_90": 0.2936,
-    "xGChain_90": 0.7666,
-    "xGBuildup_90": 0.1074,
+    "assists": 5,
+    "npxG": 3.6982070934027433,
+    "xG": 4.458302212879062,
+    "xA": 3.1194878444075584,
+    "xGChain": 7.538928605616093,
+    "xGBuildup": 1.5018227845430374,
+    "npxG_90": 0.4039,
+    "xG_90": 0.487,
+    "xA_90": 0.3407,
+    "xGChain_90": 0.8234,
+    "xGBuildup_90": 0.164,
     "percentiles": {
-      "npxG_90": 71.8,
-      "xG_90": 78.2,
-      "xA_90": 95.8,
-      "xGChain_90": 83.8,
-      "xGBuildup_90": 28.2
+      "npxG_90": 73.9,
+      "xG_90": 78.4,
+      "xA_90": 95.9,
+      "xGChain_90": 86.7,
+      "xGBuildup_90": 52.8
     }
   },
   {
@@ -2316,11 +2316,11 @@
     "xGChain_90": 0.8075,
     "xGBuildup_90": 0.212,
     "percentiles": {
-      "npxG_90": 96.4,
-      "xG_90": 95.4,
-      "xA_90": 82.1,
-      "xGChain_90": 85.2,
-      "xGBuildup_90": 38.3
+      "npxG_90": 96.5,
+      "xG_90": 95.5,
+      "xA_90": 82.3,
+      "xGChain_90": 85.4,
+      "xGBuildup_90": 37.9
     }
   },
   {
@@ -2344,11 +2344,11 @@
     "xGChain_90": 0.9051,
     "xGBuildup_90": 0.2499,
     "percentiles": {
-      "npxG_90": 95.8,
-      "xG_90": 95.8,
-      "xA_90": 84.7,
-      "xGChain_90": 91.2,
-      "xGBuildup_90": 76.4
+      "npxG_90": 95.9,
+      "xG_90": 95.9,
+      "xA_90": 84.9,
+      "xGChain_90": 91.3,
+      "xGBuildup_90": 75.7
     }
   },
   {
@@ -2372,10 +2372,10 @@
     "xGChain_90": 0.2614,
     "xGBuildup_90": 0.0883,
     "percentiles": {
-      "npxG_90": 54.7,
-      "xG_90": 54.7,
+      "npxG_90": 54.2,
+      "xG_90": 54.2,
       "xA_90": 84.2,
-      "xGChain_90": 37.5,
+      "xGChain_90": 36.9,
       "xGBuildup_90": 8.6
     }
   },
@@ -2400,11 +2400,11 @@
     "xGChain_90": 0.4155,
     "xGBuildup_90": 0.1296,
     "percentiles": {
-      "npxG_90": 47.7,
-      "xG_90": 44.0,
-      "xA_90": 50.5,
-      "xGChain_90": 30.1,
-      "xGBuildup_90": 34.7
+      "npxG_90": 47.2,
+      "xG_90": 43.6,
+      "xA_90": 50.9,
+      "xGChain_90": 30.7,
+      "xGBuildup_90": 33.5
     }
   },
   {
@@ -2428,11 +2428,11 @@
     "xGChain_90": 0.6296,
     "xGBuildup_90": 0.4816,
     "percentiles": {
-      "npxG_90": 62.8,
-      "xG_90": 59.7,
-      "xA_90": 48.5,
-      "xGChain_90": 70.9,
-      "xGBuildup_90": 88.3
+      "npxG_90": 63.1,
+      "xG_90": 60.1,
+      "xA_90": 49.0,
+      "xGChain_90": 71.2,
+      "xGBuildup_90": 88.4
     }
   },
   {
@@ -2456,10 +2456,10 @@
     "xGChain_90": 0.6537,
     "xGBuildup_90": 0.5193,
     "percentiles": {
-      "npxG_90": 61.7,
-      "xG_90": 58.7,
-      "xA_90": 63.8,
-      "xGChain_90": 74.0,
+      "npxG_90": 62.1,
+      "xG_90": 59.1,
+      "xA_90": 64.1,
+      "xGChain_90": 74.2,
       "xGBuildup_90": 93.4
     }
   },
@@ -2484,11 +2484,11 @@
     "xGChain_90": 0.7447,
     "xGBuildup_90": 0.6202,
     "percentiles": {
-      "npxG_90": 17.9,
-      "xG_90": 43.4,
-      "xA_90": 60.7,
-      "xGChain_90": 81.1,
-      "xGBuildup_90": 96.4
+      "npxG_90": 17.7,
+      "xG_90": 43.9,
+      "xA_90": 62.1,
+      "xGChain_90": 81.3,
+      "xGBuildup_90": 96.5
     }
   },
   {
@@ -2512,11 +2512,11 @@
     "xGChain_90": 0.6721,
     "xGBuildup_90": 0.3484,
     "percentiles": {
-      "npxG_90": 40.3,
-      "xG_90": 34.7,
-      "xA_90": 87.5,
-      "xGChain_90": 73.6,
-      "xGBuildup_90": 86.6
+      "npxG_90": 39.9,
+      "xG_90": 34.4,
+      "xA_90": 87.6,
+      "xGChain_90": 72.9,
+      "xGBuildup_90": 86.7
     }
   },
   {
@@ -2540,11 +2540,11 @@
     "xGChain_90": 0.4907,
     "xGBuildup_90": 0.3853,
     "percentiles": {
-      "npxG_90": 48.5,
-      "xG_90": 45.4,
-      "xA_90": 50.5,
-      "xGChain_90": 60.7,
-      "xGBuildup_90": 74.0
+      "npxG_90": 49.0,
+      "xG_90": 46.0,
+      "xA_90": 51.0,
+      "xGChain_90": 60.1,
+      "xGBuildup_90": 73.2
     }
   },
   {
@@ -2568,11 +2568,11 @@
     "xGChain_90": 0.6604,
     "xGBuildup_90": 0.1824,
     "percentiles": {
-      "npxG_90": 56.0,
-      "xG_90": 51.4,
-      "xA_90": 81.9,
-      "xGChain_90": 71.8,
-      "xGBuildup_90": 60.6
+      "npxG_90": 54.6,
+      "xG_90": 50.9,
+      "xA_90": 82.1,
+      "xGChain_90": 71.1,
+      "xGBuildup_90": 60.1
     }
   },
   {
@@ -2596,11 +2596,11 @@
     "xGChain_90": 0.7321,
     "xGBuildup_90": 0.4723,
     "percentiles": {
-      "npxG_90": 68.9,
-      "xG_90": 65.8,
-      "xA_90": 88.3,
-      "xGChain_90": 79.1,
-      "xGBuildup_90": 86.2
+      "npxG_90": 70.2,
+      "xG_90": 67.2,
+      "xA_90": 88.4,
+      "xGChain_90": 79.3,
+      "xGBuildup_90": 86.4
     }
   },
   {
@@ -2624,11 +2624,11 @@
     "xGChain_90": 0.2959,
     "xGBuildup_90": 0.1994,
     "percentiles": {
-      "npxG_90": 47.4,
-      "xG_90": 73.0,
-      "xA_90": 16.8,
-      "xGChain_90": 27.0,
-      "xGBuildup_90": 33.2
+      "npxG_90": 48.0,
+      "xG_90": 73.2,
+      "xA_90": 16.7,
+      "xGChain_90": 26.8,
+      "xGBuildup_90": 31.8
     }
   },
   {
@@ -2655,7 +2655,7 @@
       "npxG_90": 94.7,
       "xG_90": 94.2,
       "xA_90": 59.7,
-      "xGChain_90": 96.9,
+      "xGChain_90": 96.4,
       "xGBuildup_90": 93.1
     }
   },
@@ -2681,7 +2681,7 @@
     "xGBuildup_90": 0.3878,
     "percentiles": {
       "npxG_90": 68.1,
-      "xG_90": 67.5,
+      "xG_90": 66.9,
       "xA_90": 80.8,
       "xGChain_90": 85.3,
       "xGBuildup_90": 82.5
@@ -2708,11 +2708,11 @@
     "xGChain_90": 0.5062,
     "xGBuildup_90": 0.2511,
     "percentiles": {
-      "npxG_90": 79.1,
-      "xG_90": 78.1,
-      "xA_90": 11.7,
-      "xGChain_90": 61.7,
-      "xGBuildup_90": 49.5
+      "npxG_90": 79.3,
+      "xG_90": 78.3,
+      "xA_90": 11.6,
+      "xGChain_90": 62.1,
+      "xGBuildup_90": 48.0
     }
   },
   {
@@ -2736,11 +2736,11 @@
     "xGChain_90": 0.5057,
     "xGBuildup_90": 0.4015,
     "percentiles": {
-      "npxG_90": 58.3,
-      "xG_90": 58.3,
-      "xA_90": 78.1,
+      "npxG_90": 57.8,
+      "xG_90": 57.8,
+      "xA_90": 78.6,
       "xGChain_90": 81.9,
-      "xGBuildup_90": 86.4
+      "xGBuildup_90": 85.8
     }
   },
   {
@@ -2768,7 +2768,7 @@
       "xG_90": 76.9,
       "xA_90": 61.9,
       "xGChain_90": 56.4,
-      "xGBuildup_90": 62.5
+      "xGBuildup_90": 61.9
     }
   },
   {
@@ -2823,7 +2823,7 @@
       "npxG_90": 55.3,
       "xG_90": 55.3,
       "xA_90": 26.9,
-      "xGChain_90": 88.6,
+      "xGChain_90": 88.1,
       "xGBuildup_90": 95.3
     }
   },
@@ -2849,10 +2849,10 @@
     "xGBuildup_90": 0.27,
     "percentiles": {
       "npxG_90": 93.4,
-      "xG_90": 92.3,
-      "xA_90": 71.9,
-      "xGChain_90": 91.3,
-      "xGBuildup_90": 53.6
+      "xG_90": 92.4,
+      "xA_90": 72.2,
+      "xGChain_90": 91.4,
+      "xGBuildup_90": 52.0
     }
   },
   {
@@ -2876,10 +2876,10 @@
     "xGChain_90": 0.7511,
     "xGBuildup_90": 0.447,
     "percentiles": {
-      "npxG_90": 23.6,
-      "xG_90": 19.0,
+      "npxG_90": 24.3,
+      "xG_90": 19.7,
       "xA_90": 97.7,
-      "xGChain_90": 82.9,
+      "xGChain_90": 82.1,
       "xGBuildup_90": 94.0
     }
   },
@@ -2904,11 +2904,11 @@
     "xGChain_90": 0.3324,
     "xGBuildup_90": 0.2909,
     "percentiles": {
-      "npxG_90": 29.1,
-      "xG_90": 26.0,
-      "xA_90": 3.6,
-      "xGChain_90": 36.2,
-      "xGBuildup_90": 58.7
+      "npxG_90": 27.8,
+      "xG_90": 24.7,
+      "xA_90": 3.5,
+      "xGChain_90": 35.9,
+      "xGBuildup_90": 57.1
     }
   },
   {
@@ -2932,10 +2932,10 @@
     "xGChain_90": 0.3937,
     "xGBuildup_90": 0.0294,
     "percentiles": {
-      "npxG_90": 70.8,
-      "xG_90": 62.5,
-      "xA_90": 15.3,
-      "xGChain_90": 27.3,
+      "npxG_90": 70.2,
+      "xG_90": 62.8,
+      "xA_90": 16.1,
+      "xGChain_90": 28.0,
       "xGBuildup_90": 1.4
     }
   },
@@ -2960,9 +2960,9 @@
     "xGChain_90": 0.2947,
     "xGBuildup_90": 0.2399,
     "percentiles": {
-      "npxG_90": 40.3,
-      "xG_90": 40.3,
-      "xA_90": 55.3,
+      "npxG_90": 39.7,
+      "xG_90": 39.7,
+      "xA_90": 55.8,
       "xGChain_90": 47.5,
       "xGBuildup_90": 49.2
     }
@@ -2988,11 +2988,11 @@
     "xGChain_90": 0.5624,
     "xGBuildup_90": 0.1655,
     "percentiles": {
-      "npxG_90": 28.2,
-      "xG_90": 23.6,
-      "xA_90": 79.2,
-      "xGChain_90": 60.6,
-      "xGBuildup_90": 54.2
+      "npxG_90": 28.9,
+      "xG_90": 24.3,
+      "xA_90": 80.3,
+      "xGChain_90": 59.2,
+      "xGBuildup_90": 54.6
     }
   },
   {
@@ -3016,11 +3016,11 @@
     "xGChain_90": 0.6617,
     "xGBuildup_90": 0.1587,
     "percentiles": {
-      "npxG_90": 48.6,
-      "xG_90": 57.9,
-      "xA_90": 90.3,
-      "xGChain_90": 72.7,
-      "xGBuildup_90": 50.5
+      "npxG_90": 48.2,
+      "xG_90": 57.3,
+      "xA_90": 90.4,
+      "xGChain_90": 72.0,
+      "xGBuildup_90": 49.1
     }
   },
   {
@@ -3044,11 +3044,11 @@
     "xGChain_90": 0.6239,
     "xGBuildup_90": 0.1003,
     "percentiles": {
-      "npxG_90": 83.8,
-      "xG_90": 76.4,
-      "xA_90": 40.3,
-      "xGChain_90": 68.1,
-      "xGBuildup_90": 23.6
+      "npxG_90": 83.0,
+      "xG_90": 75.7,
+      "xA_90": 40.8,
+      "xGChain_90": 67.4,
+      "xGBuildup_90": 22.5
     }
   },
   {
@@ -3072,11 +3072,11 @@
     "xGChain_90": 0.4555,
     "xGBuildup_90": 0.1425,
     "percentiles": {
-      "npxG_90": 43.1,
-      "xG_90": 38.4,
-      "xA_90": 57.9,
-      "xGChain_90": 37.5,
-      "xGBuildup_90": 36.6
+      "npxG_90": 42.7,
+      "xG_90": 38.1,
+      "xA_90": 59.2,
+      "xGChain_90": 38.1,
+      "xGBuildup_90": 37.2
     }
   },
   {
@@ -3085,8 +3085,8 @@
     "team": "Lorient",
     "position_raw": "D S",
     "position_group": "défenseurs",
-    "minutes": 1893,
-    "games": 27,
+    "minutes": 1915,
+    "games": 28,
     "goals": 2,
     "assists": 2,
     "npxG": 1.935364414472133,
@@ -3094,17 +3094,17 @@
     "xA": 1.3978275619447231,
     "xGChain": 4.595136150252074,
     "xGBuildup": 2.6511300066486,
-    "npxG_90": 0.092,
-    "xG_90": 0.092,
-    "xA_90": 0.0665,
-    "xGChain_90": 0.2185,
-    "xGBuildup_90": 0.126,
+    "npxG_90": 0.091,
+    "xG_90": 0.091,
+    "xA_90": 0.0657,
+    "xGChain_90": 0.216,
+    "xGBuildup_90": 0.1246,
     "percentiles": {
-      "npxG_90": 74.7,
-      "xG_90": 73.1,
+      "npxG_90": 74.2,
+      "xG_90": 72.5,
       "xA_90": 56.9,
-      "xGChain_90": 30.3,
-      "xGBuildup_90": 19.2
+      "xGChain_90": 29.7,
+      "xGBuildup_90": 18.1
     }
   },
   {
@@ -3113,26 +3113,26 @@
     "team": "Lyon",
     "position_raw": "M",
     "position_group": "milieux",
-    "minutes": 2136,
-    "games": 24,
+    "minutes": 2220,
+    "games": 25,
     "goals": 2,
     "assists": 2,
     "npxG": 1.8934006802737713,
     "xG": 1.8934006802737713,
     "xA": 2.412832752801478,
-    "xGChain": 10.461508413776755,
-    "xGBuildup": 8.358155462890863,
-    "npxG_90": 0.0798,
-    "xG_90": 0.0798,
-    "xA_90": 0.1017,
-    "xGChain_90": 0.4408,
-    "xGBuildup_90": 0.3522,
+    "xGChain": 11.36272289417684,
+    "xGBuildup": 9.259369943290949,
+    "npxG_90": 0.0768,
+    "xG_90": 0.0768,
+    "xA_90": 0.0978,
+    "xGChain_90": 0.4607,
+    "xGBuildup_90": 0.3754,
     "percentiles": {
-      "npxG_90": 43.4,
-      "xG_90": 40.3,
-      "xA_90": 54.6,
-      "xGChain_90": 54.6,
-      "xGBuildup_90": 69.9
+      "npxG_90": 44.9,
+      "xG_90": 41.9,
+      "xA_90": 55.1,
+      "xGChain_90": 57.1,
+      "xGBuildup_90": 70.2
     }
   },
   {
@@ -3156,11 +3156,11 @@
     "xGChain_90": 0.3692,
     "xGBuildup_90": 0.1399,
     "percentiles": {
-      "npxG_90": 66.8,
-      "xG_90": 63.8,
-      "xA_90": 57.7,
-      "xGChain_90": 43.4,
-      "xGBuildup_90": 19.9
+      "npxG_90": 67.2,
+      "xG_90": 64.1,
+      "xA_90": 58.1,
+      "xGChain_90": 42.9,
+      "xGBuildup_90": 19.7
     }
   },
   {
@@ -3184,11 +3184,11 @@
     "xGChain_90": 0.6311,
     "xGBuildup_90": 0.2112,
     "percentiles": {
-      "npxG_90": 44.9,
-      "xG_90": 40.3,
-      "xA_90": 65.3,
-      "xGChain_90": 69.9,
-      "xGBuildup_90": 69.9
+      "npxG_90": 44.5,
+      "xG_90": 39.9,
+      "xA_90": 66.5,
+      "xGChain_90": 69.3,
+      "xGBuildup_90": 69.3
     }
   },
   {
@@ -3212,8 +3212,8 @@
     "xGChain_90": 0.4443,
     "xGBuildup_90": 0.3115,
     "percentiles": {
-      "npxG_90": 91.9,
-      "xG_90": 90.8,
+      "npxG_90": 92.5,
+      "xG_90": 91.4,
       "xA_90": 74.7,
       "xGChain_90": 76.9,
       "xGBuildup_90": 65.3
@@ -3240,11 +3240,11 @@
     "xGChain_90": 0.3107,
     "xGBuildup_90": 0.1884,
     "percentiles": {
-      "npxG_90": 49.5,
-      "xG_90": 46.4,
-      "xA_90": 37.2,
-      "xGChain_90": 32.1,
-      "xGBuildup_90": 29.1
+      "npxG_90": 50.0,
+      "xG_90": 47.0,
+      "xA_90": 37.9,
+      "xGChain_90": 30.8,
+      "xGBuildup_90": 27.8
     }
   },
   {
@@ -3270,9 +3270,9 @@
     "percentiles": {
       "npxG_90": 98.5,
       "xG_90": 98.5,
-      "xA_90": 77.0,
-      "xGChain_90": 97.4,
-      "xGBuildup_90": 63.8
+      "xA_90": 77.3,
+      "xGChain_90": 97.5,
+      "xGBuildup_90": 63.1
     }
   },
   {
@@ -3296,8 +3296,8 @@
     "xGChain_90": 0.7493,
     "xGBuildup_90": 0.5937,
     "percentiles": {
-      "npxG_90": 72.5,
-      "xG_90": 71.4,
+      "npxG_90": 71.9,
+      "xG_90": 70.8,
       "xA_90": 83.6,
       "xGChain_90": 97.5,
       "xGBuildup_90": 95.8
@@ -3324,11 +3324,11 @@
     "xGChain_90": 0.2869,
     "xGBuildup_90": 0.1654,
     "percentiles": {
-      "npxG_90": 37.2,
-      "xG_90": 34.2,
-      "xA_90": 73.0,
-      "xGChain_90": 25.0,
-      "xGBuildup_90": 24.0
+      "npxG_90": 36.9,
+      "xG_90": 33.8,
+      "xA_90": 73.2,
+      "xGChain_90": 24.7,
+      "xGBuildup_90": 23.7
     }
   },
   {
@@ -3356,7 +3356,7 @@
       "xG_90": 73.6,
       "xA_90": 75.3,
       "xGChain_90": 78.6,
-      "xGBuildup_90": 74.2
+      "xGBuildup_90": 74.7
     }
   },
   {
@@ -3380,11 +3380,11 @@
     "xGChain_90": 0.455,
     "xGBuildup_90": 0.4077,
     "percentiles": {
-      "npxG_90": 20.9,
-      "xG_90": 68.9,
-      "xA_90": 32.1,
-      "xGChain_90": 58.7,
-      "xGBuildup_90": 76.0
+      "npxG_90": 20.7,
+      "xG_90": 70.2,
+      "xA_90": 31.8,
+      "xGChain_90": 56.1,
+      "xGBuildup_90": 76.3
     }
   },
   {
@@ -3408,11 +3408,11 @@
     "xGChain_90": 0.686,
     "xGBuildup_90": 0.2749,
     "percentiles": {
-      "npxG_90": 65.3,
-      "xG_90": 56.9,
-      "xA_90": 49.5,
-      "xGChain_90": 75.5,
-      "xGBuildup_90": 79.2
+      "npxG_90": 65.6,
+      "xG_90": 56.4,
+      "xA_90": 50.0,
+      "xGChain_90": 74.8,
+      "xGBuildup_90": 78.4
     }
   },
   {
@@ -3436,10 +3436,10 @@
     "xGChain_90": 0.8087,
     "xGBuildup_90": 0.5293,
     "percentiles": {
-      "npxG_90": 80.1,
-      "xG_90": 79.1,
-      "xA_90": 92.3,
-      "xGChain_90": 86.2,
+      "npxG_90": 80.3,
+      "xG_90": 79.3,
+      "xA_90": 92.4,
+      "xGChain_90": 86.4,
       "xGBuildup_90": 94.4
     }
   },
@@ -3496,7 +3496,7 @@
       "xG_90": 55.8,
       "xA_90": 90.8,
       "xGChain_90": 65.3,
-      "xGBuildup_90": 34.7
+      "xGBuildup_90": 34.2
     }
   },
   {
@@ -3520,11 +3520,11 @@
     "xGChain_90": 0.2218,
     "xGBuildup_90": 0.1216,
     "percentiles": {
-      "npxG_90": 63.1,
-      "xG_90": 62.5,
+      "npxG_90": 62.5,
+      "xG_90": 61.9,
       "xA_90": 48.6,
       "xGChain_90": 31.4,
-      "xGBuildup_90": 16.9
+      "xGBuildup_90": 16.4
     }
   },
   {
@@ -3548,11 +3548,11 @@
     "xGChain_90": 0.1432,
     "xGBuildup_90": 0.1432,
     "percentiles": {
-      "npxG_90": 17.2,
-      "xG_90": 17.2,
-      "xA_90": 9.7,
-      "xGChain_90": 12.5,
-      "xGBuildup_90": 26.9
+      "npxG_90": 16.7,
+      "xG_90": 16.7,
+      "xA_90": 9.4,
+      "xGChain_90": 11.9,
+      "xGBuildup_90": 26.4
     }
   },
   {
@@ -3604,11 +3604,11 @@
     "xGChain_90": 0.7993,
     "xGBuildup_90": 0.3251,
     "percentiles": {
-      "npxG_90": 87.2,
-      "xG_90": 86.2,
-      "xA_90": 90.3,
-      "xGChain_90": 84.2,
-      "xGBuildup_90": 67.9
+      "npxG_90": 87.4,
+      "xG_90": 86.4,
+      "xA_90": 90.4,
+      "xGChain_90": 84.3,
+      "xGBuildup_90": 67.2
     }
   },
   {
@@ -3632,11 +3632,11 @@
     "xGChain_90": 0.657,
     "xGBuildup_90": 0.2774,
     "percentiles": {
-      "npxG_90": 62.5,
-      "xG_90": 56.0,
-      "xA_90": 14.4,
-      "xGChain_90": 70.8,
-      "xGBuildup_90": 80.1
+      "npxG_90": 61.9,
+      "xG_90": 55.5,
+      "xA_90": 15.1,
+      "xGChain_90": 70.2,
+      "xGBuildup_90": 79.4
     }
   },
   {
@@ -3660,11 +3660,11 @@
     "xGChain_90": 0.3854,
     "xGBuildup_90": 0.0545,
     "percentiles": {
-      "npxG_90": 30.1,
-      "xG_90": 26.4,
-      "xA_90": 32.9,
-      "xGChain_90": 26.4,
-      "xGBuildup_90": 11.6
+      "npxG_90": 30.7,
+      "xG_90": 27.1,
+      "xA_90": 34.4,
+      "xGChain_90": 27.1,
+      "xGBuildup_90": 11.5
     }
   },
   {
@@ -3688,10 +3688,10 @@
     "xGChain_90": 0.1726,
     "xGBuildup_90": 0.1004,
     "percentiles": {
-      "npxG_90": 90.8,
-      "xG_90": 89.7,
+      "npxG_90": 91.4,
+      "xG_90": 90.3,
       "xA_90": 83.1,
-      "xGChain_90": 18.6,
+      "xGChain_90": 18.1,
       "xGBuildup_90": 9.7
     }
   },
@@ -3720,7 +3720,7 @@
       "xG_90": 85.3,
       "xA_90": 46.9,
       "xGChain_90": 42.5,
-      "xGBuildup_90": 58.1
+      "xGBuildup_90": 57.5
     }
   },
   {
@@ -3744,8 +3744,8 @@
     "xGChain_90": 0.3311,
     "xGBuildup_90": 0.3019,
     "percentiles": {
-      "npxG_90": 90.3,
-      "xG_90": 89.2,
+      "npxG_90": 90.8,
+      "xG_90": 89.7,
       "xA_90": 34.2,
       "xGChain_90": 54.7,
       "xGBuildup_90": 63.6
@@ -3757,26 +3757,26 @@
     "team": "Lyon",
     "position_raw": "D F M S",
     "position_group": "défenseurs",
-    "minutes": 1155,
-    "games": 21,
+    "minutes": 1245,
+    "games": 22,
     "goals": 2,
     "assists": 6,
-    "npxG": 1.8607015833258629,
-    "xG": 1.8607015833258629,
-    "xA": 4.366565831936896,
-    "xGChain": 8.624651180580258,
-    "xGBuildup": 3.4790048263967037,
-    "npxG_90": 0.145,
-    "xG_90": 0.145,
-    "xA_90": 0.3403,
-    "xGChain_90": 0.6721,
-    "xGBuildup_90": 0.2711,
+    "npxG": 1.9018192365765572,
+    "xG": 1.9018192365765572,
+    "xA": 4.701512762345374,
+    "xGChain": 9.876286970451474,
+    "xGBuildup": 4.354576017707586,
+    "npxG_90": 0.1375,
+    "xG_90": 0.1375,
+    "xA_90": 0.3399,
+    "xGChain_90": 0.7139,
+    "xGBuildup_90": 0.3148,
     "percentiles": {
-      "npxG_90": 91.4,
-      "xG_90": 90.3,
-      "xA_90": 98.1,
-      "xGChain_90": 96.4,
-      "xGBuildup_90": 56.4
+      "npxG_90": 89.7,
+      "xG_90": 88.6,
+      "xA_90": 97.5,
+      "xGChain_90": 96.9,
+      "xGBuildup_90": 66.9
     }
   },
   {
@@ -3785,26 +3785,26 @@
     "team": "Lorient",
     "position_raw": "D S",
     "position_group": "défenseurs",
-    "minutes": 2207,
-    "games": 26,
+    "minutes": 2282,
+    "games": 27,
     "goals": 2,
     "assists": 5,
-    "npxG": 0.49348993320018053,
-    "xG": 0.49348993320018053,
-    "xA": 3.9876134302467108,
-    "xGChain": 6.2331181187182665,
-    "xGBuildup": 4.587899556383491,
-    "npxG_90": 0.0201,
-    "xG_90": 0.0201,
-    "xA_90": 0.1626,
-    "xGChain_90": 0.2542,
-    "xGBuildup_90": 0.1871,
+    "npxG": 0.5201713545247912,
+    "xG": 0.5201713545247912,
+    "xA": 4.08251734636724,
+    "xGChain": 6.899910630658269,
+    "xGBuildup": 5.133106699213386,
+    "npxG_90": 0.0205,
+    "xG_90": 0.0205,
+    "xA_90": 0.161,
+    "xGChain_90": 0.2721,
+    "xGBuildup_90": 0.2024,
     "percentiles": {
-      "npxG_90": 24.7,
-      "xG_90": 24.7,
-      "xA_90": 88.1,
-      "xGChain_90": 36.9,
-      "xGBuildup_90": 36.4
+      "npxG_90": 25.3,
+      "xG_90": 25.3,
+      "xA_90": 87.5,
+      "xGChain_90": 40.8,
+      "xGBuildup_90": 38.6
     }
   },
   {
@@ -3832,7 +3832,7 @@
       "xG_90": 95.8,
       "xA_90": 50.8,
       "xGChain_90": 65.8,
-      "xGBuildup_90": 13.6
+      "xGBuildup_90": 13.1
     }
   },
   {
@@ -3858,7 +3858,7 @@
     "percentiles": {
       "npxG_90": 88.6,
       "xG_90": 87.5,
-      "xA_90": 69.7,
+      "xA_90": 69.2,
       "xGChain_90": 66.9,
       "xGBuildup_90": 43.1
     }
@@ -3884,11 +3884,11 @@
     "xGChain_90": 0.3696,
     "xGBuildup_90": 0.1388,
     "percentiles": {
-      "npxG_90": 22.7,
-      "xG_90": 24.5,
-      "xA_90": 23.6,
-      "xGChain_90": 22.7,
-      "xGBuildup_90": 35.6
+      "npxG_90": 23.4,
+      "xG_90": 25.2,
+      "xA_90": 25.2,
+      "xGChain_90": 22.5,
+      "xGBuildup_90": 35.3
     }
   },
   {
@@ -3912,11 +3912,11 @@
     "xGChain_90": 0.5828,
     "xGBuildup_90": 0.1424,
     "percentiles": {
-      "npxG_90": 92.3,
-      "xG_90": 91.3,
-      "xA_90": 76.0,
-      "xGChain_90": 67.9,
-      "xGBuildup_90": 20.9
+      "npxG_90": 92.4,
+      "xG_90": 91.4,
+      "xA_90": 76.3,
+      "xGChain_90": 68.2,
+      "xGBuildup_90": 20.7
     }
   },
   {
@@ -3925,26 +3925,26 @@
     "team": "Lyon",
     "position_raw": "M S",
     "position_group": "milieux",
-    "minutes": 484,
-    "games": 8,
+    "minutes": 532,
+    "games": 9,
     "goals": 2,
     "assists": 0,
     "npxG": 0.9463840425014496,
     "xG": 0.9463840425014496,
     "xA": 0.08317125402390957,
-    "xGChain": 2.3696864768862724,
-    "xGBuildup": 1.3401311207562685,
-    "npxG_90": 0.176,
-    "xG_90": 0.176,
-    "xA_90": 0.0155,
-    "xGChain_90": 0.4406,
-    "xGBuildup_90": 0.2492,
+    "xGChain": 2.8034639582037926,
+    "xGBuildup": 1.7739086020737886,
+    "npxG_90": 0.1601,
+    "xG_90": 0.1601,
+    "xA_90": 0.0141,
+    "xGChain_90": 0.4743,
+    "xGBuildup_90": 0.3001,
     "percentiles": {
-      "npxG_90": 73.0,
-      "xG_90": 70.9,
-      "xA_90": 10.7,
-      "xGChain_90": 53.6,
-      "xGBuildup_90": 47.4
+      "npxG_90": 69.2,
+      "xG_90": 66.2,
+      "xA_90": 9.6,
+      "xGChain_90": 59.1,
+      "xGBuildup_90": 59.1
     }
   },
   {
@@ -3968,8 +3968,8 @@
     "xGChain_90": 0.0921,
     "xGBuildup_90": 0.0685,
     "percentiles": {
-      "npxG_90": 81.4,
-      "xG_90": 79.7,
+      "npxG_90": 81.9,
+      "xG_90": 80.8,
       "xA_90": 38.6,
       "xGChain_90": 4.2,
       "xGBuildup_90": 5.3
@@ -3996,11 +3996,11 @@
     "xGChain_90": 0.6306,
     "xGBuildup_90": 0.2089,
     "percentiles": {
-      "npxG_90": 50.5,
-      "xG_90": 47.4,
+      "npxG_90": 51.0,
+      "xG_90": 48.0,
       "xA_90": 98.5,
-      "xGChain_90": 71.9,
-      "xGBuildup_90": 37.2
+      "xGChain_90": 72.2,
+      "xGBuildup_90": 35.9
     }
   },
   {
@@ -4024,11 +4024,11 @@
     "xGChain_90": 0.383,
     "xGBuildup_90": 0.3792,
     "percentiles": {
-      "npxG_90": 64.7,
-      "xG_90": 64.2,
+      "npxG_90": 64.2,
+      "xG_90": 63.6,
       "xA_90": 11.4,
-      "xGChain_90": 61.9,
-      "xGBuildup_90": 80.8
+      "xGChain_90": 61.4,
+      "xGBuildup_90": 80.3
     }
   },
   {
@@ -4052,11 +4052,11 @@
     "xGChain_90": 0.5112,
     "xGBuildup_90": 0.36,
     "percentiles": {
-      "npxG_90": 53.6,
-      "xG_90": 50.5,
-      "xA_90": 47.4,
-      "xGChain_90": 62.8,
-      "xGBuildup_90": 70.9
+      "npxG_90": 54.0,
+      "xG_90": 51.0,
+      "xA_90": 48.0,
+      "xGChain_90": 63.1,
+      "xGBuildup_90": 69.2
     }
   },
   {
@@ -4065,26 +4065,26 @@
     "team": "Lyon",
     "position_raw": "D M S",
     "position_group": "défenseurs",
-    "minutes": 1993,
-    "games": 24,
+    "minutes": 2083,
+    "games": 25,
     "goals": 1,
     "assists": 3,
     "npxG": 1.710384400561452,
     "xG": 2.470479564741254,
     "xA": 2.748555427417159,
-    "xGChain": 9.35208011046052,
-    "xGBuildup": 5.83308139257133,
-    "npxG_90": 0.0772,
-    "xG_90": 0.1116,
-    "xA_90": 0.1241,
-    "xGChain_90": 0.4223,
-    "xGBuildup_90": 0.2634,
+    "xGChain": 9.478728074580431,
+    "xGBuildup": 5.959729356691241,
+    "npxG_90": 0.0739,
+    "xG_90": 0.1067,
+    "xA_90": 0.1188,
+    "xGChain_90": 0.4095,
+    "xGBuildup_90": 0.2575,
     "percentiles": {
-      "npxG_90": 69.4,
-      "xG_90": 80.6,
-      "xA_90": 78.6,
-      "xGChain_90": 72.5,
-      "xGBuildup_90": 53.1
+      "npxG_90": 65.8,
+      "xG_90": 79.2,
+      "xA_90": 78.1,
+      "xGChain_90": 68.9,
+      "xGBuildup_90": 50.8
     }
   },
   {
@@ -4108,11 +4108,11 @@
     "xGChain_90": 0.639,
     "xGBuildup_90": 0.4397,
     "percentiles": {
-      "npxG_90": 70.9,
-      "xG_90": 67.9,
-      "xA_90": 64.8,
-      "xGChain_90": 73.0,
-      "xGBuildup_90": 83.2
+      "npxG_90": 72.2,
+      "xG_90": 69.2,
+      "xA_90": 65.2,
+      "xGChain_90": 73.2,
+      "xGBuildup_90": 83.3
     }
   },
   {
@@ -4136,8 +4136,8 @@
     "xGChain_90": 0.4199,
     "xGBuildup_90": 0.4072,
     "percentiles": {
-      "npxG_90": 38.6,
-      "xG_90": 38.6,
+      "npxG_90": 38.1,
+      "xG_90": 38.1,
       "xA_90": 43.6,
       "xGChain_90": 71.4,
       "xGBuildup_90": 87.5
@@ -4164,11 +4164,11 @@
     "xGChain_90": 0.7211,
     "xGBuildup_90": 0.3267,
     "percentiles": {
-      "npxG_90": 24.5,
-      "xG_90": 19.9,
+      "npxG_90": 25.2,
+      "xG_90": 20.6,
       "xA_90": 96.8,
-      "xGChain_90": 79.2,
-      "xGBuildup_90": 85.6
+      "xGChain_90": 78.4,
+      "xGBuildup_90": 85.8
     }
   },
   {
@@ -4220,11 +4220,11 @@
     "xGChain_90": 0.4569,
     "xGBuildup_90": 0.1745,
     "percentiles": {
-      "npxG_90": 20.8,
-      "xG_90": 44.9,
-      "xA_90": 73.6,
-      "xGChain_90": 38.4,
-      "xGBuildup_90": 57.9
+      "npxG_90": 21.6,
+      "xG_90": 44.5,
+      "xA_90": 73.9,
+      "xGChain_90": 39.0,
+      "xGBuildup_90": 57.3
     }
   },
   {
@@ -4248,11 +4248,11 @@
     "xGChain_90": 0.517,
     "xGBuildup_90": 0.432,
     "percentiles": {
-      "npxG_90": 14.8,
-      "xG_90": 14.8,
-      "xA_90": 70.9,
-      "xGChain_90": 63.8,
-      "xGBuildup_90": 82.1
+      "npxG_90": 14.6,
+      "xG_90": 14.6,
+      "xA_90": 71.2,
+      "xGChain_90": 64.1,
+      "xGBuildup_90": 82.3
     }
   },
   {
@@ -4279,8 +4279,8 @@
       "npxG_90": 51.9,
       "xG_90": 51.9,
       "xA_90": 45.8,
-      "xGChain_90": 14.7,
-      "xGBuildup_90": 28.6
+      "xGChain_90": 14.2,
+      "xGBuildup_90": 28.1
     }
   },
   {
@@ -4304,11 +4304,11 @@
     "xGChain_90": 0.2071,
     "xGBuildup_90": 0.1565,
     "percentiles": {
-      "npxG_90": 70.8,
-      "xG_90": 69.7,
+      "npxG_90": 70.3,
+      "xG_90": 69.2,
       "xA_90": 51.9,
       "xGChain_90": 28.1,
-      "xGBuildup_90": 31.9
+      "xGBuildup_90": 31.4
     }
   },
   {
@@ -4332,11 +4332,11 @@
     "xGChain_90": 0.2808,
     "xGBuildup_90": 0.2409,
     "percentiles": {
-      "npxG_90": 19.9,
-      "xG_90": 18.9,
-      "xA_90": 25.0,
-      "xGChain_90": 23.0,
-      "xGBuildup_90": 43.4
+      "npxG_90": 19.7,
+      "xG_90": 18.7,
+      "xA_90": 24.7,
+      "xGChain_90": 22.7,
+      "xGBuildup_90": 42.9
     }
   },
   {
@@ -4360,11 +4360,11 @@
     "xGChain_90": 0.4162,
     "xGBuildup_90": 0.3029,
     "percentiles": {
-      "npxG_90": 45.4,
-      "xG_90": 42.3,
-      "xA_90": 45.4,
-      "xGChain_90": 49.5,
-      "xGBuildup_90": 60.7
+      "npxG_90": 46.0,
+      "xG_90": 42.9,
+      "xA_90": 46.0,
+      "xGChain_90": 49.0,
+      "xGBuildup_90": 60.1
     }
   },
   {
@@ -4416,11 +4416,11 @@
     "xGChain_90": 0.2876,
     "xGBuildup_90": 0.2523,
     "percentiles": {
-      "npxG_90": 11.7,
-      "xG_90": 11.7,
-      "xA_90": 30.1,
-      "xGChain_90": 26.0,
-      "xGBuildup_90": 50.5
+      "npxG_90": 11.6,
+      "xG_90": 11.6,
+      "xA_90": 30.8,
+      "xGChain_90": 25.8,
+      "xGBuildup_90": 49.0
     }
   },
   {
@@ -4447,8 +4447,8 @@
       "npxG_90": 87.5,
       "xG_90": 85.8,
       "xA_90": 99.2,
-      "xGChain_90": 90.8,
-      "xGBuildup_90": 66.9
+      "xGChain_90": 90.3,
+      "xGBuildup_90": 67.5
     }
   },
   {
@@ -4472,11 +4472,11 @@
     "xGChain_90": 0.1899,
     "xGBuildup_90": 0.1454,
     "percentiles": {
-      "npxG_90": 22.5,
-      "xG_90": 22.5,
+      "npxG_90": 21.9,
+      "xG_90": 21.9,
       "xA_90": 58.6,
-      "xGChain_90": 20.8,
-      "xGBuildup_90": 28.1
+      "xGChain_90": 20.3,
+      "xGBuildup_90": 27.5
     }
   },
   {
@@ -4500,11 +4500,11 @@
     "xGChain_90": 0.3337,
     "xGBuildup_90": 0.1051,
     "percentiles": {
-      "npxG_90": 55.1,
-      "xG_90": 77.3,
-      "xA_90": 2.3,
-      "xGChain_90": 18.1,
-      "xGBuildup_90": 27.3
+      "npxG_90": 53.7,
+      "xG_90": 76.6,
+      "xA_90": 2.8,
+      "xGChain_90": 17.9,
+      "xGBuildup_90": 27.1
     }
   },
   {
@@ -4528,11 +4528,11 @@
     "xGChain_90": 0.2271,
     "xGBuildup_90": 0.1731,
     "percentiles": {
-      "npxG_90": 30.1,
-      "xG_90": 27.0,
+      "npxG_90": 28.8,
+      "xG_90": 25.8,
       "xA_90": 5.6,
-      "xGChain_90": 13.8,
-      "xGBuildup_90": 25.0
+      "xGChain_90": 13.6,
+      "xGBuildup_90": 24.7
     }
   },
   {
@@ -4556,8 +4556,8 @@
     "xGChain_90": 0.2878,
     "xGBuildup_90": 0.271,
     "percentiles": {
-      "npxG_90": 65.8,
-      "xG_90": 65.3,
+      "npxG_90": 65.3,
+      "xG_90": 64.7,
       "xA_90": 21.4,
       "xGChain_90": 44.7,
       "xGBuildup_90": 55.8
@@ -4585,10 +4585,10 @@
     "xGBuildup_90": 0.1493,
     "percentiles": {
       "npxG_90": 66.9,
-      "xG_90": 66.4,
+      "xG_90": 65.8,
       "xA_90": 12.8,
-      "xGChain_90": 13.6,
-      "xGBuildup_90": 29.7
+      "xGChain_90": 13.1,
+      "xGBuildup_90": 29.2
     }
   },
   {
@@ -4612,11 +4612,11 @@
     "xGChain_90": 0.4483,
     "xGBuildup_90": 0.2986,
     "percentiles": {
-      "npxG_90": 39.3,
-      "xG_90": 37.2,
-      "xA_90": 80.1,
-      "xGChain_90": 56.6,
-      "xGBuildup_90": 59.7
+      "npxG_90": 38.9,
+      "xG_90": 36.9,
+      "xA_90": 80.3,
+      "xGChain_90": 54.0,
+      "xGBuildup_90": 58.1
     }
   },
   {
@@ -4640,11 +4640,11 @@
     "xGChain_90": 0.358,
     "xGBuildup_90": 0.1595,
     "percentiles": {
-      "npxG_90": 65.8,
-      "xG_90": 62.8,
-      "xA_90": 49.5,
-      "xGChain_90": 41.3,
-      "xGBuildup_90": 23.0
+      "npxG_90": 66.2,
+      "xG_90": 63.1,
+      "xA_90": 50.0,
+      "xGChain_90": 40.9,
+      "xGBuildup_90": 22.7
     }
   },
   {
@@ -4668,11 +4668,11 @@
     "xGChain_90": 0.1523,
     "xGBuildup_90": 0.0977,
     "percentiles": {
-      "npxG_90": 34.2,
-      "xG_90": 31.1,
-      "xA_90": 9.7,
+      "npxG_90": 33.8,
+      "xG_90": 30.8,
+      "xA_90": 10.6,
       "xGChain_90": 5.6,
-      "xGBuildup_90": 12.8
+      "xGBuildup_90": 12.6
     }
   },
   {
@@ -4696,11 +4696,11 @@
     "xGChain_90": 0.8866,
     "xGBuildup_90": 0.2987,
     "percentiles": {
-      "npxG_90": 91.2,
-      "xG_90": 87.5,
+      "npxG_90": 91.3,
+      "xG_90": 87.6,
       "xA_90": 0.5,
-      "xGChain_90": 90.3,
-      "xGBuildup_90": 83.8
+      "xGChain_90": 90.4,
+      "xGBuildup_90": 83.0
     }
   },
   {
@@ -4724,11 +4724,11 @@
     "xGChain_90": 0.4793,
     "xGBuildup_90": 0.0673,
     "percentiles": {
-      "npxG_90": 74.5,
-      "xG_90": 65.3,
-      "xA_90": 43.1,
-      "xGChain_90": 44.0,
-      "xGBuildup_90": 14.4
+      "npxG_90": 72.9,
+      "xG_90": 64.7,
+      "xA_90": 43.6,
+      "xGChain_90": 44.5,
+      "xGBuildup_90": 14.2
     }
   },
   {
@@ -4752,11 +4752,11 @@
     "xGChain_90": 0.4347,
     "xGBuildup_90": 0.2275,
     "percentiles": {
-      "npxG_90": 54.2,
-      "xG_90": 54.2,
-      "xA_90": 96.9,
+      "npxG_90": 53.6,
+      "xG_90": 53.6,
+      "xA_90": 96.4,
       "xGChain_90": 74.7,
-      "xGBuildup_90": 45.3
+      "xGBuildup_90": 44.7
     }
   },
   {
@@ -4780,11 +4780,11 @@
     "xGChain_90": 0.1152,
     "xGBuildup_90": 0.1133,
     "percentiles": {
-      "npxG_90": 80.3,
-      "xG_90": 78.6,
+      "npxG_90": 80.8,
+      "xG_90": 79.7,
       "xA_90": 33.6,
-      "xGChain_90": 6.9,
-      "xGBuildup_90": 12.5
+      "xGChain_90": 6.4,
+      "xGBuildup_90": 11.9
     }
   },
   {
@@ -4808,11 +4808,11 @@
     "xGChain_90": 0.8632,
     "xGBuildup_90": 0.7545,
     "percentiles": {
-      "npxG_90": 24.0,
-      "xG_90": 20.9,
-      "xA_90": 69.9,
+      "npxG_90": 23.7,
+      "xG_90": 20.7,
+      "xA_90": 70.2,
       "xGChain_90": 94.4,
-      "xGBuildup_90": 97.4
+      "xGBuildup_90": 97.5
     }
   },
   {
@@ -4837,10 +4837,10 @@
     "xGBuildup_90": 0.113,
     "percentiles": {
       "npxG_90": 66.4,
-      "xG_90": 65.8,
+      "xG_90": 65.3,
       "xA_90": 19.7,
-      "xGChain_90": 10.3,
-      "xGBuildup_90": 11.9
+      "xGChain_90": 9.7,
+      "xGBuildup_90": 11.4
     }
   },
   {
@@ -4864,11 +4864,11 @@
     "xGChain_90": 0.3837,
     "xGBuildup_90": 0.2738,
     "percentiles": {
-      "npxG_90": 65.3,
-      "xG_90": 64.7,
+      "npxG_90": 64.7,
+      "xG_90": 64.2,
       "xA_90": 85.3,
-      "xGChain_90": 62.5,
-      "xGBuildup_90": 57.5
+      "xGChain_90": 61.9,
+      "xGBuildup_90": 56.9
     }
   },
   {
@@ -4894,9 +4894,9 @@
     "percentiles": {
       "npxG_90": 84.2,
       "xG_90": 83.1,
-      "xA_90": 8.9,
+      "xA_90": 8.3,
       "xGChain_90": 45.6,
-      "xGBuildup_90": 51.4
+      "xGBuildup_90": 51.9
     }
   },
   {
@@ -4920,8 +4920,8 @@
     "xGChain_90": 0.4468,
     "xGBuildup_90": 0.3936,
     "percentiles": {
-      "npxG_90": 30.8,
-      "xG_90": 30.8,
+      "npxG_90": 30.3,
+      "xG_90": 30.3,
       "xA_90": 92.5,
       "xGChain_90": 77.5,
       "xGBuildup_90": 84.2
@@ -4948,8 +4948,8 @@
     "xGChain_90": 0.1569,
     "xGBuildup_90": 0.1393,
     "percentiles": {
-      "npxG_90": 32.5,
-      "xG_90": 32.5,
+      "npxG_90": 31.9,
+      "xG_90": 31.9,
       "xA_90": 41.4,
       "xGChain_90": 16.4,
       "xGBuildup_90": 24.7
@@ -4961,8 +4961,8 @@
     "team": "Lyon",
     "position_raw": "D M S",
     "position_group": "défenseurs",
-    "minutes": 1870,
-    "games": 26,
+    "minutes": 1876,
+    "games": 27,
     "goals": 1,
     "assists": 0,
     "npxG": 2.568478574976325,
@@ -4970,16 +4970,16 @@
     "xA": 1.4022282604128122,
     "xGChain": 11.99945586360991,
     "xGBuildup": 9.819737522862852,
-    "npxG_90": 0.1236,
-    "xG_90": 0.1236,
-    "xA_90": 0.0675,
-    "xGChain_90": 0.5775,
-    "xGBuildup_90": 0.4726,
+    "npxG_90": 0.1232,
+    "xG_90": 0.1232,
+    "xA_90": 0.0673,
+    "xGChain_90": 0.5757,
+    "xGBuildup_90": 0.4711,
     "percentiles": {
       "npxG_90": 85.8,
       "xG_90": 84.2,
       "xA_90": 57.5,
-      "xGChain_90": 88.1,
+      "xGChain_90": 87.5,
       "xGBuildup_90": 91.4
     }
   },
@@ -5004,11 +5004,11 @@
     "xGChain_90": 0.2637,
     "xGBuildup_90": 0.1641,
     "percentiles": {
-      "npxG_90": 64.2,
-      "xG_90": 63.6,
+      "npxG_90": 63.6,
+      "xG_90": 63.1,
       "xA_90": 53.6,
-      "xGChain_90": 39.2,
-      "xGBuildup_90": 33.6
+      "xGChain_90": 38.6,
+      "xGBuildup_90": 33.1
     }
   },
   {
@@ -5032,10 +5032,10 @@
     "xGChain_90": 0.143,
     "xGBuildup_90": 0.1343,
     "percentiles": {
-      "npxG_90": 41.4,
-      "xG_90": 41.4,
+      "npxG_90": 40.8,
+      "xG_90": 40.8,
       "xA_90": 12.8,
-      "xGChain_90": 11.9,
+      "xGChain_90": 11.4,
       "xGBuildup_90": 21.9
     }
   },
@@ -5064,7 +5064,7 @@
       "xG_90": 88.1,
       "xA_90": 18.9,
       "xGChain_90": 58.1,
-      "xGBuildup_90": 69.7
+      "xGBuildup_90": 70.3
     }
   },
   {
@@ -5088,8 +5088,8 @@
     "xGChain_90": 0.2455,
     "xGBuildup_90": 0.2362,
     "percentiles": {
-      "npxG_90": 15.3,
-      "xG_90": 15.3,
+      "npxG_90": 14.7,
+      "xG_90": 14.7,
       "xA_90": 18.1,
       "xGChain_90": 34.7,
       "xGBuildup_90": 46.9
@@ -5116,11 +5116,11 @@
     "xGChain_90": 0.454,
     "xGBuildup_90": 0.2012,
     "percentiles": {
-      "npxG_90": 69.9,
-      "xG_90": 66.8,
-      "xA_90": 66.8,
-      "xGChain_90": 57.7,
-      "xGBuildup_90": 35.2
+      "npxG_90": 71.2,
+      "xG_90": 68.2,
+      "xA_90": 67.2,
+      "xGChain_90": 55.1,
+      "xGBuildup_90": 33.8
     }
   },
   {
@@ -5144,8 +5144,8 @@
     "xGChain_90": 0.1062,
     "xGBuildup_90": 0.0138,
     "percentiles": {
-      "npxG_90": 89.7,
-      "xG_90": 88.6,
+      "npxG_90": 90.3,
+      "xG_90": 89.2,
       "xA_90": 16.4,
       "xGChain_90": 5.3,
       "xGBuildup_90": 1.9
@@ -5172,8 +5172,8 @@
     "xGChain_90": 0.5239,
     "xGBuildup_90": 0.5228,
     "percentiles": {
-      "npxG_90": 34.7,
-      "xG_90": 34.7,
+      "npxG_90": 34.2,
+      "xG_90": 34.2,
       "xA_90": 15.8,
       "xGChain_90": 84.2,
       "xGBuildup_90": 93.6
@@ -5203,7 +5203,7 @@
       "npxG_90": 79.2,
       "xG_90": 77.5,
       "xA_90": 86.4,
-      "xGChain_90": 89.2,
+      "xGChain_90": 88.6,
       "xGBuildup_90": 88.1
     }
   },
@@ -5228,11 +5228,11 @@
     "xGChain_90": 0.8548,
     "xGBuildup_90": 0.4466,
     "percentiles": {
-      "npxG_90": 90.3,
-      "xG_90": 89.3,
-      "xA_90": 85.2,
-      "xGChain_90": 92.3,
-      "xGBuildup_90": 84.2
+      "npxG_90": 90.4,
+      "xG_90": 89.4,
+      "xA_90": 85.4,
+      "xGChain_90": 92.4,
+      "xGBuildup_90": 84.3
     }
   },
   {
@@ -5256,11 +5256,11 @@
     "xGChain_90": 0.2529,
     "xGBuildup_90": 0.1883,
     "percentiles": {
-      "npxG_90": 21.9,
-      "xG_90": 35.2,
-      "xA_90": 52.6,
-      "xGChain_90": 17.9,
-      "xGBuildup_90": 28.1
+      "npxG_90": 21.7,
+      "xG_90": 34.8,
+      "xA_90": 53.0,
+      "xGChain_90": 17.7,
+      "xGBuildup_90": 26.8
     }
   },
   {
@@ -5284,11 +5284,11 @@
     "xGChain_90": 0.2009,
     "xGBuildup_90": 0.1906,
     "percentiles": {
-      "npxG_90": 21.4,
-      "xG_90": 21.4,
+      "npxG_90": 20.8,
+      "xG_90": 20.8,
       "xA_90": 27.5,
       "xGChain_90": 25.3,
-      "xGBuildup_90": 36.9
+      "xGBuildup_90": 35.8
     }
   },
   {
@@ -5340,11 +5340,11 @@
     "xGChain_90": 0.3752,
     "xGBuildup_90": 0.1882,
     "percentiles": {
-      "npxG_90": 10.6,
-      "xG_90": 9.7,
-      "xA_90": 26.4,
-      "xGChain_90": 23.6,
-      "xGBuildup_90": 63.4
+      "npxG_90": 11.5,
+      "xG_90": 10.6,
+      "xA_90": 27.1,
+      "xGChain_90": 23.4,
+      "xGBuildup_90": 62.8
     }
   },
   {
@@ -5369,9 +5369,9 @@
     "xGBuildup_90": 0.0933,
     "percentiles": {
       "npxG_90": 68.6,
-      "xG_90": 68.1,
+      "xG_90": 67.5,
       "xA_90": 51.4,
-      "xGChain_90": 19.2,
+      "xGChain_90": 18.6,
       "xGBuildup_90": 9.2
     }
   },
@@ -5397,10 +5397,38 @@
     "xGBuildup_90": 0.0402,
     "percentiles": {
       "npxG_90": 6.0,
-      "xG_90": 5.1,
-      "xA_90": 59.7,
-      "xGChain_90": 7.9,
-      "xGBuildup_90": 4.2
+      "xG_90": 5.0,
+      "xA_90": 61.0,
+      "xGChain_90": 7.8,
+      "xGBuildup_90": 4.1
+    }
+  },
+  {
+    "player_name": "Roman Yaremchuk",
+    "player_id": "12041",
+    "team": "Lyon",
+    "position_raw": "F S",
+    "position_group": "attaquants",
+    "minutes": 285,
+    "games": 7,
+    "goals": 1,
+    "assists": 1,
+    "npxG": 1.5575660020112991,
+    "xG": 1.5575660020112991,
+    "xA": 0.5003054514527321,
+    "xGChain": 2.2893956154584885,
+    "xGBuildup": 0.32723838090896606,
+    "npxG_90": 0.4919,
+    "xG_90": 0.4919,
+    "xA_90": 0.158,
+    "xGChain_90": 0.723,
+    "xGBuildup_90": 0.1033,
+    "percentiles": {
+      "npxG_90": 84.9,
+      "xG_90": 79.4,
+      "xA_90": 58.3,
+      "xGChain_90": 79.4,
+      "xGBuildup_90": 25.2
     }
   },
   {
@@ -5424,11 +5452,11 @@
     "xGChain_90": 0.4429,
     "xGBuildup_90": 0.3188,
     "percentiles": {
-      "npxG_90": 10.7,
-      "xG_90": 10.7,
-      "xA_90": 61.7,
-      "xGChain_90": 55.6,
-      "xGBuildup_90": 64.8
+      "npxG_90": 10.6,
+      "xG_90": 10.6,
+      "xA_90": 63.1,
+      "xGChain_90": 53.0,
+      "xGBuildup_90": 64.1
     }
   },
   {
@@ -5437,25 +5465,25 @@
     "team": "Lorient",
     "position_raw": "M S",
     "position_group": "milieux",
-    "minutes": 1792,
-    "games": 25,
+    "minutes": 1882,
+    "games": 26,
     "goals": 1,
     "assists": 1,
-    "npxG": 0.8682776810601354,
-    "xG": 0.8682776810601354,
+    "npxG": 0.9925332339480519,
+    "xG": 0.9925332339480519,
     "xA": 2.6821309588849545,
-    "xGChain": 7.247977511025965,
-    "xGBuildup": 4.835234404541552,
-    "npxG_90": 0.0436,
-    "xG_90": 0.0436,
-    "xA_90": 0.1347,
-    "xGChain_90": 0.364,
-    "xGBuildup_90": 0.2428,
+    "xGChain": 7.6328350165858865,
+    "xGBuildup": 5.095836372114718,
+    "npxG_90": 0.0475,
+    "xG_90": 0.0475,
+    "xA_90": 0.1283,
+    "xGChain_90": 0.365,
+    "xGBuildup_90": 0.2437,
     "percentiles": {
-      "npxG_90": 26.0,
-      "xG_90": 23.0,
-      "xA_90": 62.8,
-      "xGChain_90": 42.3,
+      "npxG_90": 29.8,
+      "xG_90": 26.8,
+      "xA_90": 61.1,
+      "xGChain_90": 41.9,
       "xGBuildup_90": 44.4
     }
   },
@@ -5480,10 +5508,10 @@
     "xGChain_90": 0.6061,
     "xGBuildup_90": 0.6,
     "percentiles": {
-      "npxG_90": 43.1,
-      "xG_90": 43.1,
+      "npxG_90": 42.5,
+      "xG_90": 42.5,
       "xA_90": 16.9,
-      "xGChain_90": 91.4,
+      "xGChain_90": 90.8,
       "xGBuildup_90": 96.4
     }
   },
@@ -5508,11 +5536,11 @@
     "xGChain_90": 0.4987,
     "xGBuildup_90": 0.0903,
     "percentiles": {
-      "npxG_90": 46.8,
-      "xG_90": 63.4,
-      "xA_90": 78.2,
-      "xGChain_90": 47.7,
-      "xGBuildup_90": 20.8
+      "npxG_90": 46.3,
+      "xG_90": 63.8,
+      "xA_90": 79.4,
+      "xGChain_90": 48.2,
+      "xGBuildup_90": 20.6
     }
   },
   {
@@ -5538,9 +5566,9 @@
     "percentiles": {
       "npxG_90": 84.7,
       "xG_90": 83.6,
-      "xA_90": 82.5,
+      "xA_90": 81.9,
       "xGChain_90": 44.2,
-      "xGBuildup_90": 19.7
+      "xGBuildup_90": 19.2
     }
   },
   {
@@ -5564,11 +5592,11 @@
     "xGChain_90": 0.1889,
     "xGBuildup_90": 0.0802,
     "percentiles": {
-      "npxG_90": 56.6,
-      "xG_90": 53.6,
-      "xA_90": 14.8,
-      "xGChain_90": 8.7,
-      "xGBuildup_90": 10.7
+      "npxG_90": 57.1,
+      "xG_90": 54.0,
+      "xA_90": 14.6,
+      "xGChain_90": 8.6,
+      "xGBuildup_90": 10.6
     }
   },
   {
@@ -5592,11 +5620,11 @@
     "xGChain_90": 0.6826,
     "xGBuildup_90": 0.4522,
     "percentiles": {
-      "npxG_90": 54.6,
-      "xG_90": 51.5,
-      "xA_90": 84.2,
-      "xGChain_90": 77.0,
-      "xGBuildup_90": 85.2
+      "npxG_90": 55.1,
+      "xG_90": 52.0,
+      "xA_90": 84.3,
+      "xGChain_90": 77.3,
+      "xGBuildup_90": 85.4
     }
   },
   {
@@ -5620,11 +5648,11 @@
     "xGChain_90": 0.7692,
     "xGBuildup_90": 0.3155,
     "percentiles": {
-      "npxG_90": 38.4,
-      "xG_90": 32.9,
-      "xA_90": 81.0,
-      "xGChain_90": 84.7,
-      "xGBuildup_90": 84.7
+      "npxG_90": 38.1,
+      "xG_90": 32.6,
+      "xA_90": 81.2,
+      "xGChain_90": 83.9,
+      "xGBuildup_90": 84.9
     }
   },
   {
@@ -5648,11 +5676,11 @@
     "xGChain_90": 0.3914,
     "xGBuildup_90": 0.2735,
     "percentiles": {
-      "npxG_90": 74.0,
-      "xG_90": 71.9,
-      "xA_90": 20.9,
-      "xGChain_90": 45.4,
-      "xGBuildup_90": 55.6
+      "npxG_90": 74.2,
+      "xG_90": 72.2,
+      "xA_90": 20.7,
+      "xGChain_90": 44.9,
+      "xGBuildup_90": 54.0
     }
   },
   {
@@ -5676,11 +5704,11 @@
     "xGChain_90": 0.8522,
     "xGBuildup_90": 0.5094,
     "percentiles": {
-      "npxG_90": 78.1,
-      "xG_90": 77.0,
-      "xA_90": 67.9,
-      "xGChain_90": 90.3,
-      "xGBuildup_90": 90.3
+      "npxG_90": 78.3,
+      "xG_90": 77.3,
+      "xA_90": 68.2,
+      "xGChain_90": 90.4,
+      "xGBuildup_90": 90.4
     }
   },
   {
@@ -5708,7 +5736,7 @@
       "xG_90": 74.7,
       "xA_90": 35.3,
       "xGChain_90": 24.7,
-      "xGBuildup_90": 18.1
+      "xGBuildup_90": 17.5
     }
   },
   {
@@ -5732,11 +5760,11 @@
     "xGChain_90": 0.4249,
     "xGBuildup_90": 0.2905,
     "percentiles": {
-      "npxG_90": 34.2,
-      "xG_90": 34.2,
+      "npxG_90": 33.6,
+      "xG_90": 33.6,
       "xA_90": 79.2,
-      "xGChain_90": 73.6,
-      "xGBuildup_90": 60.8
+      "xGChain_90": 73.1,
+      "xGBuildup_90": 60.3
     }
   },
   {
@@ -5760,11 +5788,11 @@
     "xGChain_90": 0.7676,
     "xGBuildup_90": 0.5178,
     "percentiles": {
-      "npxG_90": 55.6,
-      "xG_90": 52.6,
-      "xA_90": 97.4,
-      "xGChain_90": 82.1,
-      "xGBuildup_90": 92.3
+      "npxG_90": 56.1,
+      "xG_90": 53.0,
+      "xA_90": 97.5,
+      "xGChain_90": 82.3,
+      "xGBuildup_90": 92.4
     }
   },
   {
@@ -5788,11 +5816,11 @@
     "xGChain_90": 0.1503,
     "xGBuildup_90": 0.1479,
     "percentiles": {
-      "npxG_90": 20.8,
-      "xG_90": 20.8,
+      "npxG_90": 20.3,
+      "xG_90": 20.3,
       "xA_90": 29.7,
-      "xGChain_90": 14.2,
-      "xGBuildup_90": 29.2
+      "xGChain_90": 13.6,
+      "xGBuildup_90": 28.6
     }
   },
   {
@@ -5816,11 +5844,11 @@
     "xGChain_90": 0.4693,
     "xGBuildup_90": 0.1488,
     "percentiles": {
-      "npxG_90": 53.2,
-      "xG_90": 49.5,
-      "xA_90": 4.2,
-      "xGChain_90": 43.1,
-      "xGBuildup_90": 44.0
+      "npxG_90": 51.8,
+      "xG_90": 49.1,
+      "xA_90": 5.0,
+      "xGChain_90": 43.6,
+      "xGBuildup_90": 43.6
     }
   },
   {
@@ -5844,11 +5872,11 @@
     "xGChain_90": 0.8266,
     "xGBuildup_90": 0.4209,
     "percentiles": {
-      "npxG_90": 91.3,
-      "xG_90": 90.3,
-      "xA_90": 41.3,
-      "xGChain_90": 88.8,
-      "xGBuildup_90": 77.0
+      "npxG_90": 91.4,
+      "xG_90": 90.4,
+      "xA_90": 41.9,
+      "xGChain_90": 88.9,
+      "xGBuildup_90": 77.3
     }
   },
   {
@@ -5872,11 +5900,11 @@
     "xGChain_90": 0.5428,
     "xGBuildup_90": 0.3123,
     "percentiles": {
-      "npxG_90": 67.9,
-      "xG_90": 64.8,
-      "xA_90": 79.1,
-      "xGChain_90": 65.8,
-      "xGBuildup_90": 62.8
+      "npxG_90": 68.2,
+      "xG_90": 65.2,
+      "xA_90": 79.3,
+      "xGChain_90": 66.2,
+      "xGBuildup_90": 62.1
     }
   },
   {
@@ -5885,8 +5913,8 @@
     "team": "Lyon",
     "position_raw": "D S",
     "position_group": "défenseurs",
-    "minutes": 636,
-    "games": 11,
+    "minutes": 638,
+    "games": 12,
     "goals": 1,
     "assists": 2,
     "npxG": 0.467510849237442,
@@ -5894,17 +5922,17 @@
     "xA": 0.7292618155479431,
     "xGChain": 2.727930672466755,
     "xGBuildup": 2.727930672466755,
-    "npxG_90": 0.0662,
-    "xG_90": 0.0662,
-    "xA_90": 0.1032,
-    "xGChain_90": 0.386,
-    "xGBuildup_90": 0.386,
+    "npxG_90": 0.0659,
+    "xG_90": 0.0659,
+    "xA_90": 0.1029,
+    "xGChain_90": 0.3848,
+    "xGBuildup_90": 0.3848,
     "percentiles": {
-      "npxG_90": 62.5,
-      "xG_90": 61.9,
+      "npxG_90": 61.9,
+      "xG_90": 61.4,
       "xA_90": 71.4,
-      "xGChain_90": 64.2,
-      "xGBuildup_90": 81.7
+      "xGChain_90": 62.5,
+      "xGBuildup_90": 80.8
     }
   },
   {
@@ -5928,11 +5956,11 @@
     "xGChain_90": 0.326,
     "xGBuildup_90": 0.123,
     "percentiles": {
-      "npxG_90": 37.5,
-      "xG_90": 31.9,
-      "xA_90": 45.8,
-      "xGChain_90": 16.2,
-      "xGBuildup_90": 32.9
+      "npxG_90": 37.2,
+      "xG_90": 31.7,
+      "xA_90": 46.3,
+      "xGChain_90": 16.1,
+      "xGBuildup_90": 31.7
     }
   },
   {
@@ -5956,11 +5984,11 @@
     "xGChain_90": 0.2789,
     "xGBuildup_90": 0.1019,
     "percentiles": {
-      "npxG_90": 7.9,
+      "npxG_90": 7.8,
       "xG_90": 6.9,
-      "xA_90": 36.6,
+      "xA_90": 38.1,
       "xGChain_90": 10.6,
-      "xGBuildup_90": 24.5
+      "xGBuildup_90": 23.4
     }
   },
   {
@@ -5984,11 +6012,11 @@
     "xGChain_90": 0.8265,
     "xGBuildup_90": 0.6024,
     "percentiles": {
-      "npxG_90": 86.2,
-      "xG_90": 85.2,
-      "xA_90": 17.9,
-      "xGChain_90": 87.2,
-      "xGBuildup_90": 95.4
+      "npxG_90": 86.4,
+      "xG_90": 85.4,
+      "xA_90": 17.7,
+      "xGChain_90": 87.4,
+      "xGBuildup_90": 95.5
     }
   },
   {
@@ -6012,8 +6040,8 @@
     "xGChain_90": 0.2428,
     "xGBuildup_90": 0.2091,
     "percentiles": {
-      "npxG_90": 56.9,
-      "xG_90": 56.9,
+      "npxG_90": 56.4,
+      "xG_90": 56.4,
       "xA_90": 34.7,
       "xGChain_90": 34.2,
       "xGBuildup_90": 39.7
@@ -6040,11 +6068,11 @@
     "xGChain_90": 0.4312,
     "xGBuildup_90": 0.1901,
     "percentiles": {
-      "npxG_90": 27.3,
-      "xG_90": 22.7,
-      "xA_90": 47.7,
-      "xGChain_90": 32.9,
-      "xGBuildup_90": 64.4
+      "npxG_90": 28.0,
+      "xG_90": 23.4,
+      "xA_90": 48.2,
+      "xGChain_90": 33.5,
+      "xGBuildup_90": 63.8
     }
   },
   {
@@ -6068,11 +6096,11 @@
     "xGChain_90": 0.3017,
     "xGBuildup_90": 0.1058,
     "percentiles": {
-      "npxG_90": 75.0,
-      "xG_90": 74.0,
-      "xA_90": 8.7,
-      "xGChain_90": 29.1,
-      "xGBuildup_90": 14.8
+      "npxG_90": 75.3,
+      "xG_90": 74.2,
+      "xA_90": 8.6,
+      "xGChain_90": 27.8,
+      "xGBuildup_90": 14.6
     }
   },
   {
@@ -6096,11 +6124,11 @@
     "xGChain_90": 0.261,
     "xGBuildup_90": 0.2072,
     "percentiles": {
-      "npxG_90": 32.1,
-      "xG_90": 29.1,
-      "xA_90": 34.2,
-      "xGChain_90": 19.9,
-      "xGBuildup_90": 36.2
+      "npxG_90": 31.8,
+      "xG_90": 28.8,
+      "xA_90": 34.8,
+      "xGChain_90": 19.7,
+      "xGBuildup_90": 34.8
     }
   },
   {
@@ -6124,11 +6152,11 @@
     "xGChain_90": 0.4095,
     "xGBuildup_90": 0.4004,
     "percentiles": {
-      "npxG_90": 60.8,
-      "xG_90": 60.8,
+      "npxG_90": 60.3,
+      "xG_90": 60.3,
       "xA_90": 50.0,
-      "xGChain_90": 68.6,
-      "xGBuildup_90": 85.8
+      "xGChain_90": 68.9,
+      "xGBuildup_90": 85.3
     }
   },
   {
@@ -6152,11 +6180,11 @@
     "xGChain_90": 0.2579,
     "xGBuildup_90": 0.1343,
     "percentiles": {
-      "npxG_90": 40.3,
-      "xG_90": 87.2,
-      "xA_90": 75.0,
-      "xGChain_90": 18.9,
-      "xGBuildup_90": 18.9
+      "npxG_90": 39.9,
+      "xG_90": 87.4,
+      "xA_90": 75.3,
+      "xGChain_90": 18.7,
+      "xGBuildup_90": 18.7
     }
   },
   {
@@ -6180,11 +6208,11 @@
     "xGChain_90": 0.3938,
     "xGBuildup_90": 0.1842,
     "percentiles": {
-      "npxG_90": 8.8,
-      "xG_90": 7.9,
-      "xA_90": 62.5,
-      "xGChain_90": 28.2,
-      "xGBuildup_90": 61.6
+      "npxG_90": 8.7,
+      "xG_90": 7.8,
+      "xA_90": 63.8,
+      "xGChain_90": 28.9,
+      "xGBuildup_90": 61.0
     }
   },
   {
@@ -6208,11 +6236,11 @@
     "xGChain_90": 0.4083,
     "xGBuildup_90": 0.3727,
     "percentiles": {
-      "npxG_90": 93.1,
-      "xG_90": 91.9,
+      "npxG_90": 93.6,
+      "xG_90": 92.5,
       "xA_90": 23.1,
       "xGChain_90": 67.5,
-      "xGBuildup_90": 77.5
+      "xGBuildup_90": 78.1
     }
   },
   {
@@ -6236,8 +6264,8 @@
     "xGChain_90": 0.3765,
     "xGBuildup_90": 0.3011,
     "percentiles": {
-      "npxG_90": 71.4,
-      "xG_90": 70.3,
+      "npxG_90": 70.8,
+      "xG_90": 69.7,
       "xA_90": 39.2,
       "xGChain_90": 60.8,
       "xGBuildup_90": 63.1
@@ -6264,11 +6292,11 @@
     "xGChain_90": 0.4794,
     "xGBuildup_90": 0.2124,
     "percentiles": {
-      "npxG_90": 32.9,
-      "xG_90": 28.2,
-      "xA_90": 25.5,
-      "xGChain_90": 44.9,
-      "xGBuildup_90": 71.8
+      "npxG_90": 33.5,
+      "xG_90": 28.9,
+      "xA_90": 26.1,
+      "xGChain_90": 45.4,
+      "xGBuildup_90": 71.1
     }
   },
   {
@@ -6277,26 +6305,26 @@
     "team": "Lorient",
     "position_raw": "M S",
     "position_group": "milieux",
-    "minutes": 1311,
-    "games": 22,
+    "minutes": 1401,
+    "games": 23,
     "goals": 1,
     "assists": 1,
     "npxG": 1.178680825047195,
     "xG": 1.178680825047195,
     "xA": 0.6393682397902012,
-    "xGChain": 4.355867760255933,
-    "xGBuildup": 2.7130229342728853,
-    "npxG_90": 0.0809,
-    "xG_90": 0.0809,
-    "xA_90": 0.0439,
-    "xGChain_90": 0.299,
-    "xGBuildup_90": 0.1862,
+    "xGChain": 4.925799624994397,
+    "xGBuildup": 3.2829547990113497,
+    "npxG_90": 0.0757,
+    "xG_90": 0.0757,
+    "xA_90": 0.0411,
+    "xGChain_90": 0.3164,
+    "xGBuildup_90": 0.2109,
     "percentiles": {
-      "npxG_90": 44.4,
-      "xG_90": 41.3,
-      "xA_90": 31.1,
-      "xGChain_90": 28.1,
-      "xGBuildup_90": 27.0
+      "npxG_90": 43.9,
+      "xG_90": 40.9,
+      "xA_90": 29.8,
+      "xGChain_90": 31.8,
+      "xGBuildup_90": 36.9
     }
   },
   {
@@ -6320,11 +6348,11 @@
     "xGChain_90": 0.3129,
     "xGBuildup_90": 0.1485,
     "percentiles": {
-      "npxG_90": 17.1,
-      "xG_90": 15.3,
-      "xA_90": 6.0,
-      "xGChain_90": 13.4,
-      "xGBuildup_90": 43.1
+      "npxG_90": 17.9,
+      "xG_90": 16.1,
+      "xA_90": 6.9,
+      "xGChain_90": 13.3,
+      "xGBuildup_90": 42.7
     }
   },
   {
@@ -6348,11 +6376,11 @@
     "xGChain_90": 0.5979,
     "xGBuildup_90": 0.1774,
     "percentiles": {
-      "npxG_90": 88.3,
-      "xG_90": 88.3,
-      "xA_90": 51.5,
-      "xGChain_90": 68.9,
-      "xGBuildup_90": 26.0
+      "npxG_90": 88.4,
+      "xG_90": 88.4,
+      "xA_90": 52.0,
+      "xGChain_90": 69.2,
+      "xGBuildup_90": 25.8
     }
   },
   {
@@ -6376,8 +6404,8 @@
     "xGChain_90": 0.1319,
     "xGBuildup_90": 0.0434,
     "percentiles": {
-      "npxG_90": 31.9,
-      "xG_90": 27.3,
+      "npxG_90": 32.6,
+      "xG_90": 28.0,
       "xA_90": 1.4,
       "xGChain_90": 2.3,
       "xGBuildup_90": 6.0
@@ -6404,11 +6432,11 @@
     "xGChain_90": 0.3028,
     "xGBuildup_90": 0.1904,
     "percentiles": {
-      "npxG_90": 63.8,
-      "xG_90": 60.7,
-      "xA_90": 58.7,
-      "xGChain_90": 30.1,
-      "xGBuildup_90": 30.1
+      "npxG_90": 64.1,
+      "xG_90": 61.1,
+      "xA_90": 59.1,
+      "xGChain_90": 28.8,
+      "xGBuildup_90": 28.8
     }
   },
   {
@@ -6434,9 +6462,9 @@
     "percentiles": {
       "npxG_90": 99.5,
       "xG_90": 99.5,
-      "xA_90": 21.9,
-      "xGChain_90": 44.4,
-      "xGBuildup_90": 4.6
+      "xA_90": 21.7,
+      "xGChain_90": 43.9,
+      "xGBuildup_90": 4.5
     }
   },
   {
@@ -6460,11 +6488,11 @@
     "xGChain_90": 0.3221,
     "xGBuildup_90": 0.3189,
     "percentiles": {
-      "npxG_90": 15.8,
-      "xG_90": 15.8,
-      "xA_90": 8.1,
+      "npxG_90": 15.3,
+      "xG_90": 15.3,
+      "xA_90": 7.5,
       "xGChain_90": 53.1,
-      "xGBuildup_90": 67.5
+      "xGBuildup_90": 68.1
     }
   },
   {
@@ -6488,8 +6516,8 @@
     "xGChain_90": 0.0844,
     "xGBuildup_90": 0.061,
     "percentiles": {
-      "npxG_90": 23.1,
-      "xG_90": 23.1,
+      "npxG_90": 22.5,
+      "xG_90": 22.5,
       "xA_90": 23.6,
       "xGChain_90": 3.6,
       "xGBuildup_90": 4.7
@@ -6516,11 +6544,11 @@
     "xGChain_90": 0.0958,
     "xGBuildup_90": 0.0618,
     "percentiles": {
-      "npxG_90": 12.8,
-      "xG_90": 12.8,
-      "xA_90": 13.8,
-      "xGChain_90": 2.6,
-      "xGBuildup_90": 7.7
+      "npxG_90": 12.6,
+      "xG_90": 12.6,
+      "xA_90": 13.6,
+      "xGChain_90": 2.5,
+      "xGBuildup_90": 7.6
     }
   },
   {
@@ -6544,11 +6572,11 @@
     "xGChain_90": 0.4166,
     "xGBuildup_90": 0.3495,
     "percentiles": {
-      "npxG_90": 19.7,
-      "xG_90": 19.7,
+      "npxG_90": 19.2,
+      "xG_90": 19.2,
       "xA_90": 63.1,
-      "xGChain_90": 69.7,
-      "xGBuildup_90": 74.7
+      "xGChain_90": 70.3,
+      "xGBuildup_90": 75.3
     }
   },
   {
@@ -6572,8 +6600,8 @@
     "xGChain_90": 0.4482,
     "xGBuildup_90": 0.443,
     "percentiles": {
-      "npxG_90": 35.8,
-      "xG_90": 35.8,
+      "npxG_90": 35.3,
+      "xG_90": 35.3,
       "xA_90": 53.1,
       "xGChain_90": 78.1,
       "xGBuildup_90": 90.3
@@ -6600,8 +6628,8 @@
     "xGChain_90": 0.6171,
     "xGBuildup_90": 0.531,
     "percentiles": {
-      "npxG_90": 25.8,
-      "xG_90": 25.8,
+      "npxG_90": 24.7,
+      "xG_90": 24.7,
       "xA_90": 88.6,
       "xGChain_90": 92.5,
       "xGBuildup_90": 94.2
@@ -6628,11 +6656,11 @@
     "xGChain_90": 0.434,
     "xGBuildup_90": 0.3834,
     "percentiles": {
-      "npxG_90": 42.3,
-      "xG_90": 39.3,
-      "xA_90": 40.3,
-      "xGChain_90": 52.6,
-      "xGBuildup_90": 73.0
+      "npxG_90": 42.9,
+      "xG_90": 39.9,
+      "xA_90": 40.9,
+      "xGChain_90": 52.0,
+      "xGBuildup_90": 72.2
     }
   },
   {
@@ -6656,10 +6684,10 @@
     "xGChain_90": 0.4228,
     "xGBuildup_90": 0.4176,
     "percentiles": {
-      "npxG_90": 45.3,
-      "xG_90": 45.3,
+      "npxG_90": 44.7,
+      "xG_90": 44.7,
       "xA_90": 22.5,
-      "xGChain_90": 73.1,
+      "xGChain_90": 72.5,
       "xGBuildup_90": 88.6
     }
   },
@@ -6684,11 +6712,11 @@
     "xGChain_90": 0.3285,
     "xGBuildup_90": 0.169,
     "percentiles": {
-      "npxG_90": 4.2,
-      "xG_90": 4.2,
-      "xA_90": 86.6,
-      "xGChain_90": 17.1,
-      "xGBuildup_90": 56.0
+      "npxG_90": 4.1,
+      "xG_90": 4.1,
+      "xA_90": 86.7,
+      "xGChain_90": 17.0,
+      "xGBuildup_90": 55.5
     }
   },
   {
@@ -6712,11 +6740,11 @@
     "xGChain_90": 0.3643,
     "xGBuildup_90": 0.0435,
     "percentiles": {
-      "npxG_90": 56.9,
-      "xG_90": 53.2,
-      "xA_90": 7.9,
-      "xGChain_90": 21.8,
-      "xGBuildup_90": 7.4
+      "npxG_90": 56.4,
+      "xG_90": 52.8,
+      "xA_90": 8.7,
+      "xGChain_90": 21.6,
+      "xGBuildup_90": 7.3
     }
   },
   {
@@ -6740,11 +6768,11 @@
     "xGChain_90": 0.1549,
     "xGBuildup_90": 0.1499,
     "percentiles": {
-      "npxG_90": 7.5,
-      "xG_90": 7.5,
+      "npxG_90": 6.9,
+      "xG_90": 6.9,
       "xA_90": 14.7,
-      "xGChain_90": 15.3,
-      "xGBuildup_90": 30.8
+      "xGChain_90": 14.7,
+      "xGBuildup_90": 30.3
     }
   },
   {
@@ -6768,8 +6796,8 @@
     "xGChain_90": 0.7507,
     "xGBuildup_90": 0.6827,
     "percentiles": {
-      "npxG_90": 20.3,
-      "xG_90": 20.3,
+      "npxG_90": 19.7,
+      "xG_90": 19.7,
       "xA_90": 60.8,
       "xGChain_90": 98.1,
       "xGBuildup_90": 99.7
@@ -6796,11 +6824,11 @@
     "xGChain_90": 0.3297,
     "xGBuildup_90": 0.329,
     "percentiles": {
-      "npxG_90": 61.9,
-      "xG_90": 61.4,
+      "npxG_90": 61.4,
+      "xG_90": 60.8,
       "xA_90": 28.1,
       "xGChain_90": 54.2,
-      "xGBuildup_90": 71.4
+      "xGBuildup_90": 71.9
     }
   },
   {
@@ -6824,11 +6852,11 @@
     "xGChain_90": 0.3098,
     "xGBuildup_90": 0.2609,
     "percentiles": {
-      "npxG_90": 41.9,
-      "xG_90": 41.9,
+      "npxG_90": 41.4,
+      "xG_90": 41.4,
       "xA_90": 58.1,
       "xGChain_90": 50.3,
-      "xGBuildup_90": 51.9
+      "xGBuildup_90": 52.5
     }
   },
   {
@@ -6852,11 +6880,39 @@
     "xGChain_90": 0.0395,
     "xGBuildup_90": 0.0395,
     "percentiles": {
-      "npxG_90": 14.2,
-      "xG_90": 14.2,
-      "xA_90": 96.4,
+      "npxG_90": 13.6,
+      "xG_90": 13.6,
+      "xA_90": 95.8,
       "xGChain_90": 1.9,
       "xGBuildup_90": 3.1
+    }
+  },
+  {
+    "player_name": "Rachid Ghezzal",
+    "player_id": "3276",
+    "team": "Lyon",
+    "position_raw": "F M S",
+    "position_group": "attaquants",
+    "minutes": 211,
+    "games": 10,
+    "goals": 0,
+    "assists": 0,
+    "npxG": 0.23862712271511555,
+    "xG": 0.23862712271511555,
+    "xA": 0.021294433623552322,
+    "xGChain": 0.8847337290644646,
+    "xGBuildup": 0.7071213498711586,
+    "npxG_90": 0.1018,
+    "xG_90": 0.1018,
+    "xA_90": 0.0091,
+    "xGChain_90": 0.3774,
+    "xGBuildup_90": 0.3016,
+    "percentiles": {
+      "npxG_90": 10.6,
+      "xG_90": 9.6,
+      "xA_90": 2.8,
+      "xGChain_90": 24.3,
+      "xGBuildup_90": 83.9
     }
   },
   {
@@ -6880,11 +6936,11 @@
     "xGChain_90": 0.1564,
     "xGBuildup_90": 0.1102,
     "percentiles": {
-      "npxG_90": 15.8,
-      "xG_90": 15.8,
-      "xA_90": 56.6,
+      "npxG_90": 15.7,
+      "xG_90": 15.7,
+      "xA_90": 57.1,
       "xGChain_90": 6.6,
-      "xGBuildup_90": 15.8
+      "xGBuildup_90": 15.7
     }
   },
   {
@@ -6908,8 +6964,8 @@
     "xGChain_90": 0.521,
     "xGBuildup_90": 0.5172,
     "percentiles": {
-      "npxG_90": 4.4,
-      "xG_90": 4.4,
+      "npxG_90": 3.9,
+      "xG_90": 3.9,
       "xA_90": 11.9,
       "xGChain_90": 83.6,
       "xGBuildup_90": 92.5
@@ -6936,9 +6992,9 @@
     "xGChain_90": 1.2598,
     "xGBuildup_90": 0.8243,
     "percentiles": {
-      "npxG_90": 84.2,
-      "xG_90": 83.2,
-      "xA_90": 95.4,
+      "npxG_90": 84.3,
+      "xG_90": 83.3,
+      "xA_90": 95.5,
       "xGChain_90": 99.5,
       "xGBuildup_90": 99.5
     }
@@ -6966,9 +7022,9 @@
     "percentiles": {
       "npxG_90": 99.2,
       "xG_90": 98.1,
-      "xA_90": 70.8,
+      "xA_90": 70.3,
       "xGChain_90": 82.5,
-      "xGBuildup_90": 44.7
+      "xGBuildup_90": 44.2
     }
   },
   {
@@ -6992,10 +7048,10 @@
     "xGChain_90": 0.1133,
     "xGBuildup_90": 0.0146,
     "percentiles": {
-      "npxG_90": 33.2,
-      "xG_90": 30.1,
-      "xA_90": 36.2,
-      "xGChain_90": 3.6,
+      "npxG_90": 32.8,
+      "xG_90": 29.8,
+      "xA_90": 36.9,
+      "xGChain_90": 3.5,
       "xGBuildup_90": 0.5
     }
   },
@@ -7020,11 +7076,11 @@
     "xGChain_90": 0.2613,
     "xGBuildup_90": 0.095,
     "percentiles": {
-      "npxG_90": 58.7,
-      "xG_90": 55.6,
-      "xA_90": 42.3,
-      "xGChain_90": 20.9,
-      "xGBuildup_90": 11.7
+      "npxG_90": 59.1,
+      "xG_90": 56.1,
+      "xA_90": 42.9,
+      "xGChain_90": 20.7,
+      "xGBuildup_90": 11.6
     }
   },
   {
@@ -7048,11 +7104,11 @@
     "xGChain_90": 0.3226,
     "xGBuildup_90": 0.1996,
     "percentiles": {
-      "npxG_90": 23.0,
-      "xG_90": 19.9,
-      "xA_90": 43.4,
-      "xGChain_90": 35.2,
-      "xGBuildup_90": 34.2
+      "npxG_90": 22.7,
+      "xG_90": 19.7,
+      "xA_90": 43.9,
+      "xGChain_90": 34.8,
+      "xGBuildup_90": 32.8
     }
   },
   {
@@ -7076,11 +7132,11 @@
     "xGChain_90": 0.6938,
     "xGBuildup_90": 0.5173,
     "percentiles": {
-      "npxG_90": 31.1,
-      "xG_90": 28.1,
-      "xA_90": 87.2,
-      "xGChain_90": 78.1,
-      "xGBuildup_90": 91.3
+      "npxG_90": 30.8,
+      "xG_90": 27.8,
+      "xA_90": 87.4,
+      "xGChain_90": 78.3,
+      "xGBuildup_90": 91.4
     }
   },
   {
@@ -7104,10 +7160,10 @@
     "xGChain_90": 0.1928,
     "xGBuildup_90": 0.1395,
     "percentiles": {
-      "npxG_90": 18.6,
-      "xG_90": 18.6,
+      "npxG_90": 18.1,
+      "xG_90": 18.1,
       "xA_90": 52.5,
-      "xGChain_90": 22.5,
+      "xGChain_90": 21.9,
       "xGBuildup_90": 25.3
     }
   },
@@ -7132,11 +7188,11 @@
     "xGChain_90": 0.3618,
     "xGBuildup_90": 0.333,
     "percentiles": {
-      "npxG_90": 45.8,
-      "xG_90": 45.8,
+      "npxG_90": 45.3,
+      "xG_90": 45.3,
       "xA_90": 13.6,
       "xGChain_90": 59.2,
-      "xGBuildup_90": 71.9
+      "xGBuildup_90": 72.5
     }
   },
   {
@@ -7160,8 +7216,8 @@
     "xGChain_90": 0.2404,
     "xGBuildup_90": 0.2302,
     "percentiles": {
-      "npxG_90": 12.5,
-      "xG_90": 12.5,
+      "npxG_90": 11.9,
+      "xG_90": 11.9,
       "xA_90": 86.9,
       "xGChain_90": 33.1,
       "xGBuildup_90": 45.8
@@ -7188,11 +7244,11 @@
     "xGChain_90": 0.4198,
     "xGBuildup_90": 0.4028,
     "percentiles": {
-      "npxG_90": 49.7,
-      "xG_90": 49.7,
+      "npxG_90": 49.2,
+      "xG_90": 49.2,
       "xA_90": 25.8,
       "xGChain_90": 70.8,
-      "xGBuildup_90": 86.9
+      "xGBuildup_90": 86.4
     }
   },
   {
@@ -7216,9 +7272,9 @@
     "xGChain_90": 0.3484,
     "xGBuildup_90": 0.3119,
     "percentiles": {
-      "npxG_90": 10.3,
-      "xG_90": 10.3,
-      "xA_90": 68.6,
+      "npxG_90": 9.7,
+      "xG_90": 9.7,
+      "xA_90": 68.1,
       "xGChain_90": 57.5,
       "xGBuildup_90": 65.8
     }
@@ -7244,8 +7300,8 @@
     "xGChain_90": 0.1044,
     "xGBuildup_90": 0.0756,
     "percentiles": {
-      "npxG_90": 31.7,
-      "xG_90": 31.7,
+      "npxG_90": 31.1,
+      "xG_90": 31.1,
       "xA_90": 71.9,
       "xGChain_90": 4.7,
       "xGBuildup_90": 6.4
@@ -7272,11 +7328,11 @@
     "xGChain_90": 0.4246,
     "xGBuildup_90": 0.1042,
     "percentiles": {
-      "npxG_90": 60.7,
-      "xG_90": 57.7,
-      "xA_90": 81.1,
-      "xGChain_90": 51.5,
-      "xGBuildup_90": 13.8
+      "npxG_90": 61.1,
+      "xG_90": 58.1,
+      "xA_90": 81.3,
+      "xGChain_90": 51.0,
+      "xGBuildup_90": 13.6
     }
   },
   {
@@ -7300,8 +7356,8 @@
     "xGChain_90": 0.3079,
     "xGBuildup_90": 0.2372,
     "percentiles": {
-      "npxG_90": 9.7,
-      "xG_90": 9.7,
+      "npxG_90": 9.2,
+      "xG_90": 9.2,
       "xA_90": 76.4,
       "xGChain_90": 49.2,
       "xGBuildup_90": 47.5
@@ -7313,26 +7369,26 @@
     "team": "Lyon",
     "position_raw": "D S",
     "position_group": "défenseurs",
-    "minutes": 2210,
-    "games": 26,
+    "minutes": 2300,
+    "games": 27,
     "goals": 0,
     "assists": 2,
     "npxG": 0.17097577545791864,
     "xG": 0.17097577545791864,
-    "xA": 0.7531700320541859,
-    "xGChain": 10.298291044309735,
-    "xGBuildup": 9.76381694059819,
-    "npxG_90": 0.007,
-    "xG_90": 0.007,
-    "xA_90": 0.0307,
-    "xGChain_90": 0.4194,
-    "xGBuildup_90": 0.3976,
+    "xA": 0.7685293406248093,
+    "xGChain": 10.87407578714192,
+    "xGBuildup": 10.339601683430374,
+    "npxG_90": 0.0067,
+    "xG_90": 0.0067,
+    "xA_90": 0.0301,
+    "xGChain_90": 0.4255,
+    "xGBuildup_90": 0.4046,
     "percentiles": {
-      "npxG_90": 8.3,
-      "xG_90": 8.3,
-      "xA_90": 38.1,
-      "xGChain_90": 70.3,
-      "xGBuildup_90": 85.3
+      "npxG_90": 7.5,
+      "xG_90": 7.5,
+      "xA_90": 36.4,
+      "xGChain_90": 74.2,
+      "xGBuildup_90": 86.9
     }
   },
   {
@@ -7356,11 +7412,39 @@
     "xGChain_90": 0.1082,
     "xGBuildup_90": 0.0863,
     "percentiles": {
-      "npxG_90": 39.7,
-      "xG_90": 39.7,
+      "npxG_90": 39.2,
+      "xG_90": 39.2,
       "xA_90": 31.7,
       "xGChain_90": 5.8,
       "xGBuildup_90": 8.1
+    }
+  },
+  {
+    "player_name": "Orel Mangala",
+    "player_id": "6088",
+    "team": "Lyon",
+    "position_raw": "M S",
+    "position_group": "milieux",
+    "minutes": 218,
+    "games": 6,
+    "goals": 0,
+    "assists": 0,
+    "npxG": 0.18205954506993294,
+    "xG": 0.18205954506993294,
+    "xA": 0.124705845490098,
+    "xGChain": 1.2231862097978592,
+    "xGBuildup": 0.9502378702163696,
+    "npxG_90": 0.0752,
+    "xG_90": 0.0752,
+    "xA_90": 0.0515,
+    "xGChain_90": 0.505,
+    "xGBuildup_90": 0.3923,
+    "percentiles": {
+      "npxG_90": 41.9,
+      "xG_90": 38.9,
+      "xA_90": 32.8,
+      "xGChain_90": 61.1,
+      "xGBuildup_90": 75.3
     }
   },
   {
@@ -7386,9 +7470,9 @@
     "percentiles": {
       "npxG_90": 1.5,
       "xG_90": 1.5,
-      "xA_90": 26.0,
-      "xGChain_90": 11.7,
-      "xGBuildup_90": 32.1
+      "xA_90": 25.8,
+      "xGChain_90": 11.6,
+      "xGBuildup_90": 30.8
     }
   },
   {
@@ -7414,9 +7498,9 @@
     "percentiles": {
       "npxG_90": 6.9,
       "xG_90": 6.0,
-      "xA_90": 69.9,
+      "xA_90": 70.2,
       "xGChain_90": 0.5,
-      "xGBuildup_90": 12.5
+      "xGBuildup_90": 12.4
     }
   },
   {
@@ -7440,8 +7524,8 @@
     "xGChain_90": 0.2494,
     "xGBuildup_90": 0.2351,
     "percentiles": {
-      "npxG_90": 25.3,
-      "xG_90": 25.3,
+      "npxG_90": 24.2,
+      "xG_90": 24.2,
       "xA_90": 35.8,
       "xGChain_90": 35.3,
       "xGBuildup_90": 46.4
@@ -7468,11 +7552,11 @@
     "xGChain_90": 0.2916,
     "xGBuildup_90": 0.2823,
     "percentiles": {
-      "npxG_90": 10.8,
-      "xG_90": 10.8,
-      "xA_90": 3.3,
+      "npxG_90": 10.3,
+      "xG_90": 10.3,
+      "xA_90": 3.1,
       "xGChain_90": 45.6,
-      "xGBuildup_90": 59.2
+      "xGBuildup_90": 58.6
     }
   },
   {
@@ -7496,8 +7580,8 @@
     "xGChain_90": 0.3097,
     "xGBuildup_90": 0.3044,
     "percentiles": {
-      "npxG_90": 13.6,
-      "xG_90": 13.6,
+      "npxG_90": 13.1,
+      "xG_90": 13.1,
       "xA_90": 18.9,
       "xGChain_90": 49.7,
       "xGBuildup_90": 64.2
@@ -7525,9 +7609,9 @@
     "xGBuildup_90": 0.5563,
     "percentiles": {
       "npxG_90": 67.5,
-      "xG_90": 66.9,
+      "xG_90": 66.4,
       "xA_90": 21.9,
-      "xGChain_90": 86.9,
+      "xGChain_90": 86.4,
       "xGBuildup_90": 94.7
     }
   },
@@ -7554,9 +7638,9 @@
     "percentiles": {
       "npxG_90": 3.2,
       "xG_90": 3.2,
-      "xA_90": 44.0,
-      "xGChain_90": 4.2,
-      "xGBuildup_90": 31.9
+      "xA_90": 44.5,
+      "xGChain_90": 4.1,
+      "xGBuildup_90": 30.7
     }
   },
   {
@@ -7580,11 +7664,11 @@
     "xGChain_90": 0.2308,
     "xGBuildup_90": 0.2121,
     "percentiles": {
-      "npxG_90": 3.6,
-      "xG_90": 3.6,
-      "xA_90": 12.8,
-      "xGChain_90": 15.8,
-      "xGBuildup_90": 39.3
+      "npxG_90": 3.5,
+      "xG_90": 3.5,
+      "xA_90": 12.6,
+      "xGChain_90": 15.7,
+      "xGBuildup_90": 38.9
     }
   },
   {
@@ -7608,11 +7692,11 @@
     "xGChain_90": 0.2325,
     "xGBuildup_90": 0.2006,
     "percentiles": {
-      "npxG_90": 36.4,
-      "xG_90": 36.4,
+      "npxG_90": 35.8,
+      "xG_90": 35.8,
       "xA_90": 64.2,
       "xGChain_90": 32.5,
-      "xGBuildup_90": 38.6
+      "xGBuildup_90": 38.1
     }
   },
   {
@@ -7636,8 +7720,8 @@
     "xGChain_90": 0.2526,
     "xGBuildup_90": 0.2388,
     "percentiles": {
-      "npxG_90": 43.6,
-      "xG_90": 43.6,
+      "npxG_90": 43.1,
+      "xG_90": 43.1,
       "xA_90": 73.6,
       "xGChain_90": 36.4,
       "xGBuildup_90": 48.6
@@ -7664,11 +7748,11 @@
     "xGChain_90": 0.1697,
     "xGBuildup_90": 0.1472,
     "percentiles": {
-      "npxG_90": 8.7,
-      "xG_90": 8.7,
-      "xA_90": 7.7,
-      "xGChain_90": 7.7,
-      "xGBuildup_90": 21.9
+      "npxG_90": 8.6,
+      "xG_90": 8.6,
+      "xA_90": 7.6,
+      "xGChain_90": 7.6,
+      "xGBuildup_90": 21.7
     }
   },
   {
@@ -7692,9 +7776,9 @@
     "xGChain_90": 0.3125,
     "xGBuildup_90": 0.3125,
     "percentiles": {
-      "npxG_90": 57.5,
-      "xG_90": 57.5,
-      "xA_90": 3.3,
+      "npxG_90": 56.9,
+      "xG_90": 56.9,
+      "xA_90": 3.1,
       "xGChain_90": 50.8,
       "xGBuildup_90": 66.4
     }
@@ -7720,11 +7804,11 @@
     "xGChain_90": 0.3853,
     "xGBuildup_90": 0.3749,
     "percentiles": {
-      "npxG_90": 19.2,
-      "xG_90": 19.2,
-      "xA_90": 36.9,
+      "npxG_90": 18.6,
+      "xG_90": 18.6,
+      "xA_90": 37.5,
       "xGChain_90": 63.6,
-      "xGBuildup_90": 78.6
+      "xGBuildup_90": 79.2
     }
   },
   {
@@ -7748,8 +7832,8 @@
     "xGChain_90": 0.6431,
     "xGBuildup_90": 0.6351,
     "percentiles": {
-      "npxG_90": 46.4,
-      "xG_90": 46.4,
+      "npxG_90": 45.8,
+      "xG_90": 45.8,
       "xA_90": 74.2,
       "xGChain_90": 94.2,
       "xGBuildup_90": 98.1
@@ -7776,11 +7860,11 @@
     "xGChain_90": 0.3415,
     "xGBuildup_90": 0.3262,
     "percentiles": {
-      "npxG_90": 44.2,
-      "xG_90": 44.2,
+      "npxG_90": 43.6,
+      "xG_90": 43.6,
       "xA_90": 42.5,
       "xGChain_90": 55.8,
-      "xGBuildup_90": 70.8
+      "xGBuildup_90": 71.4
     }
   },
   {
@@ -7804,10 +7888,10 @@
     "xGChain_90": 0.3375,
     "xGBuildup_90": 0.0509,
     "percentiles": {
-      "npxG_90": 16.2,
-      "xG_90": 14.4,
-      "xA_90": 64.4,
-      "xGChain_90": 19.0,
+      "npxG_90": 17.0,
+      "xG_90": 15.1,
+      "xA_90": 65.6,
+      "xGChain_90": 18.8,
       "xGBuildup_90": 10.6
     }
   },
@@ -7832,10 +7916,10 @@
     "xGChain_90": 0.1202,
     "xGBuildup_90": 0.1052,
     "percentiles": {
-      "npxG_90": 69.4,
-      "xG_90": 68.6,
+      "npxG_90": 69.2,
+      "xG_90": 68.1,
       "xA_90": 17.5,
-      "xGChain_90": 9.2,
+      "xGChain_90": 8.6,
       "xGBuildup_90": 10.3
     }
   },
@@ -7860,11 +7944,11 @@
     "xGChain_90": 0.4589,
     "xGBuildup_90": 0.1434,
     "percentiles": {
-      "npxG_90": 80.1,
-      "xG_90": 70.8,
-      "xA_90": 3.2,
-      "xGChain_90": 39.4,
-      "xGBuildup_90": 38.0
+      "npxG_90": 79.4,
+      "xG_90": 70.2,
+      "xA_90": 4.1,
+      "xGChain_90": 39.9,
+      "xGBuildup_90": 38.1
     }
   },
   {
@@ -7888,11 +7972,11 @@
     "xGChain_90": 0.2889,
     "xGBuildup_90": 0.1179,
     "percentiles": {
-      "npxG_90": 21.8,
-      "xG_90": 18.1,
-      "xA_90": 11.6,
-      "xGChain_90": 11.6,
-      "xGBuildup_90": 30.1
+      "npxG_90": 22.5,
+      "xG_90": 18.8,
+      "xA_90": 12.4,
+      "xGChain_90": 11.5,
+      "xGBuildup_90": 28.9
     }
   },
   {
@@ -7916,9 +8000,9 @@
     "xGChain_90": 0.1488,
     "xGBuildup_90": 0.0356,
     "percentiles": {
-      "npxG_90": 12.5,
-      "xG_90": 10.6,
-      "xA_90": 56.0,
+      "npxG_90": 13.3,
+      "xG_90": 11.5,
+      "xA_90": 56.4,
       "xGChain_90": 3.2,
       "xGBuildup_90": 2.3
     }
@@ -7944,11 +8028,11 @@
     "xGChain_90": 0.2021,
     "xGBuildup_90": 0.0463,
     "percentiles": {
-      "npxG_90": 38.3,
-      "xG_90": 36.2,
-      "xA_90": 46.4,
-      "xGChain_90": 10.7,
-      "xGBuildup_90": 3.6
+      "npxG_90": 37.9,
+      "xG_90": 35.9,
+      "xA_90": 47.0,
+      "xGChain_90": 10.6,
+      "xGBuildup_90": 3.5
     }
   },
   {
@@ -7972,8 +8056,8 @@
     "xGChain_90": 0.4404,
     "xGBuildup_90": 0.3088,
     "percentiles": {
-      "npxG_90": 39.2,
-      "xG_90": 39.2,
+      "npxG_90": 38.6,
+      "xG_90": 38.6,
       "xA_90": 91.4,
       "xGChain_90": 75.8,
       "xGBuildup_90": 64.7
@@ -8000,11 +8084,11 @@
     "xGChain_90": 0.2635,
     "xGBuildup_90": 0.2619,
     "percentiles": {
-      "npxG_90": 21.9,
-      "xG_90": 21.9,
+      "npxG_90": 21.4,
+      "xG_90": 21.4,
       "xA_90": 30.3,
-      "xGChain_90": 38.3,
-      "xGBuildup_90": 52.5
+      "xGChain_90": 37.8,
+      "xGBuildup_90": 53.1
     }
   },
   {
@@ -8028,11 +8112,11 @@
     "xGChain_90": 0.2762,
     "xGBuildup_90": 0.1497,
     "percentiles": {
-      "npxG_90": 70.3,
-      "xG_90": 69.2,
+      "npxG_90": 69.7,
+      "xG_90": 68.6,
       "xA_90": 47.5,
       "xGChain_90": 41.4,
-      "xGBuildup_90": 30.3
+      "xGBuildup_90": 29.7
     }
   },
   {
@@ -8059,8 +8143,8 @@
       "npxG_90": 0.5,
       "xG_90": 0.5,
       "xA_90": 1.5,
-      "xGChain_90": 12.8,
-      "xGBuildup_90": 41.3
+      "xGChain_90": 12.6,
+      "xGBuildup_90": 40.9
     }
   },
   {
@@ -8084,10 +8168,10 @@
     "xGChain_90": 0.4251,
     "xGBuildup_90": 0.4185,
     "percentiles": {
-      "npxG_90": 6.9,
-      "xG_90": 6.9,
+      "npxG_90": 6.4,
+      "xG_90": 6.4,
       "xA_90": 72.5,
-      "xGChain_90": 74.2,
+      "xGChain_90": 73.6,
       "xGBuildup_90": 89.2
     }
   },
@@ -8112,9 +8196,9 @@
     "xGChain_90": 0.2783,
     "xGBuildup_90": 0.2551,
     "percentiles": {
-      "npxG_90": 6.4,
-      "xG_90": 6.4,
-      "xA_90": 69.2,
+      "npxG_90": 5.8,
+      "xG_90": 5.8,
+      "xA_90": 68.6,
       "xGChain_90": 41.9,
       "xGBuildup_90": 49.7
     }
@@ -8140,8 +8224,8 @@
     "xGChain_90": 1.1286,
     "xGBuildup_90": 0.7794,
     "percentiles": {
-      "npxG_90": 36.2,
-      "xG_90": 33.2,
+      "npxG_90": 35.9,
+      "xG_90": 32.8,
       "xA_90": 93.4,
       "xGChain_90": 98.5,
       "xGBuildup_90": 98.5
@@ -8153,26 +8237,26 @@
     "team": "Lorient",
     "position_raw": "D S",
     "position_group": "défenseurs",
-    "minutes": 1695,
-    "games": 21,
+    "minutes": 1785,
+    "games": 22,
     "goals": 0,
     "assists": 3,
-    "npxG": 0.7919618664309382,
-    "xG": 0.7919618664309382,
+    "npxG": 0.804156918078661,
+    "xG": 0.804156918078661,
     "xA": 1.2407074691727757,
     "xGChain": 3.089598447084427,
     "xGBuildup": 2.6556347273290157,
-    "npxG_90": 0.0421,
-    "xG_90": 0.0421,
-    "xA_90": 0.0659,
-    "xGChain_90": 0.164,
-    "xGBuildup_90": 0.141,
+    "npxG_90": 0.0405,
+    "xG_90": 0.0405,
+    "xA_90": 0.0626,
+    "xGChain_90": 0.1558,
+    "xGBuildup_90": 0.1339,
     "percentiles": {
-      "npxG_90": 47.5,
-      "xG_90": 47.5,
-      "xA_90": 56.4,
-      "xGChain_90": 16.9,
-      "xGBuildup_90": 26.4
+      "npxG_90": 46.9,
+      "xG_90": 46.9,
+      "xA_90": 54.2,
+      "xGChain_90": 15.8,
+      "xGBuildup_90": 21.4
     }
   },
   {
@@ -8196,11 +8280,11 @@
     "xGChain_90": 0.1663,
     "xGBuildup_90": 0.1435,
     "percentiles": {
-      "npxG_90": 3.6,
-      "xG_90": 3.6,
+      "npxG_90": 3.1,
+      "xG_90": 3.1,
       "xA_90": 49.2,
-      "xGChain_90": 18.1,
-      "xGBuildup_90": 27.5
+      "xGChain_90": 17.5,
+      "xGBuildup_90": 26.9
     }
   },
   {
@@ -8224,9 +8308,9 @@
     "xGChain_90": 0.3891,
     "xGBuildup_90": 0.3891,
     "percentiles": {
-      "npxG_90": 37.2,
-      "xG_90": 37.2,
-      "xA_90": 3.3,
+      "npxG_90": 36.7,
+      "xG_90": 36.7,
+      "xA_90": 3.1,
       "xGChain_90": 64.7,
       "xGBuildup_90": 83.1
     }
@@ -8252,8 +8336,8 @@
     "xGChain_90": 0.2211,
     "xGBuildup_90": 0.2119,
     "percentiles": {
-      "npxG_90": 31.7,
-      "xG_90": 31.7,
+      "npxG_90": 31.1,
+      "xG_90": 31.1,
       "xA_90": 39.7,
       "xGChain_90": 30.8,
       "xGBuildup_90": 40.3
@@ -8280,11 +8364,11 @@
     "xGChain_90": 0.5237,
     "xGBuildup_90": 0.2199,
     "percentiles": {
-      "npxG_90": 19.0,
-      "xG_90": 16.2,
-      "xA_90": 71.8,
-      "xGChain_90": 53.2,
-      "xGBuildup_90": 73.6
+      "npxG_90": 19.7,
+      "xG_90": 17.0,
+      "xA_90": 72.0,
+      "xGChain_90": 52.8,
+      "xGBuildup_90": 72.9
     }
   },
   {
@@ -8308,8 +8392,8 @@
     "xGChain_90": 0.2061,
     "xGBuildup_90": 0.2061,
     "percentiles": {
-      "npxG_90": 35.3,
-      "xG_90": 35.3,
+      "npxG_90": 34.7,
+      "xG_90": 34.7,
       "xA_90": 43.1,
       "xGChain_90": 27.5,
       "xGBuildup_90": 39.2
@@ -8336,8 +8420,8 @@
     "xGChain_90": 0.2932,
     "xGBuildup_90": 0.2203,
     "percentiles": {
-      "npxG_90": 1.7,
-      "xG_90": 1.7,
+      "npxG_90": 1.4,
+      "xG_90": 1.4,
       "xA_90": 60.3,
       "xGChain_90": 46.9,
       "xGBuildup_90": 42.2
@@ -8364,11 +8448,11 @@
     "xGChain_90": 0.201,
     "xGBuildup_90": 0.122,
     "percentiles": {
-      "npxG_90": 46.9,
-      "xG_90": 46.9,
-      "xA_90": 54.4,
+      "npxG_90": 46.4,
+      "xG_90": 46.4,
+      "xA_90": 55.0,
       "xGChain_90": 25.8,
-      "xGBuildup_90": 17.5
+      "xGBuildup_90": 16.9
     }
   },
   {
@@ -8392,8 +8476,8 @@
     "xGChain_90": 0.4847,
     "xGBuildup_90": 0.39,
     "percentiles": {
-      "npxG_90": 28.6,
-      "xG_90": 28.6,
+      "npxG_90": 28.1,
+      "xG_90": 28.1,
       "xA_90": 93.1,
       "xGChain_90": 80.8,
       "xGBuildup_90": 83.6
@@ -8420,11 +8504,11 @@
     "xGChain_90": 0.3478,
     "xGBuildup_90": 0.339,
     "percentiles": {
-      "npxG_90": 33.3,
-      "xG_90": 33.3,
+      "npxG_90": 32.8,
+      "xG_90": 32.8,
       "xA_90": 40.3,
       "xGChain_90": 56.9,
-      "xGBuildup_90": 73.1
+      "xGBuildup_90": 73.6
     }
   },
   {
@@ -8448,11 +8532,11 @@
     "xGChain_90": 0.2837,
     "xGBuildup_90": 0.2837,
     "percentiles": {
-      "npxG_90": 30.3,
-      "xG_90": 30.3,
-      "xA_90": 7.5,
+      "npxG_90": 29.7,
+      "xG_90": 29.7,
+      "xA_90": 6.9,
       "xGChain_90": 43.1,
-      "xGBuildup_90": 59.7
+      "xGBuildup_90": 59.2
     }
   },
   {
@@ -8480,7 +8564,7 @@
       "xG_90": 86.9,
       "xA_90": 84.7,
       "xGChain_90": 79.2,
-      "xGBuildup_90": 61.4
+      "xGBuildup_90": 60.8
     }
   },
   {
@@ -8506,9 +8590,9 @@
     "percentiles": {
       "npxG_90": 1.4,
       "xG_90": 1.4,
-      "xA_90": 18.1,
+      "xA_90": 18.8,
       "xGChain_90": 6.0,
-      "xGBuildup_90": 59.7
+      "xGBuildup_90": 59.2
     }
   },
   {
@@ -8532,11 +8616,11 @@
     "xGChain_90": 0.3358,
     "xGBuildup_90": 0.2456,
     "percentiles": {
-      "npxG_90": 18.9,
-      "xG_90": 17.9,
-      "xA_90": 65.8,
-      "xGChain_90": 37.2,
-      "xGBuildup_90": 46.4
+      "npxG_90": 18.7,
+      "xG_90": 17.7,
+      "xA_90": 66.2,
+      "xGChain_90": 36.9,
+      "xGBuildup_90": 46.0
     }
   },
   {
@@ -8560,9 +8644,9 @@
     "xGChain_90": 0.6204,
     "xGBuildup_90": 0.6204,
     "percentiles": {
-      "npxG_90": 49.2,
-      "xG_90": 49.2,
-      "xA_90": 3.3,
+      "npxG_90": 48.6,
+      "xG_90": 48.6,
+      "xA_90": 3.1,
       "xGChain_90": 93.1,
       "xGBuildup_90": 97.5
     }
@@ -8573,26 +8657,26 @@
     "team": "Lorient",
     "position_raw": "D S",
     "position_group": "défenseurs",
-    "minutes": 1170,
-    "games": 20,
+    "minutes": 1185,
+    "games": 21,
     "goals": 0,
     "assists": 1,
     "npxG": 0.7409866116940975,
     "xG": 0.7409866116940975,
-    "xA": 1.783777967095375,
-    "xGChain": 3.492740500718355,
+    "xA": 1.8582680821418762,
+    "xGChain": 3.5672306157648563,
     "xGBuildup": 1.5042753145098686,
-    "npxG_90": 0.057,
-    "xG_90": 0.057,
-    "xA_90": 0.1372,
-    "xGChain_90": 0.2687,
-    "xGBuildup_90": 0.1157,
+    "npxG_90": 0.0563,
+    "xG_90": 0.0563,
+    "xA_90": 0.1411,
+    "xGChain_90": 0.2709,
+    "xGBuildup_90": 0.1142,
     "percentiles": {
-      "npxG_90": 56.4,
-      "xG_90": 56.4,
-      "xA_90": 81.9,
-      "xGChain_90": 40.3,
-      "xGBuildup_90": 13.1
+      "npxG_90": 54.7,
+      "xG_90": 54.7,
+      "xA_90": 82.5,
+      "xGChain_90": 39.7,
+      "xGBuildup_90": 12.5
     }
   },
   {
@@ -8616,11 +8700,11 @@
     "xGChain_90": 0.1162,
     "xGBuildup_90": 0.1162,
     "percentiles": {
-      "npxG_90": 26.4,
-      "xG_90": 26.4,
-      "xA_90": 8.9,
-      "xGChain_90": 8.1,
-      "xGBuildup_90": 14.2
+      "npxG_90": 25.8,
+      "xG_90": 25.8,
+      "xA_90": 8.3,
+      "xGChain_90": 7.5,
+      "xGBuildup_90": 13.6
     }
   },
   {
@@ -8644,11 +8728,11 @@
     "xGChain_90": 0.3394,
     "xGBuildup_90": 0.2729,
     "percentiles": {
-      "npxG_90": 42.5,
-      "xG_90": 42.5,
-      "xA_90": 36.4,
+      "npxG_90": 41.9,
+      "xG_90": 41.9,
+      "xA_90": 36.9,
       "xGChain_90": 55.3,
-      "xGBuildup_90": 56.9
+      "xGBuildup_90": 56.4
     }
   },
   {
@@ -8672,11 +8756,11 @@
     "xGChain_90": 0.3274,
     "xGBuildup_90": 0.3246,
     "percentiles": {
-      "npxG_90": 5.3,
-      "xG_90": 5.3,
+      "npxG_90": 4.7,
+      "xG_90": 4.7,
       "xA_90": 10.3,
       "xGChain_90": 53.6,
-      "xGBuildup_90": 69.2
+      "xGBuildup_90": 69.7
     }
   },
   {
@@ -8730,9 +8814,9 @@
     "percentiles": {
       "npxG_90": 0.5,
       "xG_90": 0.5,
-      "xA_90": 28.2,
+      "xA_90": 28.9,
       "xGChain_90": 1.4,
-      "xGBuildup_90": 7.4
+      "xGBuildup_90": 7.3
     }
   },
   {
@@ -8756,11 +8840,11 @@
     "xGChain_90": 0.376,
     "xGBuildup_90": 0.366,
     "percentiles": {
-      "npxG_90": 48.1,
-      "xG_90": 48.1,
-      "xA_90": 37.5,
+      "npxG_90": 47.5,
+      "xG_90": 47.5,
+      "xA_90": 38.1,
       "xGChain_90": 60.3,
-      "xGBuildup_90": 75.8
+      "xGBuildup_90": 76.4
     }
   },
   {
@@ -8784,9 +8868,9 @@
     "xGChain_90": 0.4385,
     "xGBuildup_90": 0.3771,
     "percentiles": {
-      "npxG_90": 58.3,
-      "xG_90": 58.3,
-      "xA_90": 68.1,
+      "npxG_90": 57.8,
+      "xG_90": 57.8,
+      "xA_90": 67.5,
       "xGChain_90": 75.3,
       "xGBuildup_90": 79.7
     }
@@ -8812,11 +8896,11 @@
     "xGChain_90": 0.1659,
     "xGBuildup_90": 0.127,
     "percentiles": {
-      "npxG_90": 29.2,
-      "xG_90": 29.2,
-      "xA_90": 55.8,
-      "xGChain_90": 17.5,
-      "xGBuildup_90": 20.3
+      "npxG_90": 28.6,
+      "xG_90": 28.6,
+      "xA_90": 56.4,
+      "xGChain_90": 16.9,
+      "xGBuildup_90": 19.7
     }
   },
   {
@@ -8840,8 +8924,8 @@
     "xGChain_90": 0.0235,
     "xGBuildup_90": 0.0134,
     "percentiles": {
-      "npxG_90": 1.7,
-      "xG_90": 1.7,
+      "npxG_90": 1.4,
+      "xG_90": 1.4,
       "xA_90": 20.3,
       "xGChain_90": 0.8,
       "xGBuildup_90": 1.4
@@ -8868,10 +8952,10 @@
     "xGChain_90": 0.146,
     "xGBuildup_90": 0.1392,
     "percentiles": {
-      "npxG_90": 14.7,
-      "xG_90": 14.7,
+      "npxG_90": 14.2,
+      "xG_90": 14.2,
       "xA_90": 20.8,
-      "xGChain_90": 13.1,
+      "xGChain_90": 12.5,
       "xGBuildup_90": 24.2
     }
   },
@@ -8896,11 +8980,11 @@
     "xGChain_90": 0.5806,
     "xGBuildup_90": 0.428,
     "percentiles": {
-      "npxG_90": 35.2,
-      "xG_90": 32.1,
-      "xA_90": 86.2,
-      "xGChain_90": 66.8,
-      "xGBuildup_90": 81.1
+      "npxG_90": 34.8,
+      "xG_90": 31.8,
+      "xA_90": 86.4,
+      "xGChain_90": 67.2,
+      "xGBuildup_90": 81.3
     }
   },
   {
@@ -8924,11 +9008,11 @@
     "xGChain_90": 0.0825,
     "xGBuildup_90": 0.0443,
     "percentiles": {
-      "npxG_90": 13.8,
-      "xG_90": 13.8,
-      "xA_90": 28.1,
+      "npxG_90": 13.6,
+      "xG_90": 13.6,
+      "xA_90": 27.8,
       "xGChain_90": 1.5,
-      "xGBuildup_90": 2.6
+      "xGBuildup_90": 2.5
     }
   },
   {
@@ -8937,26 +9021,26 @@
     "team": "Lyon",
     "position_raw": "D",
     "position_group": "défenseurs",
-    "minutes": 2305,
-    "games": 26,
+    "minutes": 2395,
+    "games": 27,
     "goals": 0,
     "assists": 0,
     "npxG": 0.12493745237588882,
     "xG": 0.12493745237588882,
     "xA": 0.0863934475928545,
-    "xGChain": 9.699296304956079,
-    "xGBuildup": 9.628173539415002,
-    "npxG_90": 0.0049,
-    "xG_90": 0.0049,
-    "xA_90": 0.0034,
-    "xGChain_90": 0.3787,
-    "xGBuildup_90": 0.3759,
+    "xGChain": 10.326482782140374,
+    "xGBuildup": 10.255360016599298,
+    "npxG_90": 0.0047,
+    "xG_90": 0.0047,
+    "xA_90": 0.0032,
+    "xGChain_90": 0.3881,
+    "xGBuildup_90": 0.3854,
     "percentiles": {
-      "npxG_90": 5.8,
-      "xG_90": 5.8,
+      "npxG_90": 5.3,
+      "xG_90": 5.3,
       "xA_90": 10.8,
-      "xGChain_90": 61.4,
-      "xGBuildup_90": 79.2
+      "xGChain_90": 64.2,
+      "xGBuildup_90": 81.4
     }
   },
   {
@@ -8980,10 +9064,10 @@
     "xGChain_90": 0.6105,
     "xGBuildup_90": 0.6058,
     "percentiles": {
-      "npxG_90": 29.7,
-      "xG_90": 29.7,
+      "npxG_90": 29.2,
+      "xG_90": 29.2,
       "xA_90": 14.2,
-      "xGChain_90": 91.9,
+      "xGChain_90": 91.4,
       "xGBuildup_90": 96.9
     }
   },
@@ -9008,11 +9092,11 @@
     "xGChain_90": 0.3198,
     "xGBuildup_90": 0.1961,
     "percentiles": {
-      "npxG_90": 28.1,
-      "xG_90": 25.0,
-      "xA_90": 74.0,
-      "xGChain_90": 33.2,
-      "xGBuildup_90": 31.1
+      "npxG_90": 26.8,
+      "xG_90": 23.7,
+      "xA_90": 74.2,
+      "xGChain_90": 32.8,
+      "xGBuildup_90": 29.8
     }
   },
   {
@@ -9044,34 +9128,6 @@
     }
   },
   {
-    "player_name": "Roman Yaremchuk",
-    "player_id": "12041",
-    "team": "Lyon",
-    "position_raw": "F S",
-    "position_group": "attaquants",
-    "minutes": 197,
-    "games": 6,
-    "goals": 0,
-    "assists": 1,
-    "npxG": 0.5218189507722855,
-    "xG": 0.5218189507722855,
-    "xA": 0.5003054514527321,
-    "xGChain": 1.1270006150007248,
-    "xGBuildup": 0.20059041678905487,
-    "npxG_90": 0.2384,
-    "xG_90": 0.2384,
-    "xA_90": 0.2286,
-    "xGChain_90": 0.5149,
-    "xGBuildup_90": 0.0916,
-    "percentiles": {
-      "npxG_90": 35.2,
-      "xG_90": 30.1,
-      "xA_90": 80.1,
-      "xGChain_90": 51.4,
-      "xGBuildup_90": 21.8
-    }
-  },
-  {
     "player_name": "Mahamadou Nagida",
     "player_id": "12159",
     "team": "Rennes",
@@ -9092,8 +9148,8 @@
     "xGChain_90": 0.3582,
     "xGBuildup_90": 0.2665,
     "percentiles": {
-      "npxG_90": 73.1,
-      "xG_90": 71.9,
+      "npxG_90": 72.5,
+      "xG_90": 71.4,
       "xA_90": 28.9,
       "xGChain_90": 58.6,
       "xGBuildup_90": 54.2
@@ -9120,11 +9176,11 @@
     "xGChain_90": 0.4534,
     "xGBuildup_90": 0.386,
     "percentiles": {
-      "npxG_90": 50.3,
-      "xG_90": 50.3,
+      "npxG_90": 49.7,
+      "xG_90": 49.7,
       "xA_90": 61.4,
       "xGChain_90": 79.7,
-      "xGBuildup_90": 81.7
+      "xGBuildup_90": 81.9
     }
   },
   {
@@ -9148,11 +9204,11 @@
     "xGChain_90": 0.6537,
     "xGBuildup_90": 0.3713,
     "percentiles": {
-      "npxG_90": 80.8,
-      "xG_90": 79.2,
+      "npxG_90": 81.4,
+      "xG_90": 80.3,
       "xA_90": 95.3,
       "xGChain_90": 94.7,
-      "xGBuildup_90": 76.9
+      "xGBuildup_90": 77.5
     }
   },
   {
@@ -9176,11 +9232,11 @@
     "xGChain_90": 0.4099,
     "xGBuildup_90": 0.3389,
     "percentiles": {
-      "npxG_90": 38.1,
-      "xG_90": 38.1,
+      "npxG_90": 37.5,
+      "xG_90": 37.5,
       "xA_90": 62.5,
-      "xGChain_90": 69.2,
-      "xGBuildup_90": 72.5
+      "xGChain_90": 69.7,
+      "xGBuildup_90": 73.1
     }
   },
   {
@@ -9204,11 +9260,11 @@
     "xGChain_90": 0.429,
     "xGBuildup_90": 0.1445,
     "percentiles": {
-      "npxG_90": 25.5,
-      "xG_90": 20.8,
-      "xA_90": 46.8,
-      "xGChain_90": 31.9,
-      "xGBuildup_90": 39.4
+      "npxG_90": 26.1,
+      "xG_90": 21.6,
+      "xA_90": 47.2,
+      "xGChain_90": 32.6,
+      "xGBuildup_90": 39.0
     }
   },
   {
@@ -9232,10 +9288,10 @@
     "xGChain_90": 0.3423,
     "xGBuildup_90": 0.049,
     "percentiles": {
-      "npxG_90": 85.2,
-      "xG_90": 84.2,
-      "xA_90": 15.8,
-      "xGChain_90": 39.3,
+      "npxG_90": 85.4,
+      "xG_90": 84.3,
+      "xA_90": 15.7,
+      "xGChain_90": 38.9,
       "xGBuildup_90": 5.6
     }
   },
@@ -9245,26 +9301,26 @@
     "team": "Lorient",
     "position_raw": "D S",
     "position_group": "défenseurs",
-    "minutes": 231,
-    "games": 10,
+    "minutes": 299,
+    "games": 11,
     "goals": 0,
     "assists": 0,
-    "npxG": 0.42672405764460564,
-    "xG": 0.42672405764460564,
-    "xA": 0.6820591390132904,
-    "xGChain": 1.442051786929369,
-    "xGBuildup": 0.9031499736011028,
-    "npxG_90": 0.1663,
-    "xG_90": 0.1663,
-    "xA_90": 0.2657,
-    "xGChain_90": 0.5618,
-    "xGBuildup_90": 0.3519,
+    "npxG": 0.4716084636747837,
+    "xG": 0.4716084636747837,
+    "xA": 1.1775008738040924,
+    "xGChain": 2.0323974080383778,
+    "xGBuildup": 0.998053889721632,
+    "npxG_90": 0.142,
+    "xG_90": 0.142,
+    "xA_90": 0.3544,
+    "xGChain_90": 0.6118,
+    "xGBuildup_90": 0.3004,
     "percentiles": {
-      "npxG_90": 94.2,
-      "xG_90": 93.1,
-      "xA_90": 95.8,
-      "xGChain_90": 86.4,
-      "xGBuildup_90": 75.3
+      "npxG_90": 91.9,
+      "xG_90": 90.8,
+      "xA_90": 98.1,
+      "xGChain_90": 91.9,
+      "xGBuildup_90": 62.5
     }
   },
   {
@@ -9273,26 +9329,26 @@
     "team": "Lorient",
     "position_raw": "D S",
     "position_group": "défenseurs",
-    "minutes": 302,
-    "games": 9,
+    "minutes": 392,
+    "games": 10,
     "goals": 0,
     "assists": 0,
-    "npxG": 0.0,
-    "xG": 0.0,
+    "npxG": 0.3801920711994171,
+    "xG": 0.3801920711994171,
     "xA": 0.0,
-    "xGChain": 0.37089663557708263,
-    "xGBuildup": 0.37089663557708263,
-    "npxG_90": 0.0,
-    "xG_90": 0.0,
+    "xGChain": 0.8663383703678846,
+    "xGBuildup": 0.8663383703678846,
+    "npxG_90": 0.0873,
+    "xG_90": 0.0873,
     "xA_90": 0.0,
-    "xGChain_90": 0.1105,
-    "xGBuildup_90": 0.1105,
+    "xGChain_90": 0.1989,
+    "xGBuildup_90": 0.1989,
     "percentiles": {
-      "npxG_90": 1.7,
-      "xG_90": 1.7,
-      "xA_90": 3.3,
-      "xGChain_90": 6.4,
-      "xGBuildup_90": 10.8
+      "npxG_90": 73.1,
+      "xG_90": 71.9,
+      "xA_90": 3.1,
+      "xGChain_90": 24.2,
+      "xGBuildup_90": 36.9
     }
   },
   {
@@ -9316,11 +9372,11 @@
     "xGChain_90": 0.4646,
     "xGBuildup_90": 0.4248,
     "percentiles": {
-      "npxG_90": 2.6,
-      "xG_90": 2.6,
-      "xA_90": 29.1,
-      "xGChain_90": 59.7,
-      "xGBuildup_90": 78.1
+      "npxG_90": 2.5,
+      "xG_90": 2.5,
+      "xA_90": 28.8,
+      "xGChain_90": 58.1,
+      "xGBuildup_90": 78.3
     }
   },
   {
@@ -9344,11 +9400,11 @@
     "xGChain_90": 0.4184,
     "xGBuildup_90": 0.3235,
     "percentiles": {
-      "npxG_90": 41.3,
-      "xG_90": 38.3,
-      "xA_90": 38.3,
-      "xGChain_90": 50.5,
-      "xGBuildup_90": 66.8
+      "npxG_90": 40.9,
+      "xG_90": 37.9,
+      "xA_90": 38.9,
+      "xGChain_90": 50.0,
+      "xGBuildup_90": 66.2
     }
   },
   {
@@ -9372,10 +9428,10 @@
     "xGChain_90": 0.1973,
     "xGBuildup_90": 0.0805,
     "percentiles": {
-      "npxG_90": 1.7,
-      "xG_90": 1.7,
+      "npxG_90": 1.4,
+      "xG_90": 1.4,
       "xA_90": 77.5,
-      "xGChain_90": 24.2,
+      "xGChain_90": 23.6,
       "xGBuildup_90": 6.9
     }
   },
@@ -9400,11 +9456,11 @@
     "xGChain_90": 0.2033,
     "xGBuildup_90": 0.1633,
     "percentiles": {
-      "npxG_90": 23.6,
-      "xG_90": 23.6,
+      "npxG_90": 23.1,
+      "xG_90": 23.1,
       "xA_90": 79.7,
       "xGChain_90": 26.4,
-      "xGBuildup_90": 32.5
+      "xGBuildup_90": 31.9
     }
   },
   {
@@ -9428,11 +9484,11 @@
     "xGChain_90": 0.1933,
     "xGBuildup_90": 0.1251,
     "percentiles": {
-      "npxG_90": 27.0,
-      "xG_90": 24.0,
-      "xA_90": 24.0,
-      "xGChain_90": 9.7,
-      "xGBuildup_90": 17.9
+      "npxG_90": 25.8,
+      "xG_90": 22.7,
+      "xA_90": 23.7,
+      "xGChain_90": 9.6,
+      "xGBuildup_90": 17.7
     }
   },
   {
@@ -9456,11 +9512,11 @@
     "xGChain_90": 0.1156,
     "xGBuildup_90": 0.1107,
     "percentiles": {
-      "npxG_90": 13.1,
-      "xG_90": 13.1,
+      "npxG_90": 12.5,
+      "xG_90": 12.5,
       "xA_90": 32.5,
-      "xGChain_90": 7.5,
-      "xGBuildup_90": 11.4
+      "xGChain_90": 6.9,
+      "xGBuildup_90": 10.8
     }
   },
   {
@@ -9484,10 +9540,10 @@
     "xGChain_90": 0.1306,
     "xGBuildup_90": 0.0387,
     "percentiles": {
-      "npxG_90": 46.4,
-      "xG_90": 44.4,
-      "xA_90": 33.2,
-      "xGChain_90": 4.6,
+      "npxG_90": 47.0,
+      "xG_90": 44.9,
+      "xA_90": 33.8,
+      "xGChain_90": 4.5,
       "xGBuildup_90": 1.5
     }
   },
@@ -9516,7 +9572,7 @@
       "xG_90": 53.1,
       "xA_90": 48.1,
       "xGChain_90": 29.2,
-      "xGBuildup_90": 20.8
+      "xGBuildup_90": 20.3
     }
   },
   {
@@ -9540,11 +9596,11 @@
     "xGChain_90": 0.212,
     "xGBuildup_90": 0.1542,
     "percentiles": {
-      "npxG_90": 11.9,
-      "xG_90": 11.9,
-      "xA_90": 67.5,
+      "npxG_90": 11.4,
+      "xG_90": 11.4,
+      "xA_90": 66.9,
       "xGChain_90": 28.6,
-      "xGBuildup_90": 31.4
+      "xGBuildup_90": 30.8
     }
   },
   {
@@ -9568,8 +9624,8 @@
     "xGChain_90": 0.3176,
     "xGBuildup_90": 0.2675,
     "percentiles": {
-      "npxG_90": 8.3,
-      "xG_90": 8.3,
+      "npxG_90": 8.1,
+      "xG_90": 8.1,
       "xA_90": 50.0,
       "xGChain_90": 51.4,
       "xGBuildup_90": 54.7
@@ -9596,9 +9652,9 @@
     "xGChain_90": 0.0693,
     "xGBuildup_90": 0.0693,
     "percentiles": {
-      "npxG_90": 1.7,
-      "xG_90": 1.7,
-      "xA_90": 3.3,
+      "npxG_90": 1.4,
+      "xG_90": 1.4,
+      "xA_90": 3.1,
       "xGChain_90": 2.5,
       "xGBuildup_90": 5.8
     }
@@ -9624,11 +9680,11 @@
     "xGChain_90": 0.4758,
     "xGBuildup_90": 0.3462,
     "percentiles": {
-      "npxG_90": 17.2,
-      "xG_90": 17.2,
+      "npxG_90": 16.7,
+      "xG_90": 16.7,
       "xA_90": 90.3,
       "xGChain_90": 80.3,
-      "xGBuildup_90": 73.6
+      "xGBuildup_90": 74.2
     }
   },
   {
@@ -9652,11 +9708,11 @@
     "xGChain_90": 0.2686,
     "xGBuildup_90": 0.1172,
     "percentiles": {
-      "npxG_90": 71.9,
-      "xG_90": 69.9,
+      "npxG_90": 73.2,
+      "xG_90": 71.2,
       "xA_90": 6.6,
-      "xGChain_90": 21.9,
-      "xGBuildup_90": 16.8
+      "xGChain_90": 21.7,
+      "xGBuildup_90": 16.7
     }
   },
   {
@@ -9682,7 +9738,7 @@
     "percentiles": {
       "npxG_90": 52.5,
       "xG_90": 52.5,
-      "xA_90": 3.3,
+      "xA_90": 3.1,
       "xGChain_90": 3.1,
       "xGBuildup_90": 2.5
     }
@@ -9708,10 +9764,10 @@
     "xGChain_90": 0.2635,
     "xGBuildup_90": 0.2258,
     "percentiles": {
-      "npxG_90": 48.6,
-      "xG_90": 48.6,
-      "xA_90": 66.9,
-      "xGChain_90": 38.3,
+      "npxG_90": 48.1,
+      "xG_90": 48.1,
+      "xA_90": 66.4,
+      "xGChain_90": 37.8,
       "xGBuildup_90": 43.6
     }
   },
@@ -9736,11 +9792,11 @@
     "xGChain_90": 0.252,
     "xGBuildup_90": 0.2124,
     "percentiles": {
-      "npxG_90": 7.7,
-      "xG_90": 7.7,
-      "xA_90": 23.0,
-      "xGChain_90": 16.8,
-      "xGBuildup_90": 40.3
+      "npxG_90": 7.6,
+      "xG_90": 7.6,
+      "xA_90": 22.7,
+      "xGChain_90": 16.7,
+      "xGBuildup_90": 39.9
     }
   },
   {
@@ -9764,10 +9820,10 @@
     "xGChain_90": 0.1172,
     "xGBuildup_90": 0.0842,
     "percentiles": {
-      "npxG_90": 1.7,
-      "xG_90": 1.7,
+      "npxG_90": 1.4,
+      "xG_90": 1.4,
       "xA_90": 45.3,
-      "xGChain_90": 8.6,
+      "xGChain_90": 8.1,
       "xGBuildup_90": 7.5
     }
   },
@@ -9792,11 +9848,11 @@
     "xGChain_90": 0.4153,
     "xGBuildup_90": 0.3034,
     "percentiles": {
-      "npxG_90": 4.6,
-      "xG_90": 4.6,
-      "xA_90": 83.2,
-      "xGChain_90": 48.5,
-      "xGBuildup_90": 61.7
+      "npxG_90": 4.5,
+      "xG_90": 4.5,
+      "xA_90": 83.3,
+      "xGChain_90": 48.0,
+      "xGBuildup_90": 61.1
     }
   },
   {
@@ -9820,11 +9876,11 @@
     "xGChain_90": 0.3492,
     "xGBuildup_90": 0.0822,
     "percentiles": {
-      "npxG_90": 51.4,
-      "xG_90": 47.7,
-      "xA_90": 5.1,
-      "xGChain_90": 20.8,
-      "xGBuildup_90": 17.1
+      "npxG_90": 50.0,
+      "xG_90": 47.2,
+      "xA_90": 6.0,
+      "xGChain_90": 20.6,
+      "xGBuildup_90": 17.0
     }
   },
   {
@@ -9848,11 +9904,11 @@
     "xGChain_90": 0.1887,
     "xGBuildup_90": 0.1213,
     "percentiles": {
-      "npxG_90": 44.7,
-      "xG_90": 44.7,
+      "npxG_90": 44.2,
+      "xG_90": 44.2,
       "xA_90": 46.4,
-      "xGChain_90": 19.7,
-      "xGBuildup_90": 16.4
+      "xGChain_90": 19.2,
+      "xGBuildup_90": 15.8
     }
   },
   {
@@ -9876,11 +9932,11 @@
     "xGChain_90": 0.2927,
     "xGBuildup_90": 0.2927,
     "percentiles": {
-      "npxG_90": 24.2,
-      "xG_90": 24.2,
-      "xA_90": 3.3,
+      "npxG_90": 23.6,
+      "xG_90": 23.6,
+      "xA_90": 3.1,
       "xGChain_90": 46.4,
-      "xGBuildup_90": 61.9
+      "xGBuildup_90": 61.4
     }
   },
   {
@@ -9904,11 +9960,11 @@
     "xGChain_90": 0.1967,
     "xGBuildup_90": 0.1652,
     "percentiles": {
-      "npxG_90": 37.2,
-      "xG_90": 37.2,
+      "npxG_90": 36.7,
+      "xG_90": 36.7,
       "xA_90": 30.8,
-      "xGChain_90": 23.6,
-      "xGBuildup_90": 34.2
+      "xGChain_90": 23.1,
+      "xGBuildup_90": 33.6
     }
   },
   {
@@ -9932,8 +9988,8 @@
     "xGChain_90": 0.0241,
     "xGBuildup_90": 0.009,
     "percentiles": {
-      "npxG_90": 9.2,
-      "xG_90": 9.2,
+      "npxG_90": 8.6,
+      "xG_90": 8.6,
       "xA_90": 24.7,
       "xGChain_90": 1.4,
       "xGBuildup_90": 0.3
@@ -9960,11 +10016,11 @@
     "xGChain_90": 0.5187,
     "xGBuildup_90": 0.4279,
     "percentiles": {
-      "npxG_90": 52.6,
-      "xG_90": 49.5,
-      "xA_90": 91.3,
-      "xGChain_90": 64.8,
-      "xGBuildup_90": 80.1
+      "npxG_90": 53.0,
+      "xG_90": 50.0,
+      "xA_90": 91.4,
+      "xGChain_90": 65.2,
+      "xGBuildup_90": 80.3
     }
   },
   {
@@ -9988,11 +10044,11 @@
     "xGChain_90": 0.4952,
     "xGBuildup_90": 0.3756,
     "percentiles": {
-      "npxG_90": 9.7,
-      "xG_90": 8.8,
-      "xA_90": 35.2,
-      "xGChain_90": 46.8,
-      "xGBuildup_90": 90.3
+      "npxG_90": 9.6,
+      "xG_90": 8.7,
+      "xA_90": 36.7,
+      "xGChain_90": 47.2,
+      "xGBuildup_90": 90.4
     }
   },
   {
@@ -10016,11 +10072,11 @@
     "xGChain_90": 0.3966,
     "xGBuildup_90": 0.3228,
     "percentiles": {
-      "npxG_90": 59.7,
-      "xG_90": 56.6,
-      "xA_90": 4.6,
-      "xGChain_90": 46.4,
-      "xGBuildup_90": 65.8
+      "npxG_90": 60.1,
+      "xG_90": 57.1,
+      "xA_90": 4.5,
+      "xGChain_90": 46.0,
+      "xGBuildup_90": 65.2
     }
   },
   {
@@ -10044,11 +10100,11 @@
     "xGChain_90": 0.2184,
     "xGBuildup_90": 0.1997,
     "percentiles": {
-      "npxG_90": 40.8,
-      "xG_90": 40.8,
+      "npxG_90": 40.3,
+      "xG_90": 40.3,
       "xA_90": 26.4,
-      "xGChain_90": 29.7,
-      "xGBuildup_90": 38.1
+      "xGChain_90": 30.3,
+      "xGBuildup_90": 37.5
     }
   },
   {
@@ -10072,10 +10128,10 @@
     "xGChain_90": 0.1345,
     "xGBuildup_90": 0.1345,
     "percentiles": {
-      "npxG_90": 26.9,
-      "xG_90": 26.9,
-      "xA_90": 3.3,
-      "xGChain_90": 10.8,
+      "npxG_90": 26.4,
+      "xG_90": 26.4,
+      "xA_90": 3.1,
+      "xGChain_90": 10.3,
       "xGBuildup_90": 22.5
     }
   },
@@ -10100,11 +10156,11 @@
     "xGChain_90": 0.5387,
     "xGBuildup_90": 0.2316,
     "percentiles": {
-      "npxG_90": 42.1,
-      "xG_90": 37.5,
-      "xA_90": 63.4,
-      "xGChain_90": 56.9,
-      "xGBuildup_90": 75.5
+      "npxG_90": 41.7,
+      "xG_90": 37.2,
+      "xA_90": 64.7,
+      "xGChain_90": 56.4,
+      "xGBuildup_90": 74.8
     }
   },
   {
@@ -10128,11 +10184,11 @@
     "xGChain_90": 0.2686,
     "xGBuildup_90": 0.1639,
     "percentiles": {
-      "npxG_90": 60.0,
-      "xG_90": 60.0,
-      "xA_90": 70.3,
-      "xGChain_90": 39.7,
-      "xGBuildup_90": 33.1
+      "npxG_90": 59.4,
+      "xG_90": 59.4,
+      "xA_90": 69.7,
+      "xGChain_90": 39.2,
+      "xGBuildup_90": 32.5
     }
   },
   {
@@ -10156,11 +10212,11 @@
     "xGChain_90": 0.1412,
     "xGBuildup_90": 0.1198,
     "percentiles": {
-      "npxG_90": 27.5,
-      "xG_90": 27.5,
+      "npxG_90": 26.9,
+      "xG_90": 26.9,
       "xA_90": 44.2,
-      "xGChain_90": 11.4,
-      "xGBuildup_90": 15.8
+      "xGChain_90": 10.8,
+      "xGBuildup_90": 15.3
     }
   },
   {
@@ -10184,10 +10240,10 @@
     "xGChain_90": 0.271,
     "xGBuildup_90": 0.2642,
     "percentiles": {
-      "npxG_90": 18.1,
-      "xG_90": 18.1,
-      "xA_90": 3.3,
-      "xGChain_90": 40.8,
+      "npxG_90": 17.5,
+      "xG_90": 17.5,
+      "xA_90": 3.1,
+      "xGChain_90": 40.3,
       "xGBuildup_90": 53.6
     }
   },
@@ -10212,10 +10268,10 @@
     "xGChain_90": 0.1901,
     "xGBuildup_90": 0.1351,
     "percentiles": {
-      "npxG_90": 59.2,
-      "xG_90": 59.2,
+      "npxG_90": 58.6,
+      "xG_90": 58.6,
       "xA_90": 31.7,
-      "xGChain_90": 21.4,
+      "xGChain_90": 20.8,
       "xGBuildup_90": 23.1
     }
   },
@@ -10240,10 +10296,10 @@
     "xGChain_90": 0.1556,
     "xGBuildup_90": 0.0467,
     "percentiles": {
-      "npxG_90": 74.2,
-      "xG_90": 72.5,
+      "npxG_90": 74.7,
+      "xG_90": 73.1,
       "xA_90": 41.9,
-      "xGChain_90": 15.8,
+      "xGChain_90": 15.3,
       "xGBuildup_90": 3.6
     }
   },
@@ -10268,11 +10324,11 @@
     "xGChain_90": 0.3215,
     "xGBuildup_90": 0.3215,
     "percentiles": {
-      "npxG_90": 16.4,
-      "xG_90": 16.4,
-      "xA_90": 3.3,
+      "npxG_90": 15.8,
+      "xG_90": 15.8,
+      "xA_90": 3.1,
       "xGChain_90": 52.5,
-      "xGBuildup_90": 68.6
+      "xGBuildup_90": 69.2
     }
   },
   {
@@ -10296,11 +10352,11 @@
     "xGChain_90": 0.189,
     "xGBuildup_90": 0.1844,
     "percentiles": {
-      "npxG_90": 33.3,
-      "xG_90": 33.3,
-      "xA_90": 6.9,
-      "xGChain_90": 20.3,
-      "xGBuildup_90": 35.8
+      "npxG_90": 32.8,
+      "xG_90": 32.8,
+      "xA_90": 6.4,
+      "xGChain_90": 19.7,
+      "xGBuildup_90": 35.3
     }
   },
   {
@@ -10328,7 +10384,7 @@
       "xG_90": 6.6,
       "xA_90": 0.5,
       "xGChain_90": 0.5,
-      "xGBuildup_90": 8.7
+      "xGBuildup_90": 8.6
     }
   },
   {
@@ -10354,9 +10410,9 @@
     "percentiles": {
       "npxG_90": 2.3,
       "xG_90": 2.3,
-      "xA_90": 42.1,
-      "xGChain_90": 5.1,
-      "xGBuildup_90": 13.4
+      "xA_90": 42.7,
+      "xGChain_90": 5.0,
+      "xGBuildup_90": 13.3
     }
   },
   {
@@ -10380,11 +10436,11 @@
     "xGChain_90": 0.287,
     "xGBuildup_90": 0.281,
     "percentiles": {
-      "npxG_90": 11.4,
-      "xG_90": 11.4,
+      "npxG_90": 10.8,
+      "xG_90": 10.8,
       "xA_90": 15.3,
       "xGChain_90": 43.6,
-      "xGBuildup_90": 58.6
+      "xGBuildup_90": 58.1
     }
   },
   {
@@ -10393,26 +10449,26 @@
     "team": "Lorient",
     "position_raw": "D S",
     "position_group": "défenseurs",
-    "minutes": 929,
-    "games": 11,
+    "minutes": 1019,
+    "games": 12,
     "goals": 0,
     "assists": 0,
     "npxG": 0.5535288266837597,
     "xG": 0.5535288266837597,
-    "xA": 0.0,
-    "xGChain": 2.3383036740124226,
-    "xGBuildup": 2.3383036740124226,
-    "npxG_90": 0.0536,
-    "xG_90": 0.0536,
-    "xA_90": 0.0,
-    "xGChain_90": 0.2265,
-    "xGBuildup_90": 0.2265,
+    "xA": 0.02668142132461071,
+    "xGChain": 2.625587034970522,
+    "xGBuildup": 2.5989056415855885,
+    "npxG_90": 0.0489,
+    "xG_90": 0.0489,
+    "xA_90": 0.0024,
+    "xGChain_90": 0.2319,
+    "xGBuildup_90": 0.2295,
     "percentiles": {
-      "npxG_90": 53.6,
-      "xG_90": 53.6,
-      "xA_90": 3.3,
+      "npxG_90": 50.8,
+      "xG_90": 50.8,
+      "xA_90": 9.4,
       "xGChain_90": 31.9,
-      "xGBuildup_90": 44.2
+      "xGBuildup_90": 45.3
     }
   },
   {
@@ -10436,11 +10492,11 @@
     "xGChain_90": 0.4126,
     "xGBuildup_90": 0.3874,
     "percentiles": {
-      "npxG_90": 9.7,
-      "xG_90": 9.7,
-      "xA_90": 19.9,
-      "xGChain_90": 47.4,
-      "xGBuildup_90": 75.0
+      "npxG_90": 9.6,
+      "xG_90": 9.6,
+      "xA_90": 19.7,
+      "xGChain_90": 47.0,
+      "xGBuildup_90": 74.2
     }
   },
   {
@@ -10464,11 +10520,11 @@
     "xGChain_90": 0.1934,
     "xGBuildup_90": 0.1178,
     "percentiles": {
-      "npxG_90": 63.6,
-      "xG_90": 63.1,
+      "npxG_90": 63.1,
+      "xG_90": 62.5,
       "xA_90": 40.8,
-      "xGChain_90": 23.1,
-      "xGBuildup_90": 14.7
+      "xGChain_90": 22.5,
+      "xGBuildup_90": 14.2
     }
   },
   {
@@ -10492,11 +10548,11 @@
     "xGChain_90": 0.1232,
     "xGBuildup_90": 0.1187,
     "percentiles": {
-      "npxG_90": 50.8,
-      "xG_90": 50.8,
+      "npxG_90": 50.3,
+      "xG_90": 50.3,
       "xA_90": 33.1,
-      "xGChain_90": 9.7,
-      "xGBuildup_90": 15.3
+      "xGChain_90": 9.2,
+      "xGBuildup_90": 14.7
     }
   },
   {
@@ -10522,9 +10578,9 @@
     "percentiles": {
       "npxG_90": 5.6,
       "xG_90": 5.6,
-      "xA_90": 35.2,
-      "xGChain_90": 38.3,
-      "xGBuildup_90": 56.6
+      "xA_90": 35.9,
+      "xGChain_90": 37.9,
+      "xGBuildup_90": 55.1
     }
   },
   {
@@ -10548,8 +10604,8 @@
     "xGChain_90": 0.2048,
     "xGBuildup_90": 0.1248,
     "percentiles": {
-      "npxG_90": 93.6,
-      "xG_90": 92.5,
+      "npxG_90": 94.2,
+      "xG_90": 93.1,
       "xA_90": 76.9,
       "xGChain_90": 26.9,
       "xGBuildup_90": 18.6
@@ -10576,10 +10632,10 @@
     "xGChain_90": 0.2299,
     "xGBuildup_90": 0.0575,
     "percentiles": {
-      "npxG_90": 51.5,
-      "xG_90": 48.5,
-      "xA_90": 39.3,
-      "xGChain_90": 14.8,
+      "npxG_90": 52.0,
+      "xG_90": 49.0,
+      "xA_90": 39.9,
+      "xGChain_90": 14.6,
       "xGBuildup_90": 6.6
     }
   },
@@ -10604,11 +10660,11 @@
     "xGChain_90": 0.3851,
     "xGBuildup_90": 0.3254,
     "percentiles": {
-      "npxG_90": 4.4,
-      "xG_90": 4.4,
-      "xA_90": 66.4,
+      "npxG_90": 3.9,
+      "xG_90": 3.9,
+      "xA_90": 65.8,
       "xGChain_90": 63.1,
-      "xGBuildup_90": 70.3
+      "xGBuildup_90": 70.8
     }
   },
   {
@@ -10632,11 +10688,11 @@
     "xGChain_90": 0.3097,
     "xGBuildup_90": 0.2783,
     "percentiles": {
-      "npxG_90": 16.8,
-      "xG_90": 16.8,
-      "xA_90": 2.6,
-      "xGChain_90": 31.1,
-      "xGBuildup_90": 57.7
+      "npxG_90": 16.7,
+      "xG_90": 16.7,
+      "xA_90": 2.5,
+      "xGChain_90": 29.8,
+      "xGBuildup_90": 56.1
     }
   },
   {
@@ -10660,11 +10716,11 @@
     "xGChain_90": 0.3197,
     "xGBuildup_90": 0.2592,
     "percentiles": {
-      "npxG_90": 79.7,
-      "xG_90": 78.1,
-      "xA_90": 54.4,
+      "npxG_90": 80.3,
+      "xG_90": 78.6,
+      "xA_90": 55.0,
       "xGChain_90": 51.9,
-      "xGBuildup_90": 50.8
+      "xGBuildup_90": 51.4
     }
   },
   {
@@ -10688,11 +10744,11 @@
     "xGChain_90": 0.2814,
     "xGBuildup_90": 0.2366,
     "percentiles": {
-      "npxG_90": 25.0,
-      "xG_90": 21.9,
-      "xA_90": 18.9,
-      "xGChain_90": 24.0,
-      "xGBuildup_90": 42.3
+      "npxG_90": 24.7,
+      "xG_90": 21.7,
+      "xA_90": 18.7,
+      "xGChain_90": 23.7,
+      "xGBuildup_90": 41.9
     }
   },
   {
@@ -10716,11 +10772,11 @@
     "xGChain_90": 0.7989,
     "xGBuildup_90": 0.2529,
     "percentiles": {
-      "npxG_90": 64.8,
-      "xG_90": 61.7,
+      "npxG_90": 65.2,
+      "xG_90": 62.1,
       "xA_90": 99.5,
-      "xGChain_90": 83.2,
-      "xGBuildup_90": 51.5
+      "xGChain_90": 83.3,
+      "xGBuildup_90": 50.0
     }
   },
   {
@@ -10744,11 +10800,11 @@
     "xGChain_90": 0.3223,
     "xGBuildup_90": 0.2644,
     "percentiles": {
-      "npxG_90": 57.7,
-      "xG_90": 54.6,
-      "xA_90": 27.0,
-      "xGChain_90": 34.2,
-      "xGBuildup_90": 52.6
+      "npxG_90": 58.1,
+      "xG_90": 55.1,
+      "xA_90": 26.8,
+      "xGChain_90": 33.8,
+      "xGBuildup_90": 51.0
     }
   },
   {
@@ -10772,8 +10828,8 @@
     "xGChain_90": 0.0129,
     "xGBuildup_90": 0.0112,
     "percentiles": {
-      "npxG_90": 28.1,
-      "xG_90": 28.1,
+      "npxG_90": 27.5,
+      "xG_90": 27.5,
       "xA_90": 24.2,
       "xGChain_90": 0.3,
       "xGBuildup_90": 0.8
@@ -10800,11 +10856,11 @@
     "xGChain_90": 0.3811,
     "xGBuildup_90": 0.2169,
     "percentiles": {
-      "npxG_90": 45.8,
-      "xG_90": 42.1,
-      "xA_90": 16.2,
-      "xGChain_90": 25.5,
-      "xGBuildup_90": 72.7
+      "npxG_90": 45.4,
+      "xG_90": 41.7,
+      "xA_90": 17.0,
+      "xGChain_90": 26.1,
+      "xGBuildup_90": 72.0
     }
   }
 ]
