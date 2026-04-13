@@ -19,11 +19,11 @@ RESULT_COLORS = {
     "ShotOnPost":  "#f39c12",
 }
 RESULT_LABELS = {
-    "Goal":        "But",
-    "SavedShot":   "Arrêté",
-    "BlockedShot": "Contré",
-    "MissedShots": "Raté",
-    "ShotOnPost":  "Poteau",
+    "Goal":        "Goal",
+    "SavedShot":   "Saved",
+    "BlockedShot": "Blocked",
+    "MissedShots": "Missed",
+    "ShotOnPost":  "Post",
 }
 SITUATION_LABELS = {
     "OpenPlay":        "Jeu ouvert",
