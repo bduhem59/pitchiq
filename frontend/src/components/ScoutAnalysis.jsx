@@ -53,7 +53,17 @@ function VerdictGauge({ score, color }) {
   );
 }
 
-export default function ScoutAnalysis({ percentileRecord, goals, assists }) {
+const LEAGUE_LABELS = {
+  Ligue_1:    "Ligue 1",
+  EPL:        "Premier League",
+  La_Liga:    "La Liga",
+  Bundesliga: "Bundesliga",
+  Serie_A:    "Serie A",
+  RFPL:       "RFPL",
+};
+
+export default function ScoutAnalysis({ percentileRecord, goals, assists, league = "Ligue_1" }) {
+  const leagueLabel = LEAGUE_LABELS[league] ?? league.replace(/_/g, " ");
   const pcts   = percentileRecord?.percentiles ?? {};
   const vals   = percentileRecord ?? {};
   const pctArr = Object.values(pcts).filter((v) => v != null);
@@ -70,7 +80,7 @@ export default function ScoutAnalysis({ percentileRecord, goals, assists }) {
   if (avgPct != null && avgPct >= 75) {
     verdictLabel = "Recommended";
     verdictColor = "#2ecc71";
-    verdictText  = "High-level offensive profile. Metrics place this player among the best at his position in Ligue 1.";
+    verdictText  = `High-level offensive profile. Metrics place this player among the best at his position in ${leagueLabel}.`;
   } else if (avgPct != null && avgPct >= 50) {
     verdictLabel = "Promising";
     verdictColor = "#ffaa00";

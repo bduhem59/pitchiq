@@ -16,12 +16,12 @@ export default function HomePage({ onNavigate }) {
       <div className="flex flex-col items-center gap-3 mb-12">
         <div className="w-16 h-16 rounded-2xl flex items-center justify-center
                         shadow-[0_4px_30px_rgba(0,210,255,0.3)] mb-2">
-          <img src={logo} alt="xScout" className="w-14 h-14" />
+          <img src={logo} alt="PitchIQ" className="w-14 h-14" />
         </div>
         <h1 className="font-manrope font-black text-5xl leading-tight tracking-[-2px] m-0
                        bg-gradient-to-r from-text to-primary bg-clip-text text-transparent"
             style={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-          xScout
+          PitchIQ
         </h1>
         <p className="font-manrope text-[10px] text-muted font-bold tracking-[4px] uppercase m-0">
           Football Intelligence Platform

@@ -3,7 +3,7 @@
 build_tm_cache.py — Populate the Transfermarkt cache using a real Chrome browser.
 
 Uses nodriver (undetected Chrome via CDP) in VISIBLE mode to bypass AWS WAF.
-Scraped data is saved to tm_cache.json for use by the xScout API.
+Scraped data is saved to tm_cache.json for use by the PitchIQ API.
 
 Usage:
     python3 build_tm_cache.py                          # cache all players from percentile files
@@ -442,10 +442,10 @@ async def run_cache_builder(players: list[str], limit: int | None) -> None:
 
     print(f"\nPlayers to cache: {len(uncached)}")
     print("Opening Chrome browser (VISIBLE mode to bypass WAF)...")
-    print("Cookies are saved to ~/.xscout_chrome_profile — challenge solved once, then reused.\n")
+    print("Cookies are saved to ~/.pitchiq_chrome_profile — challenge solved once, then reused.\n")
 
     # Persistent profile so TM cookies survive between runs
-    profile_dir = Path.home() / ".xscout_chrome_profile"
+    profile_dir = Path.home() / ".pitchiq_chrome_profile"
     profile_dir.mkdir(exist_ok=True)
 
     browser = await uc.start(
@@ -481,7 +481,7 @@ async def run_cache_builder(players: list[str], limit: int | None) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Build TM cache for xScout")
+    parser = argparse.ArgumentParser(description="Build TM cache for PitchIQ")
     parser.add_argument("players", nargs="*", help="Player name(s) to cache")
     parser.add_argument("--league", help="Cache all players from a specific league")
     parser.add_argument("--limit", type=int, help="Max number of uncached players to process")

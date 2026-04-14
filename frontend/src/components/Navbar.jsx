@@ -26,11 +26,11 @@ export default function Navbar({ view, onNavigate, players, onSearch, currentLea
         <div className="flex items-center gap-2 shrink-0">
           <div className="w-8 h-8 rounded-lg flex items-center justify-center
                           shadow-[0_2px_12px_rgba(0,210,255,0.3)]">
-            <img src={logo} alt="xScout" className="w-7 h-7" />
+            <img src={logo} alt="PitchIQ" className="w-7 h-7" />
           </div>
           <div>
-            <div className="font-manrope font-black italic text-primary text-sm tracking-widest uppercase leading-none">
-              xScout
+            <div className="font-manrope font-black italic text-primary text-sm tracking-wide leading-none">
+              PitchIQ
             </div>
             <div className="flex items-center gap-1 text-[9px] text-muted/60 tracking-widest uppercase leading-none mt-0.5">
               {leagueInfo ? (

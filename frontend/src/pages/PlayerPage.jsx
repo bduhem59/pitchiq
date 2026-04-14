@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
-import { usePlayer }    from "../hooks/usePlayer";
-import { getLeagueAverages } from "../api";
-import ErrorBoundary   from "../components/ErrorBoundary";
-import PlayerHeader    from "../components/PlayerHeader";
-import SeasonStats     from "../components/SeasonStats";
-import StatCard        from "../components/StatCard";
-import ShotMap         from "../components/ShotMap";
-import RadarChart      from "../components/RadarChart";
-import ScoutAnalysis   from "../components/ScoutAnalysis";
+import { usePlayer }           from "../hooks/usePlayer";
+import { useSimilarPlayers }   from "../hooks/useSimilarPlayers";
+import { getLeagueAverages }   from "../api";
+import ErrorBoundary           from "../components/ErrorBoundary";
+import PlayerHeader            from "../components/PlayerHeader";
+import SeasonStats             from "../components/SeasonStats";
+import StatCard                from "../components/StatCard";
+import ShotMap                 from "../components/ShotMap";
+import RadarChart              from "../components/RadarChart";
+import ScoutAnalysis           from "../components/ScoutAnalysis";
+import SimilarPlayers          from "../components/SimilarPlayers";
 
 const METRICS = [
   { key: "xG_90",        label: "xG / 90",        tooltip: "Expected goals per 90 minutes based on shot quality" },
@@ -32,9 +34,11 @@ function Section({ children }) {
   );
 }
 
-export default function PlayerPage({ playerName, league = "Ligue_1" }) {
+export default function PlayerPage({ playerName, league = "Ligue_1", players, onCompare, onNavigate }) {
   const { data, loading, error } = usePlayer(playerName, league);
   const [leagueAvgs, setLeagueAvgs] = useState(null);
+  const { data: similarData, loading: similarLoading, error: similarError } =
+    useSimilarPlayers(playerName, league);
 
   useEffect(() => {
     getLeagueAverages(league).then(setLeagueAvgs).catch(() => {});
@@ -102,6 +106,9 @@ export default function PlayerPage({ playerName, league = "Ligue_1" }) {
           tmProfileUrl={tm?.profile_url ?? ""}
           minutes={us.minutes ?? 0}
           fallbackName={us.player_name ?? playerName}
+          players={players}
+          onCompare={onCompare}
+          currentLeague={league}
         />
       </Section>
 
@@ -179,6 +186,20 @@ export default function PlayerPage({ playerName, league = "Ligue_1" }) {
             percentileRecord={pct}
             goals={us.goals    ?? 0}
             assists={us.assists ?? 0}
+            league={league}
+          />
+        </ErrorBoundary>
+      </section>
+
+      {/* 6 ── Similar Players */}
+      <section className="mb-8">
+        <div className="section-label mb-4">Similar Players</div>
+        <ErrorBoundary>
+          <SimilarPlayers
+            data={similarData}
+            loading={similarLoading}
+            error={similarError}
+            onNavigate={onNavigate}
           />
         </ErrorBoundary>
       </section>

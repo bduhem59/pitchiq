@@ -229,7 +229,7 @@ def print_player_summary(player_name: str, records: list[dict]) -> None:
 
 def main(league: str = LEAGUE, output_file: str = OUTPUT_FILE) -> None:
     print(f"\n{'═'*58}")
-    print(f"  xScout percentiles — {league}  →  {output_file}")
+    print(f"  PitchIQ percentiles — {league}  →  {output_file}")
     print(f"{'═'*58}")
 
     # 1. Téléchargement

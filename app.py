@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-app.py — xScout : Football Intelligence Platform
+app.py — PitchIQ : Football Intelligence Platform
 """
 
 import json
@@ -21,7 +21,7 @@ from radar_plotly import generate_radar_plotly
 # ─────────────────────────────────────────────
 
 st.set_page_config(
-    page_title="xScout",
+    page_title="PitchIQ",
     page_icon="⚽",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -760,7 +760,7 @@ def _sidebar_nav() -> None:
             f'box-shadow:0 4px 16px rgba(0,210,255,0.25);">⚽</div>'
             f'<div>'
             f'<div style="font-family:Manrope,sans-serif;font-weight:900;font-style:italic;'
-            f'color:#a5e7ff;font-size:14px;text-transform:uppercase;letter-spacing:3px;">xScout</div>'
+            f'color:#a5e7ff;font-size:14px;text-transform:uppercase;letter-spacing:3px;">PitchIQ</div>'
             f'<div style="font-size:10px;color:#4a6d8a;text-transform:uppercase;'
             f'letter-spacing:1px;margin-top:2px;">Elite Scout</div>'
             f'</div></div></div>'
@@ -891,7 +891,7 @@ def view_home() -> None:
             '<div style="font-family:Manrope,sans-serif;font-size:42px;font-weight:900;'
             'letter-spacing:-2px;background:linear-gradient(90deg,#d9e3f8 0%,#a5e7ff 100%);'
             '-webkit-background-clip:text;-webkit-text-fill-color:transparent;'
-            'line-height:1.1;margin-top:6px;">xScout</div>'
+            'line-height:1.1;margin-top:6px;">PitchIQ</div>'
             '<div style="font-family:Manrope,sans-serif;font-size:10px;color:#bbc9cf;'
             'letter-spacing:4px;font-weight:700;text-transform:uppercase;">'
             'Football Intelligence Platform</div>'
@@ -964,7 +964,7 @@ def view_player() -> None:
             'display:flex;align-items:center;justify-content:center;font-size:16px;">⚽</div>'
             '<div style="font-family:Manrope,sans-serif;font-size:22px;font-weight:900;'
             'letter-spacing:-1px;background:linear-gradient(90deg,#d9e3f8 0%,#a5e7ff 100%);'
-            '-webkit-background-clip:text;-webkit-text-fill-color:transparent;">xScout</div>'
+            '-webkit-background-clip:text;-webkit-text-fill-color:transparent;">PitchIQ</div>'
             '<div style="font-size:10px;color:#3c494e;letter-spacing:2px;font-weight:700;">'
             '🇫🇷 LIGUE 1 · 2025/26</div>'
             '</div>'
@@ -1179,7 +1179,7 @@ def view_explore() -> None:
             '<div style="display:flex;align-items:center;gap:10px;padding:4px 0;">'
             '<div style="font-family:Manrope,sans-serif;font-size:22px;font-weight:900;'
             'letter-spacing:-1px;background:linear-gradient(90deg,#d9e3f8 0%,#a5e7ff 100%);'
-            '-webkit-background-clip:text;-webkit-text-fill-color:transparent;">xScout</div>'
+            '-webkit-background-clip:text;-webkit-text-fill-color:transparent;">PitchIQ</div>'
             '<div style="font-size:14px;color:#bbc9cf;font-weight:700;">'
             '🇫🇷 Ligue 1 · 2025/26</div>'
             '</div>'

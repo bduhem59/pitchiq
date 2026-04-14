@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-api.py — xScout FastAPI backend
+api.py — PitchIQ FastAPI backend
 
 Endpoints :
   GET /players/list                               → all players across all leagues
@@ -17,6 +17,8 @@ from __future__ import annotations
 import html as _html
 import json
 import logging
+import math
+import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -25,17 +27,17 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 
-from player_data import fetch_understat_data, fetch_transfermarkt_data, get_tm_cache_entry
+from player_data import fetch_understat_data, fetch_transfermarkt_data, get_tm_cache_entry, normalize_name
 
 # ─────────────────────────────────────────────────────────────────────────────
 # SETUP
 # ─────────────────────────────────────────────────────────────────────────────
 
 logging.basicConfig(level=logging.INFO)
-log = logging.getLogger("xscout")
+log = logging.getLogger("pitchiq")
 
 app = FastAPI(
-    title="xScout API",
+    title="PitchIQ API",
     description="Football Intelligence Platform — multi-league analytics",
     version="2.0.0",
 )
@@ -96,7 +98,7 @@ def _load_all_percentiles() -> list[dict]:
         if not path.exists():
             log.warning("Percentile file missing: %s", path)
             continue
-        records = json.loads(path.read_text(encoding="utf-8"))
+        records = _decode_names(json.loads(path.read_text(encoding="utf-8")))
         for r in records:
             r["league"] = league_code
         all_records.extend(records)
@@ -104,7 +106,12 @@ def _load_all_percentiles() -> list[dict]:
 
 
 def _find_percentile_record(name: str, records: list[dict]) -> dict | None:
-    needle = name.lower()
+    needle = name.lower().strip()
+    # 1. Exact match (covers the vast majority of calls — name comes from the same records)
+    for r in records:
+        if r["player_name"].lower().strip() == needle:
+            return r
+    # 2. Substring fallback (legacy / search-bar partial queries)
     for r in records:
         if needle in r["player_name"].lower():
             return r
@@ -285,6 +292,102 @@ def league_averages(
     return result
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# SIMILAR-PLAYERS HELPER
+# ─────────────────────────────────────────────────────────────────────────────
+
+_SIMILAR_KEYS = ["xG_90", "npxG_90", "xA_90", "xGChain_90", "xGBuildup_90"]
+_SIMILAR_LABELS = {
+    "xG_90": "xG/90", "npxG_90": "npxG/90", "xA_90": "xA/90",
+    "xGChain_90": "xGChain/90", "xGBuildup_90": "xGBuildup/90",
+}
+
+
+def _euclidean_similar(target: dict, all_records: list[dict], target_name: str, n: int = 3) -> list[dict]:
+    pos_group = target.get("position_group", "")
+    # Use the name from the target record (already decoded) for reliable exclusion
+    target_name_norm = target.get("player_name", target_name).lower()
+
+    # Refine position matching using position_raw codes (D / F / M).
+    # A player whose position_raw starts with D but also contains F (e.g. "D F M S")
+    # is a completely different profile from a pure defender ("D S", "D M S", etc.).
+    # Require candidates to share the same F-presence as the target.
+    target_raw_codes = set(target.get("position_raw", "").split())
+    target_has_f = "F" in target_raw_codes
+
+    pool = [r for r in all_records if r.get("position_group") == pos_group]
+    candidates = [
+        r for r in pool
+        if r.get("player_name", "").lower() != target_name_norm
+        and ("F" in r.get("position_raw", "").split()) == target_has_f
+    ]
+
+    if not candidates:
+        return []
+
+    # Min-max normalise over entire pos-group pool (candidates + target)
+    full_pool = candidates + [target]
+    mins = {k: min(r.get(k, 0.0) for r in full_pool) for k in _SIMILAR_KEYS}
+    maxs = {k: max(r.get(k, 0.0) for r in full_pool) for k in _SIMILAR_KEYS}
+
+    def vec(r: dict) -> list[float]:
+        return [(r.get(k, 0.0) - mins[k]) / max(maxs[k] - mins[k], 1e-9) for k in _SIMILAR_KEYS]
+
+    tv = vec(target)
+    max_d = math.sqrt(len(_SIMILAR_KEYS))
+
+    scored: list[tuple[float, dict]] = []
+    for r in candidates:
+        rv = vec(r)
+        d = math.sqrt(sum((a - b) ** 2 for a, b in zip(tv, rv)))
+        similarity = round(max(0.0, (1.0 - d / max_d) * 100))
+        scored.append((d, similarity, r))
+
+    scored.sort(key=lambda x: x[0])
+
+    # Load TM cache once for photo lookup
+    tm_cache_path = BASE_DIR / "tm_cache.json"
+    try:
+        tm_cache: dict = json.loads(tm_cache_path.read_text(encoding="utf-8"))
+    except Exception:
+        tm_cache = {}
+
+    result: list[dict] = []
+    for d, similarity, r in scored[:n]:
+        # 3 closest-value metrics
+        diffs = sorted(
+            [(k, abs(target.get(k, 0.0) - r.get(k, 0.0))) for k in _SIMILAR_KEYS],
+            key=lambda x: x[1],
+        )
+        closest = [
+            {"key": k, "label": _SIMILAR_LABELS[k], "value": round(r.get(k, 0.0), 2)}
+            for k, _ in diffs[:3]
+        ]
+
+        avg = _avg_percentile(r)
+
+        # Photo URL from TM cache
+        pname = r["player_name"]
+        norm_key = unicodedata.normalize("NFKD", pname.lower().strip()).encode("ASCII", "ignore").decode("ASCII")
+        cached_tm = tm_cache.get(norm_key, {})
+        photo_url = cached_tm.get("photo_url") if cached_tm.get("_status") != "not_found" else None
+        if photo_url == "N/A":
+            photo_url = None
+
+        result.append({
+            "player_name":     pname,
+            "team":            r.get("team", ""),
+            "league":          r.get("league", ""),
+            "position_group":  r.get("position_group", ""),
+            "similarity":      similarity,
+            "avg_percentile":  round(avg, 1) if avg is not None else None,
+            "closest_metrics": closest,
+            "photo_url":       photo_url,
+        })
+
+    return result
+
+
 @app.get("/player/{name}")
 def player_detail(
     name: str,
@@ -336,3 +439,44 @@ def player_detail(
         "photo_data_uri":       photo_data_uri,
         "club_logo_data_uri":   club_logo_data_uri,
     }
+
+
+@app.get("/player/{name}/photo")
+def player_photo(name: str) -> Response:
+    """Proxy a player photo from TM cache (avoids CORS / hotlink issues)."""
+    tm = get_tm_cache_entry(name)
+    photo_url = (tm or {}).get("photo_url", "")
+    if not photo_url or photo_url == "N/A":
+        raise HTTPException(status_code=404, detail="No photo available")
+    try:
+        r = requests.get(photo_url, headers=TM_HEADERS, timeout=8)
+        r.raise_for_status()
+        mime = "image/png" if r.content[:4] == b"\x89PNG" else "image/jpeg"
+        return Response(
+            content=r.content, media_type=mime,
+            headers={"Cache-Control": "public, max-age=3600"},
+        )
+    except Exception as exc:
+        log.warning("Player photo proxy failed (%s): %s", name, exc)
+        raise HTTPException(status_code=502, detail=str(exc))
+
+
+@app.get("/player/{name}/similar")
+def player_similar(
+    name: str,
+    league: str = Query(default="Ligue_1"),
+) -> list[dict[str, Any]]:
+    """Return the 3 most statistically similar players (same position, all leagues)."""
+    # Load target's percentile record
+    records = _load_percentiles(league)
+    target  = _find_percentile_record(name, records)
+    if not target:
+        # Fall back: search across all leagues
+        all_r  = _load_all_percentiles()
+        target = _find_percentile_record(name, all_r)
+        if not target:
+            raise HTTPException(status_code=404, detail=f"'{name}' not found in percentile data")
+        return _euclidean_similar(target, all_r, name, n=3)
+
+    all_records = _load_all_percentiles()
+    return _euclidean_similar(target, all_records, name, n=3)
