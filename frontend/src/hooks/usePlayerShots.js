@@ -3,8 +3,9 @@ import { getPlayerShots } from "../api";
 
 export function usePlayerShots(name, league = "Ligue_1", season = "2025") {
   const [shots,   setShots]   = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(!!name);
   const [error,   setError]   = useState(null);
+  const [attempt, setAttempt] = useState(0);
 
   useEffect(() => {
     if (!name) return;
@@ -20,7 +21,9 @@ export function usePlayerShots(name, league = "Ligue_1", season = "2025") {
       .finally(() => { if (!cancelled) setLoading(false); });
 
     return () => { cancelled = true; };
-  }, [name, league, season]);
+  }, [name, league, season, attempt]);
 
-  return { shots, loading, error };
+  const retry = () => setAttempt((n) => n + 1);
+
+  return { shots, loading, error, retry };
 }

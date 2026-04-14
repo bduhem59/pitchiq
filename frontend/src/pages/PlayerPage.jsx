@@ -37,7 +37,7 @@ function Section({ children }) {
 
 export default function PlayerPage({ playerName, league = "Ligue_1", players, onCompare, onNavigate }) {
   const { data, loading, error } = usePlayer(playerName, league);
-  const { shots: lazyShots, loading: shotsLoading } = usePlayerShots(playerName, league);
+  const { shots: lazyShots, loading: shotsLoading, error: shotsError, retry: retryShots } = usePlayerShots(playerName, league);
   const [leagueAvgs, setLeagueAvgs] = useState(null);
   const { data: similarData, loading: similarLoading, error: similarError } =
     useSimilarPlayers(playerName, league);
@@ -157,6 +157,8 @@ export default function PlayerPage({ playerName, league = "Ligue_1", players, on
                   nGoals={nGoals}
                   nShots={nShots}
                   loading={shotsLoading}
+                  error={shotsError}
+                  onRetry={retryShots}
                 />
               </ErrorBoundary>
             </div>

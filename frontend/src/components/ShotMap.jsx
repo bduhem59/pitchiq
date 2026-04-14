@@ -57,7 +57,7 @@ const ZONE_COLORS = {
   "Outside Box":   "#3c4a5a",
 };
 
-export default function ShotMap({ shotCoords, playerName, nGoals, nShots, loading = false }) {
+export default function ShotMap({ shotCoords, playerName, nGoals, nShots, loading = false, error = null, onRetry }) {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center gap-3 h-48 text-muted text-sm rounded-2xl border border-[rgba(255,255,255,0.05)]">
@@ -67,10 +67,26 @@ export default function ShotMap({ shotCoords, playerName, nGoals, nShots, loadin
     );
   }
 
+  if (error) {
+    return (
+      <div className="flex flex-col items-center justify-center gap-3 h-48 text-muted text-sm rounded-2xl border border-[rgba(255,255,255,0.05)]">
+        <span>Shot data temporarily unavailable</span>
+        {onRetry && (
+          <button
+            onClick={onRetry}
+            className="text-[11px] px-3 py-1 rounded-full border border-[rgba(0,210,255,0.3)]
+                       text-accent hover:bg-[rgba(0,210,255,0.08)] transition-colors cursor-pointer">
+            Retry
+          </button>
+        )}
+      </div>
+    );
+  }
+
   if (!shotCoords || shotCoords.length === 0) {
     return (
       <div className="flex items-center justify-center h-48 text-muted text-sm rounded-2xl border border-[rgba(255,255,255,0.05)]">
-        Shot map unavailable
+        No shots recorded this season
       </div>
     );
   }

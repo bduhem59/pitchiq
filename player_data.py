@@ -122,14 +122,54 @@ def _fetch_league_players_cached(league: str, season: str) -> list:
     return players
 
 
-@lru_cache(maxsize=512)
+# ─────────────────────────────────────────────
+# SHOTS DISK CACHE
+# Survives server restarts (unlike lru_cache).
+# Key format: "{player_id}_{season}"
+# ─────────────────────────────────────────────
+
+_SHOTS_CACHE_PATH = Path(__file__).parent / "shots_cache.json"
+
+# Load from disk once at import time into memory
+def _load_shots_disk() -> dict:
+    try:
+        return json.loads(_SHOTS_CACHE_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+_shots_cache: dict = _load_shots_disk()
+
+
 def _fetch_shots_cached(player_id: str, season: str) -> list:
-    """Downloads all shots for a player in a given season. lru_cache keeps it in memory."""
+    """
+    Returns shot data for a player/season.
+    1. Memory cache  → instant
+    2. Disk cache    → instant (survives restarts / Railway redeploys)
+    3. Understat API → slow (saved to disk + memory for next time)
+    """
+    key = f"{player_id}_{season}"
+
+    if key in _shots_cache:
+        print(f"  [timing] Shots cache hit ({player_id}/{season})")
+        return _shots_cache[key]
+
     t0 = time.time()
+    print(f"  [Understat] Téléchargement tirs id={player_id}, saison={season}...")
     with UnderstatClient() as understat:
         all_shots = understat.player(player=player_id).get_shot_data()
     shots = [s for s in all_shots if s.get("season") == season]
     print(f"  [timing] Understat shots (id={player_id}): {time.time() - t0:.2f}s — {len(shots)} tirs")
+
+    # Persist in memory and on disk
+    _shots_cache[key] = shots
+    try:
+        _SHOTS_CACHE_PATH.write_text(
+            json.dumps(_shots_cache, ensure_ascii=False),
+            encoding="utf-8",
+        )
+    except Exception as e:
+        print(f"  ⚠ Shots disk cache save failed: {e}")
+
     return shots
 
 
