@@ -1,4 +1,5 @@
-import { usePlayer }   from "../hooks/usePlayer";
+import { usePlayer }            from "../hooks/usePlayer";
+import { getPlayerPhotoUrl, getClubLogoUrl } from "../api";
 import ErrorBoundary  from "../components/ErrorBoundary";
 import StatCard       from "../components/StatCard";
 import ShotMap        from "../components/ShotMap";
@@ -38,9 +39,9 @@ function PlayerCol({ data, color, fallbackName }) {
   const us    = data?.understat     || {};
   const name  = (tm.full_name && tm.full_name !== "N/A") ? tm.full_name : (fallbackName || us.player_name || "—");
   const club  = tm.club && tm.club !== "N/A" ? tm.club : "—";
-  const photo = data?.photo_data_uri;
+  const photo = fallbackName ? getPlayerPhotoUrl(fallbackName) : null;
   const avg   = data?.avg_percentile;
-  const clubLogoDataUri = data?.club_logo_data_uri;
+  const clubLogoDataUri = fallbackName ? getClubLogoUrl(fallbackName) : null;
 
   return (
     <div className="flex flex-col items-center text-center">

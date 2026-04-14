@@ -19,6 +19,7 @@ import json
 import logging
 import math
 import unicodedata
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any
 
@@ -135,18 +136,6 @@ def _build_percentile_context(record: dict, records: list[dict]) -> dict | None:
 
     return {"total": total, "pos_group": pos_group, "ranks": ranks}
 
-
-def _fetch_photo_bytes_b64(url: str) -> str | None:
-    import base64
-    try:
-        r = requests.get(url, headers=TM_HEADERS, timeout=8)
-        r.raise_for_status()
-        mime = "image/png" if r.content[:4] == b"\x89PNG" else "image/jpeg"
-        b64 = base64.b64encode(r.content).decode()
-        return f"data:{mime};base64,{b64}"
-    except Exception as exc:
-        log.warning("Photo download failed (%s): %s", url, exc)
-        return None
 
 
 def _avg_percentile(record: dict | None) -> float | None:
@@ -398,32 +387,35 @@ def player_detail(
     """Full player card data."""
     records = _load_percentiles(league)
 
-    # ── Understat ────────────────────────────────────────────────────────────
-    try:
-        us = fetch_understat_data(name, league=league, season=season)
-    except ValueError as exc:
-        raise HTTPException(status_code=404, detail=str(exc))
-    except Exception as exc:
+    # ── Fetch Understat + Transfermarkt in parallel ───────────────────────────
+    us: dict | None = None
+    tm: dict | None = None
+    us_exc: Exception | None = None
+    tm_exc: Exception | None = None
+
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        us_future = pool.submit(fetch_understat_data, name, league=league, season=season)
+        tm_future = pool.submit(fetch_transfermarkt_data, name)
+
+        try:
+            us = us_future.result()
+        except Exception as exc:
+            us_exc = exc
+
+        try:
+            tm = tm_future.result()
+        except Exception as exc:
+            tm_exc = exc
+            log.warning("Transfermarkt unavailable for '%s': %s", name, exc)
+
+    if us_exc is not None:
+        if isinstance(us_exc, ValueError):
+            raise HTTPException(status_code=404, detail=str(us_exc))
         log.exception("Understat error for '%s'", name)
-        raise HTTPException(status_code=502, detail=f"Understat error: {exc}")
+        raise HTTPException(status_code=502, detail=f"Understat error: {us_exc}")
 
     if not include_shots:
         us = {k: v for k, v in us.items() if k != "shot_coords"}
-
-    # ── Transfermarkt ────────────────────────────────────────────────────────
-    tm: dict | None = None
-    photo_data_uri: str | None = None
-    club_logo_data_uri: str | None = None
-    try:
-        tm = fetch_transfermarkt_data(name)
-        photo_url = (tm or {}).get("photo_url", "")
-        if photo_url and photo_url != "N/A":
-            photo_data_uri = _fetch_photo_bytes_b64(photo_url)
-        logo_url = (tm or {}).get("club_logo_url", "")
-        if logo_url and logo_url != "N/A":
-            club_logo_data_uri = _fetch_photo_bytes_b64(logo_url)
-    except Exception as exc:
-        log.warning("Transfermarkt unavailable for '%s': %s", name, exc)
 
     # ── Percentiles ──────────────────────────────────────────────────────────
     pct_record  = _find_percentile_record(name, records)
@@ -431,14 +423,32 @@ def player_detail(
     avg_pct     = _avg_percentile(pct_record)
 
     return {
-        "understat":            us,
-        "transfermarkt":        tm,
-        "percentile_record":    pct_record,
-        "percentile_context":   pct_context,
-        "avg_percentile":       round(avg_pct, 2) if avg_pct is not None else None,
-        "photo_data_uri":       photo_data_uri,
-        "club_logo_data_uri":   club_logo_data_uri,
+        "understat":          us,
+        "transfermarkt":      tm,
+        "percentile_record":  pct_record,
+        "percentile_context": pct_context,
+        "avg_percentile":     round(avg_pct, 2) if avg_pct is not None else None,
     }
+
+
+@app.get("/player/{name}/club-logo")
+def player_club_logo(name: str) -> Response:
+    """Proxy the club logo for a player from TM cache."""
+    tm = get_tm_cache_entry(name)
+    logo_url = (tm or {}).get("club_logo_url", "")
+    if not logo_url or logo_url == "N/A":
+        raise HTTPException(status_code=404, detail="No club logo available")
+    try:
+        r = requests.get(logo_url, headers=TM_HEADERS, timeout=8)
+        r.raise_for_status()
+        mime = "image/png" if r.content[:4] == b"\x89PNG" else "image/jpeg"
+        return Response(
+            content=r.content, media_type=mime,
+            headers={"Cache-Control": "public, max-age=86400"},
+        )
+    except Exception as exc:
+        log.warning("Club logo proxy failed (%s): %s", name, exc)
+        raise HTTPException(status_code=502, detail=str(exc))
 
 
 @app.get("/player/{name}/photo")

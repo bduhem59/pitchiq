@@ -27,3 +27,7 @@ export const getSimilarPlayers = (name, league = "Ligue_1") =>
 /** URL for a player's proxied photo (use directly in <img src>). */
 export const getPlayerPhotoUrl = (name) =>
   `${import.meta.env.VITE_API_URL}/player/${encodeURIComponent(name)}/photo`;
+
+/** URL for a player's proxied club logo (use directly in <img src>). */
+export const getClubLogoUrl = (name) =>
+  `${import.meta.env.VITE_API_URL}/player/${encodeURIComponent(name)}/club-logo`;

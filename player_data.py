@@ -13,6 +13,7 @@ Usage :
 
 import sys
 import json
+import time
 import unicodedata
 import re
 from datetime import datetime, timezone
@@ -22,6 +23,15 @@ from typing import Optional
 import requests
 from bs4 import BeautifulSoup
 from understatapi import UnderstatClient
+
+# ─────────────────────────────────────────────
+# UNDERSTAT LEAGUE CACHE
+# ─────────────────────────────────────────────
+
+# Caches the full player list per (league, season) for 4 hours to avoid
+# re-downloading hundreds of players on every card request.
+_LEAGUE_PLAYERS_CACHE: dict[tuple, tuple[float, list]] = {}
+_LEAGUE_CACHE_TTL = 4 * 3600  # seconds
 
 # ─────────────────────────────────────────────
 # TM CACHE
@@ -129,87 +139,83 @@ def fetch_understat_data(player_name: str,
     """
     normalized_search = normalize_name(player_name)
 
-    print(f"  Connexion à Understat ({league}, saison {season})...")
+    # ── Étape 1 : liste des joueurs de la ligue (avec cache 4h) ─────────────
+    cache_key = (league, season)
+    now = time.time()
+    cached_entry = _LEAGUE_PLAYERS_CACHE.get(cache_key)
 
-    # Le client understatapi est utilisé comme un "context manager" (bloc with)
-    # Il gère automatiquement la session HTTP et la fermeture propre
-    with UnderstatClient() as understat:
-
-        # ── Étape 1 : liste de tous les joueurs de la ligue ──────────────────
+    if cached_entry and (now - cached_entry[0]) < _LEAGUE_CACHE_TTL:
+        all_players = cached_entry[1]
+        print(f"  Cache hit ligue ({league}, {season}) — {len(all_players)} joueurs")
+    else:
+        print(f"  Connexion à Understat ({league}, saison {season})...")
         try:
-            all_players = understat.league(league=league).get_player_data(season=season)
+            with UnderstatClient() as understat:
+                all_players = understat.league(league=league).get_player_data(season=season)
         except Exception as e:
             raise ValueError(
                 f"Impossible de récupérer les joueurs de {league} saison {season}.\n"
                 f"  Vérifiez le nom de ligue (valides : {list(LEAGUE_MAP.values())}).\n"
                 f"  Erreur technique : {e}"
             )
+        _LEAGUE_PLAYERS_CACHE[cache_key] = (now, all_players)
 
-        # ── Étape 2 : trouver le joueur par son nom ───────────────────────────
-        player_stats = None
-        player_id    = None
+    # ── Étape 2 : trouver le joueur par son nom ───────────────────────────
+    player_stats = None
+    player_id    = None
 
-        # Correspondance exacte d'abord
+    for p in all_players:
+        if normalize_name(p.get("player_name", "")) == normalized_search:
+            player_stats = p
+            player_id    = p.get("id")
+            break
+
+    if player_stats is None:
         for p in all_players:
-            if normalize_name(p.get("player_name", "")) == normalized_search:
+            pname = normalize_name(p.get("player_name", ""))
+            if normalized_search in pname or pname in normalized_search:
                 player_stats = p
                 player_id    = p.get("id")
+                print(f"  ⚠ Correspondance partielle trouvée : {p.get('player_name')}")
                 break
 
-        # Si pas trouvé, tentative de correspondance partielle
-        # (utile si le nom entré est abrégé ou légèrement différent)
-        if player_stats is None:
-            for p in all_players:
-                pname = normalize_name(p.get("player_name", ""))
-                if normalized_search in pname or pname in normalized_search:
-                    player_stats = p
-                    player_id    = p.get("id")
-                    print(f"  ⚠ Correspondance partielle trouvée : {p.get('player_name')}")
-                    break
+    if player_stats is None:
+        raise ValueError(
+            f"Joueur '{player_name}' introuvable dans {league} saison {season}.\n"
+            f"  Astuce : vérifiez l'orthographe ou la ligue/saison."
+        )
 
-        if player_stats is None:
-            raise ValueError(
-                f"Joueur '{player_name}' introuvable dans {league} saison {season}.\n"
-                f"  Astuce : vérifiez l'orthographe ou la ligue/saison."
-            )
+    print(f"  Joueur trouvé : {player_stats.get('player_name')} (ID {player_id})")
 
-        print(f"  Joueur trouvé : {player_stats.get('player_name')} (ID {player_id})")
+    # ── Étape 3 : tirs individuels (x, y, xG, résultat) ─────────────────
+    shot_coords = []
 
-        # ── Étape 3 : tirs individuels (x, y, xG, résultat) ──────────────────
-        shot_coords = []
-
-        if player_id:
-            try:
-                # get_shot_data() retourne TOUS les tirs du joueur (toutes saisons)
+    if player_id:
+        try:
+            with UnderstatClient() as understat:
                 all_shots = understat.player(player=str(player_id)).get_shot_data()
 
-                # On filtre pour ne garder que la saison demandée
-                season_shots = [s for s in all_shots if s.get("season") == season]
+            season_shots = [s for s in all_shots if s.get("season") == season]
+            shot_coords = [
+                {
+                    "x":         float(s.get("X", 0)),
+                    "y":         float(s.get("Y", 0)),
+                    "xG":        float(s.get("xG", 0)),
+                    "result":    s.get("result", ""),
+                    "situation": s.get("situation", ""),
+                    "minute":    s.get("minute", ""),
+                    "h_team":    s.get("h_team", ""),
+                    "a_team":    s.get("a_team", ""),
+                    "h_goals":   s.get("h_goals"),
+                    "a_goals":   s.get("a_goals"),
+                    "h_a":       s.get("h_a", ""),
+                }
+                for s in season_shots
+            ]
+            print(f"  {len(shot_coords)} tirs récupérés pour la saison {season}")
 
-                # On extrait les champs utiles pour chaque tir
-                shot_coords = [
-                    {
-                        "x":         float(s.get("X", 0)),
-                        "y":         float(s.get("Y", 0)),
-                        "xG":        float(s.get("xG", 0)),
-                        "result":    s.get("result", ""),
-                        "situation": s.get("situation", ""),
-                        "minute":    s.get("minute", ""),
-                        # Contexte match — déjà présent dans get_shot_data()
-                        "h_team":    s.get("h_team", ""),   # équipe domicile
-                        "a_team":    s.get("a_team", ""),   # équipe extérieur
-                        "h_goals":   s.get("h_goals"),      # score final dom.
-                        "a_goals":   s.get("a_goals"),      # score final ext.
-                        "h_a":       s.get("h_a", ""),      # "h" si joueur dom., "a" si ext.
-                    }
-                    for s in season_shots
-                ]
-
-                print(f"  {len(shot_coords)} tirs récupérés pour la saison {season}")
-
-            except Exception as e:
-                # On ne plante pas si les tirs sont indisponibles — ce n'est pas critique
-                print(f"  ⚠ Tirs individuels indisponibles : {e}")
+        except Exception as e:
+            print(f"  ⚠ Tirs individuels indisponibles : {e}")
 
     # ── Construction du résultat ─────────────────────────────────────────────
     return {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { usePlayer }           from "../hooks/usePlayer";
 import { useSimilarPlayers }   from "../hooks/useSimilarPlayers";
-import { getLeagueAverages }   from "../api";
+import { getLeagueAverages, getPlayerPhotoUrl, getClubLogoUrl } from "../api";
 import ErrorBoundary           from "../components/ErrorBoundary";
 import PlayerHeader            from "../components/PlayerHeader";
 import SeasonStats             from "../components/SeasonStats";
@@ -78,9 +78,9 @@ export default function PlayerPage({ playerName, league = "Ligue_1", players, on
   const tm    = data.transfermarkt      ?? null;
   const pct   = data.percentile_record  ?? null;
   const ctx   = data.percentile_context ?? null;
-  const avgPct    = data.avg_percentile    ?? null;
-  const photo     = data.photo_data_uri    ?? null;
-  const clubLogo  = data.club_logo_data_uri ?? null;
+  const avgPct    = data.avg_percentile ?? null;
+  const photo     = getPlayerPhotoUrl(playerName);
+  const clubLogo  = getClubLogoUrl(playerName);
 
   const shots  = us.shot_coords ?? [];
   const nGoals = shots.filter((s) => s.result === "Goal").length;
