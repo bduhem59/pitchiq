@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE = "http://127.0.0.1:8000";
+const BASE = import.meta.env.VITE_API_URL;
 
 export const api = axios.create({ baseURL: BASE });
 
@@ -17,3 +17,13 @@ export const getPlayer = (name, league = "Ligue_1", season = "2025") =>
 /** Per-position average /90 values for the radar reference polygon. */
 export const getLeagueAverages = (league = "Ligue_1") =>
   api.get("/league/averages", { params: { league } }).then((r) => r.data);
+
+/** 3 most statistically similar players (same position, all leagues). */
+export const getSimilarPlayers = (name, league = "Ligue_1") =>
+  api
+    .get(`/player/${encodeURIComponent(name)}/similar`, { params: { league } })
+    .then((r) => r.data);
+
+/** URL for a player's proxied photo (use directly in <img src>). */
+export const getPlayerPhotoUrl = (name) =>
+  `${import.meta.env.VITE_API_URL}/player/${encodeURIComponent(name)}/photo`;
