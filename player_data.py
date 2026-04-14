@@ -17,21 +17,13 @@ import time
 import unicodedata
 import re
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 from typing import Optional
 
 import requests
 from bs4 import BeautifulSoup
 from understatapi import UnderstatClient
-
-# ─────────────────────────────────────────────
-# UNDERSTAT LEAGUE CACHE
-# ─────────────────────────────────────────────
-
-# Caches the full player list per (league, season) for 4 hours to avoid
-# re-downloading hundreds of players on every card request.
-_LEAGUE_PLAYERS_CACHE: dict[tuple, tuple[float, list]] = {}
-_LEAGUE_CACHE_TTL = 4 * 3600  # seconds
 
 # ─────────────────────────────────────────────
 # TM CACHE
@@ -119,6 +111,28 @@ def _compute_games(games: int, minutes: int) -> int:
     return 0
 
 
+@lru_cache(maxsize=16)
+def _fetch_league_players_cached(league: str, season: str) -> list:
+    """Downloads all players for a league/season. lru_cache keeps it in memory for the process lifetime."""
+    t0 = time.time()
+    print(f"  [Understat] Téléchargement liste {league}/{season}...")
+    with UnderstatClient() as understat:
+        players = understat.league(league=league).get_player_data(season=season)
+    print(f"  [timing] Understat league list: {time.time() - t0:.2f}s — {len(players)} joueurs")
+    return players
+
+
+@lru_cache(maxsize=512)
+def _fetch_shots_cached(player_id: str, season: str) -> list:
+    """Downloads all shots for a player in a given season. lru_cache keeps it in memory."""
+    t0 = time.time()
+    with UnderstatClient() as understat:
+        all_shots = understat.player(player=player_id).get_shot_data()
+    shots = [s for s in all_shots if s.get("season") == season]
+    print(f"  [timing] Understat shots (id={player_id}): {time.time() - t0:.2f}s — {len(shots)} tirs")
+    return shots
+
+
 def fetch_understat_data(player_name: str,
                          league: str = "Ligue_1",
                          season: str = "2024") -> dict:
@@ -126,41 +140,23 @@ def fetch_understat_data(player_name: str,
     Récupère les statistiques Understat d'un joueur.
 
     Étapes :
-      1. Télécharge la liste de tous les joueurs de la ligue + saison donnée.
+      1. Télécharge la liste de tous les joueurs de la ligue + saison donnée (cachée).
       2. Trouve le joueur par correspondance de nom (normalisé).
-      3. Récupère ses tirs individuels (coordonnées, xG, résultat).
-
-    Paramètres :
-        player_name : nom du joueur (ex: "Khvicha Kvaratskhelia")
-        league      : code ligue understat (ex: "Ligue_1")
-        season      : année de début de saison (ex: "2024" pour 2024/25)
-
-    Retourne un dict avec toutes les stats, ou lève une exception si introuvable.
+      3. Récupère ses tirs individuels (cachés par player_id).
     """
     normalized_search = normalize_name(player_name)
 
-    # ── Étape 1 : liste des joueurs de la ligue (avec cache 4h) ─────────────
-    cache_key = (league, season)
-    now = time.time()
-    cached_entry = _LEAGUE_PLAYERS_CACHE.get(cache_key)
+    # ── Étape 1 : liste des joueurs (lru_cache — réseau seulement au 1er appel) ──
+    try:
+        all_players = _fetch_league_players_cached(league, season)
+    except Exception as e:
+        raise ValueError(
+            f"Impossible de récupérer les joueurs de {league} saison {season}.\n"
+            f"  Vérifiez le nom de ligue (valides : {list(LEAGUE_MAP.values())}).\n"
+            f"  Erreur technique : {e}"
+        )
 
-    if cached_entry and (now - cached_entry[0]) < _LEAGUE_CACHE_TTL:
-        all_players = cached_entry[1]
-        print(f"  Cache hit ligue ({league}, {season}) — {len(all_players)} joueurs")
-    else:
-        print(f"  Connexion à Understat ({league}, saison {season})...")
-        try:
-            with UnderstatClient() as understat:
-                all_players = understat.league(league=league).get_player_data(season=season)
-        except Exception as e:
-            raise ValueError(
-                f"Impossible de récupérer les joueurs de {league} saison {season}.\n"
-                f"  Vérifiez le nom de ligue (valides : {list(LEAGUE_MAP.values())}).\n"
-                f"  Erreur technique : {e}"
-            )
-        _LEAGUE_PLAYERS_CACHE[cache_key] = (now, all_players)
-
-    # ── Étape 2 : trouver le joueur par son nom ───────────────────────────
+    # ── Étape 2 : trouver le joueur par son nom ───────────────────────────────
     player_stats = None
     player_id    = None
 
@@ -187,15 +183,12 @@ def fetch_understat_data(player_name: str,
 
     print(f"  Joueur trouvé : {player_stats.get('player_name')} (ID {player_id})")
 
-    # ── Étape 3 : tirs individuels (x, y, xG, résultat) ─────────────────
+    # ── Étape 3 : tirs individuels (lru_cache — réseau seulement au 1er appel) ─
     shot_coords = []
 
     if player_id:
         try:
-            with UnderstatClient() as understat:
-                all_shots = understat.player(player=str(player_id)).get_shot_data()
-
-            season_shots = [s for s in all_shots if s.get("season") == season]
+            season_shots = _fetch_shots_cached(str(player_id), season)
             shot_coords = [
                 {
                     "x":         float(s.get("X", 0)),
@@ -212,8 +205,6 @@ def fetch_understat_data(player_name: str,
                 }
                 for s in season_shots
             ]
-            print(f"  {len(shot_coords)} tirs récupérés pour la saison {season}")
-
         except Exception as e:
             print(f"  ⚠ Tirs individuels indisponibles : {e}")
 
@@ -395,14 +386,17 @@ def fetch_transfermarkt_data(player_name: str) -> dict:
     Point d'entrée principal pour les données Transfermarkt.
     Vérifie d'abord le cache local, puis tente de scraper le profil.
     """
+    t0 = time.time()
+
     # ── 1. Check local cache first ───────────────────────────────────────────
     key   = _cache_key(player_name)
     cache = _load_tm_cache()
     if key in cache:
-        print(f"  Cache hit pour '{player_name}'")
+        print(f"  [timing] TM cache hit pour '{player_name}': {time.time() - t0:.3f}s")
         return cache[key]
 
     # ── 2. Cache miss — try live scraping ────────────────────────────────────
+    print(f"  [timing] TM cache MISS pour '{player_name}' — scraping en cours...")
     print(f"  Recherche de '{player_name}' sur Transfermarkt...")
 
     profile_url = search_transfermarkt(player_name)

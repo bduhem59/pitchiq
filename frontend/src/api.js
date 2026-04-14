@@ -18,6 +18,12 @@ export const getPlayer = (name, league = "Ligue_1", season = "2025") =>
 export const getLeagueAverages = (league = "Ligue_1") =>
   api.get("/league/averages", { params: { league } }).then((r) => r.data);
 
+/** Shot coordinates for the shot map (slow — lazy loaded after the main card). */
+export const getPlayerShots = (name, league = "Ligue_1", season = "2025") =>
+  api
+    .get(`/player/${encodeURIComponent(name)}/shots`, { params: { league, season } })
+    .then((r) => r.data);
+
 /** 3 most statistically similar players (same position, all leagues). */
 export const getSimilarPlayers = (name, league = "Ligue_1") =>
   api

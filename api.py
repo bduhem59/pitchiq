@@ -18,8 +18,8 @@ import html as _html
 import json
 import logging
 import math
+import time
 import unicodedata
-from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any
 
@@ -28,7 +28,7 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 
-from player_data import fetch_understat_data, fetch_transfermarkt_data, get_tm_cache_entry, normalize_name
+from player_data import fetch_transfermarkt_data, get_tm_cache_entry, normalize_name, _fetch_shots_cached
 
 # ─────────────────────────────────────────────────────────────────────────────
 # SETUP
@@ -107,14 +107,19 @@ def _load_all_percentiles() -> list[dict]:
 
 
 def _find_percentile_record(name: str, records: list[dict]) -> dict | None:
-    needle = name.lower().strip()
-    # 1. Exact match (covers the vast majority of calls — name comes from the same records)
+    needle     = normalize_name(name)
+    needle_raw = name.lower().strip()
+    # 1. Normalized exact match (handles accents: Fernández → fernandez)
     for r in records:
-        if r["player_name"].lower().strip() == needle:
+        if normalize_name(r["player_name"]) == needle:
             return r
-    # 2. Substring fallback (legacy / search-bar partial queries)
+    # 2. Raw exact match (fast path when names already match)
     for r in records:
-        if needle in r["player_name"].lower():
+        if r["player_name"].lower().strip() == needle_raw:
+            return r
+    # 3. Substring fallback
+    for r in records:
+        if needle in normalize_name(r["player_name"]):
             return r
     return None
 
@@ -382,45 +387,49 @@ def player_detail(
     name: str,
     league: str = Query(default="Ligue_1"),
     season: str = Query(default="2025"),
-    include_shots: bool = Query(default=True),
 ) -> dict[str, Any]:
-    """Full player card data."""
-    records = _load_percentiles(league)
+    """
+    Full player card data — instant response from local JSON files.
+    Shot coordinates are NOT included here; use GET /player/{name}/shots.
+    """
+    t_start = time.time()
 
-    # ── Fetch Understat + Transfermarkt in parallel ───────────────────────────
-    us: dict | None = None
-    tm: dict | None = None
-    us_exc: Exception | None = None
-    tm_exc: Exception | None = None
+    # ── 1. Percentiles JSON (local file — instant) ────────────────────────────
+    records    = _load_percentiles(league)
+    pct_record = _find_percentile_record(name, records)
+    if not pct_record:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Player '{name}' not found in {league} percentile data."
+        )
 
-    with ThreadPoolExecutor(max_workers=2) as pool:
-        us_future = pool.submit(fetch_understat_data, name, league=league, season=season)
-        tm_future = pool.submit(fetch_transfermarkt_data, name)
+    # ── 2. Transfermarkt cache (local file — instant) ─────────────────────────
+    tm = get_tm_cache_entry(name)
 
-        try:
-            us = us_future.result()
-        except Exception as exc:
-            us_exc = exc
+    # ── 3. Build understat-compatible stats from percentile record ────────────
+    us: dict[str, Any] = {
+        "player_name": pct_record["player_name"],
+        "player_id":   pct_record.get("player_id", ""),
+        "league":      league,
+        "season":      season,
+        "xG":          pct_record.get("xG", 0),
+        "npxG":        pct_record.get("npxG", 0),
+        "xA":          pct_record.get("xA", 0),
+        "xGChain":     pct_record.get("xGChain", 0),
+        "xGBuildup":   pct_record.get("xGBuildup", 0),
+        "shots":       pct_record.get("shots", 0),
+        "goals":       pct_record.get("goals", 0),
+        "assists":     pct_record.get("assists", 0),
+        "minutes":     pct_record.get("minutes", 0),
+        "games":       pct_record.get("games", 0),
+        "shot_coords": [],   # lazy-loaded via GET /player/{name}/shots
+    }
 
-        try:
-            tm = tm_future.result()
-        except Exception as exc:
-            tm_exc = exc
-            log.warning("Transfermarkt unavailable for '%s': %s", name, exc)
-
-    if us_exc is not None:
-        if isinstance(us_exc, ValueError):
-            raise HTTPException(status_code=404, detail=str(us_exc))
-        log.exception("Understat error for '%s'", name)
-        raise HTTPException(status_code=502, detail=f"Understat error: {us_exc}")
-
-    if not include_shots:
-        us = {k: v for k, v in us.items() if k != "shot_coords"}
-
-    # ── Percentiles ──────────────────────────────────────────────────────────
-    pct_record  = _find_percentile_record(name, records)
-    pct_context = _build_percentile_context(pct_record, records) if pct_record else None
+    # ── 4. Percentile context ─────────────────────────────────────────────────
+    pct_context = _build_percentile_context(pct_record, records)
     avg_pct     = _avg_percentile(pct_record)
+
+    log.info("[timing] %s — TOTAL endpoint: %.3fs", name, time.time() - t_start)
 
     return {
         "understat":          us,
@@ -429,6 +438,58 @@ def player_detail(
         "percentile_context": pct_context,
         "avg_percentile":     round(avg_pct, 2) if avg_pct is not None else None,
     }
+
+
+@app.get("/player/{name}/shots")
+def player_shots(
+    name: str,
+    league: str = Query(default="Ligue_1"),
+    season: str = Query(default="2025"),
+) -> dict[str, Any]:
+    """
+    Returns shot coordinates for the shot map.
+    Slow (calls Understat) — called lazily after the main player card loads.
+    Results are cached in memory via lru_cache for the process lifetime.
+    """
+    t_start = time.time()
+
+    # Resolve player_id from local percentiles (fast)
+    records    = _load_percentiles(league)
+    pct_record = _find_percentile_record(name, records)
+    if not pct_record:
+        # Try all leagues
+        all_r      = _load_all_percentiles()
+        pct_record = _find_percentile_record(name, all_r)
+    if not pct_record:
+        raise HTTPException(status_code=404, detail=f"Player '{name}' not found.")
+
+    player_id = str(pct_record.get("player_id", ""))
+    if not player_id:
+        return {"shot_coords": []}
+
+    try:
+        season_shots = _fetch_shots_cached(player_id, season)
+        shot_coords = [
+            {
+                "x":         float(s.get("X", 0)),
+                "y":         float(s.get("Y", 0)),
+                "xG":        float(s.get("xG", 0)),
+                "result":    s.get("result", ""),
+                "situation": s.get("situation", ""),
+                "minute":    s.get("minute", ""),
+                "h_team":    s.get("h_team", ""),
+                "a_team":    s.get("a_team", ""),
+                "h_goals":   s.get("h_goals"),
+                "a_goals":   s.get("a_goals"),
+                "h_a":       s.get("h_a", ""),
+            }
+            for s in season_shots
+        ]
+        log.info("[timing] %s shots — %.2fs (%d tirs)", name, time.time() - t_start, len(shot_coords))
+        return {"shot_coords": shot_coords}
+    except Exception as exc:
+        log.warning("Shots unavailable for '%s': %s", name, exc)
+        return {"shot_coords": []}
 
 
 @app.get("/player/{name}/club-logo")

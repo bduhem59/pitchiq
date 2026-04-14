@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { usePlayer }           from "../hooks/usePlayer";
+import { usePlayerShots }      from "../hooks/usePlayerShots";
 import { useSimilarPlayers }   from "../hooks/useSimilarPlayers";
 import { getLeagueAverages, getPlayerPhotoUrl, getClubLogoUrl } from "../api";
 import ErrorBoundary           from "../components/ErrorBoundary";
@@ -36,6 +37,7 @@ function Section({ children }) {
 
 export default function PlayerPage({ playerName, league = "Ligue_1", players, onCompare, onNavigate }) {
   const { data, loading, error } = usePlayer(playerName, league);
+  const { shots: lazyShots, loading: shotsLoading } = usePlayerShots(playerName, league);
   const [leagueAvgs, setLeagueAvgs] = useState(null);
   const { data: similarData, loading: similarLoading, error: similarError } =
     useSimilarPlayers(playerName, league);
@@ -82,7 +84,7 @@ export default function PlayerPage({ playerName, league = "Ligue_1", players, on
   const photo     = getPlayerPhotoUrl(playerName);
   const clubLogo  = getClubLogoUrl(playerName);
 
-  const shots  = us.shot_coords ?? [];
+  const shots  = lazyShots;
   const nGoals = shots.filter((s) => s.result === "Goal").length;
   const nShots = shots.length;
 
@@ -154,6 +156,7 @@ export default function PlayerPage({ playerName, league = "Ligue_1", players, on
                   playerName={us.player_name ?? playerName}
                   nGoals={nGoals}
                   nShots={nShots}
+                  loading={shotsLoading}
                 />
               </ErrorBoundary>
             </div>

@@ -57,7 +57,16 @@ const ZONE_COLORS = {
   "Outside Box":   "#3c4a5a",
 };
 
-export default function ShotMap({ shotCoords, playerName, nGoals, nShots }) {
+export default function ShotMap({ shotCoords, playerName, nGoals, nShots, loading = false }) {
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center gap-3 h-48 text-muted text-sm rounded-2xl border border-[rgba(255,255,255,0.05)]">
+        <div className="w-6 h-6 border-2 border-accent border-t-transparent rounded-full animate-spin" />
+        Loading shot map…
+      </div>
+    );
+  }
+
   if (!shotCoords || shotCoords.length === 0) {
     return (
       <div className="flex items-center justify-center h-48 text-muted text-sm rounded-2xl border border-[rgba(255,255,255,0.05)]">

@@ -130,6 +130,7 @@ def build_player_records(raw_players: list[dict]) -> list[dict]:
             "games":          int(p.get("games", 0)),
             "goals":          int(p.get("goals", 0)),
             "assists":        int(p.get("assists", 0)),
+            "shots":          int(p.get("shots", 0)),
         }
 
         # Statistiques brutes
