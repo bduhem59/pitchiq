@@ -44,16 +44,17 @@ function PlayerCol({ data, color, fallbackName }) {
   const avg   = data?.avg_percentile;
   return (
     <div className="flex flex-col items-center text-center">
-      {photo ? (
-        <img src={photo} alt={name}
-             className="w-28 h-36 object-cover object-top rounded-2xl mb-4"
-             style={{ border: `2px solid ${color}50` }} />
-      ) : (
-        <div className="w-28 h-36 rounded-2xl bg-surface border flex items-center justify-center text-5xl mb-4"
-             style={{ borderColor: `${color}30` }}>
-          👤
-        </div>
-      )}
+      <img src={photo} alt={name}
+           className="w-28 h-36 object-cover object-top rounded-2xl mb-4"
+           style={{ border: `2px solid ${color}50` }}
+           onError={(e) => {
+             e.currentTarget.style.display = "none";
+             e.currentTarget.nextSibling.style.display = "flex";
+           }} />
+      <div className="w-28 h-36 rounded-2xl bg-surface border flex items-center justify-center text-5xl mb-4"
+           style={{ borderColor: `${color}30`, display: "none" }}>
+        👤
+      </div>
       <h2 className="font-manrope font-black leading-tight mb-2"
           style={{ fontSize: "clamp(1.2rem, 2vw, 1.8rem)", letterSpacing: "-1px", color }}>
         {name}

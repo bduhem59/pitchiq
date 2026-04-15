@@ -114,15 +114,17 @@ export default function PlayerHeader({ transfermarkt, photoDataUri, clubLogoData
       <div className="flex gap-7 items-start">
         {/* Photo */}
         <div className="shrink-0">
-          {photoDataUri ? (
-            <img src={photoDataUri} alt={name}
-                 className="w-32 h-44 object-cover object-top rounded-2xl block" />
-          ) : (
-            <div className="w-32 h-44 rounded-2xl bg-surface border border-[rgba(255,255,255,0.05)]
-                            flex items-center justify-center text-5xl text-[#3c494e]">
-              👤
-            </div>
-          )}
+          <img src={photoDataUri} alt={name}
+               className="w-32 h-44 object-cover object-top rounded-2xl block"
+               onError={(e) => {
+                 e.currentTarget.style.display = "none";
+                 e.currentTarget.nextSibling.style.display = "flex";
+               }} />
+          <div className="w-32 h-44 rounded-2xl bg-surface border border-[rgba(255,255,255,0.05)]
+                          items-center justify-center text-5xl text-[#3c494e]"
+               style={{ display: "none" }}>
+            👤
+          </div>
           {profUrl && (
             <a href={profUrl} target="_blank" rel="noreferrer"
                className="block mt-2 text-[10px] text-muted hover:text-accent transition-colors
