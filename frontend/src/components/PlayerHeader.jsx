@@ -204,14 +204,7 @@ export default function PlayerHeader({ transfermarkt, photoDataUri, clubLogoData
 
           {/* Badges */}
           <div className="flex flex-wrap gap-2">
-            {club && club !== "—" && (
-              <Badge>
-                {clubLogoDataUri && (
-                  <img src={clubLogoDataUri} alt="" className="w-4 h-4 object-contain rounded-sm" />
-                )}
-                {club}
-              </Badge>
-            )}
+            {club && club !== "—" && <Badge>{club}</Badge>}
             {nat  && nat  !== "—" && <Badge>{natWithFlag(nat)}</Badge>}
             {pos  && pos  !== "—" && <Badge>{pos}</Badge>}
             {age  && age  !== "—" && <Badge>{age}</Badge>}

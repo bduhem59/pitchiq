@@ -1,6 +1,6 @@
 import { usePlayer }            from "../hooks/usePlayer";
 import { usePlayerShots }       from "../hooks/usePlayerShots";
-import { getPlayerPhotoUrl, getClubLogoUrl } from "../api";
+import { getPlayerPhotoUrl } from "../api";
 import ErrorBoundary  from "../components/ErrorBoundary";
 import StatCard       from "../components/StatCard";
 import ShotMap        from "../components/ShotMap";
@@ -42,8 +42,6 @@ function PlayerCol({ data, color, fallbackName }) {
   const club  = tm.club && tm.club !== "N/A" ? tm.club : "—";
   const photo = fallbackName ? getPlayerPhotoUrl(fallbackName) : null;
   const avg   = data?.avg_percentile;
-  const clubLogoDataUri = fallbackName ? getClubLogoUrl(fallbackName) : null;
-
   return (
     <div className="flex flex-col items-center text-center">
       {photo ? (
@@ -62,10 +60,7 @@ function PlayerCol({ data, color, fallbackName }) {
       </h2>
       <div className="flex items-center gap-2 flex-wrap justify-center">
         {club !== "—" && (
-          <span className="inline-flex items-center gap-1.5 badge">
-            {clubLogoDataUri && (
-              <img src={clubLogoDataUri} alt="" className="w-4 h-4 object-contain rounded-sm" />
-            )}
+          <span className="inline-flex items-center badge">
             {club}
           </span>
         )}
