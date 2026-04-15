@@ -1,4 +1,5 @@
 import { usePlayer }            from "../hooks/usePlayer";
+import { usePlayerShots }       from "../hooks/usePlayerShots";
 import { getPlayerPhotoUrl, getClubLogoUrl } from "../api";
 import ErrorBoundary  from "../components/ErrorBoundary";
 import StatCard       from "../components/StatCard";
@@ -193,6 +194,9 @@ export default function ComparePage({ p1, p1League, p2, p2League, onBack, onNavi
   const { data: d1, loading: l1, error: e1 } = usePlayer(p1, p1League);
   const { data: d2, loading: l2, error: e2 } = usePlayer(p2, p2League);
 
+  const { shots: shots1 } = usePlayerShots(p1, p1League);
+  const { shots: shots2 } = usePlayerShots(p2, p2League);
+
   const loading = l1 || l2;
 
   if (loading) return (
@@ -225,9 +229,6 @@ export default function ComparePage({ p1, p1League, p2, p2League, onBack, onNavi
     ? d1.transfermarkt.full_name : (us1.player_name || p1);
   const name2 = (d2?.transfermarkt?.full_name && d2.transfermarkt.full_name !== "N/A")
     ? d2.transfermarkt.full_name : (us2.player_name || p2);
-
-  const shots1 = us1.shot_coords || [];
-  const shots2 = us2.shot_coords || [];
 
   return (
     <main className="max-w-[1420px] mx-auto px-6 pt-6 pb-16">
