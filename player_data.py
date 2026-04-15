@@ -341,8 +341,16 @@ def search_transfermarkt(player_name: str) -> Optional[str]:
         if normalize_name(link.get_text()) == normalized_search:
             return TM_BASE + link["href"]
 
-    # Si pas de correspondance exacte, on prend le premier résultat
-    return TM_BASE + candidate_links[0]["href"]
+    # Correspondance partielle : tous les mots de la recherche présents dans le résultat
+    search_words = set(normalized_search.split())
+    for link in candidate_links:
+        result_norm = normalize_name(link.get_text())
+        result_words = set(result_norm.split())
+        if search_words and search_words <= result_words:
+            return TM_BASE + link["href"]
+
+    # Aucune correspondance fiable trouvée
+    return None
 
 
 def scrape_tm_profile(profile_url: str) -> dict:
