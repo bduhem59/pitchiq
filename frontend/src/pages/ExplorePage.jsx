@@ -4,8 +4,8 @@ import { LEAGUE_MAP } from "../leagues";
 
 const PAGE_SIZE = 25;
 
-const POS_OPTIONS = ["All", "attaquants", "milieux", "défenseurs"];
-const POS_LABEL   = { All: "Position", attaquants: "Forward", milieux: "Midfielder", défenseurs: "Defender" };
+const POS_OPTIONS = ["All", "Forward", "Midfielder", "Defender"];
+const POS_LABEL   = { All: "Position", Forward: "Forward", Midfielder: "Midfielder", Defender: "Defender" };
 
 function pctColor(v) {
   if (v == null) return "#3c4a5a";

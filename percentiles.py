@@ -12,9 +12,11 @@ Usage :
 
 import json
 import sys
-from typing import Optional
+from pathlib import Path
 
 from understatapi import UnderstatClient
+
+from utils import get_position_group, normalize_tm_key
 
 
 # ─────────────────────────────────────────────
@@ -29,32 +31,8 @@ OUTPUT_FILE   = "percentiles.json"
 # Métriques à calculer par 90 minutes
 METRICS_90 = ["npxG", "xG", "xA", "xGChain", "xGBuildup"]
 
-# Mapping du premier code de position → groupe
-POSITION_GROUPS = {
-    "F":  "attaquants",
-    "M":  "milieux",
-    "D":  "défenseurs",
-    # GK exclu
-}
-
-
-# ─────────────────────────────────────────────
-# HELPERS
-# ─────────────────────────────────────────────
-
-def get_position_group(position_str: str) -> Optional[str]:
-    """
-    Extrait le groupe de poste à partir du champ 'position' d'Understat.
-
-    Le champ contient des codes séparés par des espaces, ex : 'F M S', 'D M', 'GK'.
-    On prend le PREMIER code comme poste principal.
-
-    Retourne None pour les gardiens ou les positions non reconnues.
-    """
-    if not position_str:
-        return None
-    first = position_str.strip().split()[0]
-    return POSITION_GROUPS.get(first)  # None si GK ou inconnu
+# Groupes de postes (Transfermarkt comme source de vérité)
+POSITION_GROUPS = ["Forward", "Midfielder", "Defender"]
 
 
 def per90(value: float, minutes: int) -> float:
@@ -102,8 +80,16 @@ def build_player_records(raw_players: list[dict]) -> list[dict]:
       - Convertit les champs numériques
       - Filtre le minimum de minutes
       - Calcule les métriques /90
-      - Assigne le groupe de poste
+      - Assigne le groupe de poste (Transfermarkt prioritaire, Understat en fallback)
     """
+    # Charge le cache Transfermarkt pour la résolution des postes
+    tm_cache_path = Path(__file__).parent / "tm_cache.json"
+    try:
+        with open(tm_cache_path, encoding="utf-8") as f:
+            tm_cache: dict = json.load(f)
+    except Exception:
+        tm_cache = {}
+
     records = []
 
     for p in raw_players:
@@ -112,8 +98,15 @@ def build_player_records(raw_players: list[dict]) -> list[dict]:
             continue
 
         position_str = p.get("position", "")
-        group = get_position_group(position_str)
-        if group is None:
+
+        # Résolution du poste via Transfermarkt (priorité) puis Understat (fallback)
+        player_name = p.get("player_name", "")
+        tm_key   = normalize_tm_key(player_name)
+        tm_entry = tm_cache.get(tm_key, {})
+        tm_pos   = "" if tm_entry.get("_status") == "not_found" else tm_entry.get("position", "")
+        group    = get_position_group(tm_pos, position_str)
+
+        if group in ("Goalkeeper", "Unknown"):
             continue  # gardiens et positions inconnues exclus
 
         # Club unique : si transfert en cours de saison, prendre le plus récent
@@ -157,7 +150,7 @@ def compute_percentiles(records: list[dict]) -> list[dict]:
     # Regroupe les valeurs /90 par poste pour chaque métrique
     group_populations: dict[str, dict[str, list[float]]] = {}
 
-    for group in POSITION_GROUPS.values():
+    for group in POSITION_GROUPS:
         group_populations[group] = {f"{m}_90": [] for m in METRICS_90}
 
     for r in records:
@@ -245,7 +238,7 @@ def main(league: str = LEAGUE, output_file: str = OUTPUT_FILE) -> None:
     records = compute_percentiles(records)
 
     # Résumé par groupe
-    for group in POSITION_GROUPS.values():
+    for group in POSITION_GROUPS:
         count = sum(1 for r in records if r["position_group"] == group)
         print(f"  {group:<15}: {count} joueurs")
 

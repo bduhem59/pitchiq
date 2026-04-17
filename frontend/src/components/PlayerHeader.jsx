@@ -59,7 +59,7 @@ function Badge({ children }) {
   return <span className="badge">{children}</span>;
 }
 
-export default function PlayerHeader({ transfermarkt, photoDataUri, clubLogoDataUri, avgPercentile, tmProfileUrl, minutes, fallbackName, players, onCompare, currentLeague }) {
+export default function PlayerHeader({ transfermarkt, photoDataUri, clubLogoDataUri, avgPercentile, tmProfileUrl, minutes, fallbackName, positionGroup, players, onCompare, currentLeague }) {
   const tm = transfermarkt || {};
 
   const rawName = tm.full_name;
@@ -209,6 +209,9 @@ export default function PlayerHeader({ transfermarkt, photoDataUri, clubLogoData
             {club && club !== "—" && <Badge>{club}</Badge>}
             {nat  && nat  !== "—" && <Badge>{natWithFlag(nat)}</Badge>}
             {pos  && pos  !== "—" && <Badge>{pos}</Badge>}
+            {positionGroup && positionGroup !== "" && (
+              <Badge>{positionGroup}</Badge>
+            )}
             {age  && age  !== "—" && <Badge>{age}</Badge>}
             {valClean && (
               <span className="inline-flex items-center gap-[5px] px-3 py-1 rounded-full

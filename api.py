@@ -29,6 +29,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
 
 from player_data import fetch_transfermarkt_data, get_tm_cache_entry, normalize_name, _fetch_shots_cached
+from utils import get_position_group
 
 # ─────────────────────────────────────────────────────────────────────────────
 # SETUP
@@ -270,7 +271,7 @@ def league_averages(
     Used to draw the reference polygon on the radar chart.
     """
     records   = _load_percentiles(league)
-    pos_groups = ["attaquants", "milieux", "défenseurs"]
+    pos_groups = ["Forward", "Midfielder", "Defender"]
     kpi_keys  = ["xG_90", "npxG_90", "xA_90", "xGChain_90", "xGBuildup_90"]
 
     result: dict[str, Any] = {}
@@ -302,18 +303,10 @@ def _euclidean_similar(target: dict, all_records: list[dict], target_name: str, 
     # Use the name from the target record (already decoded) for reliable exclusion
     target_name_norm = target.get("player_name", target_name).lower()
 
-    # Refine position matching using position_raw codes (D / F / M).
-    # A player whose position_raw starts with D but also contains F (e.g. "D F M S")
-    # is a completely different profile from a pure defender ("D S", "D M S", etc.).
-    # Require candidates to share the same F-presence as the target.
-    target_raw_codes = set(target.get("position_raw", "").split())
-    target_has_f = "F" in target_raw_codes
-
-    pool = [r for r in all_records if r.get("position_group") == pos_group]
     candidates = [
-        r for r in pool
-        if r.get("player_name", "").lower() != target_name_norm
-        and ("F" in r.get("position_raw", "").split()) == target_has_f
+        r for r in all_records
+        if r.get("position_group") == pos_group
+        and r.get("player_name", "").lower() != target_name_norm
     ]
 
     if not candidates:

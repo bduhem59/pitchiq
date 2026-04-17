@@ -20,11 +20,6 @@ const METRICS = [
   { key: "xGBuildup_90", label: "xGBuildup / 90",  tooltip: "Contribution to offensive build-up play before shots" },
 ];
 
-const POS_SINGULAR = {
-  attaquants:  "Forward",
-  milieux:     "Midfielder",
-  "d\u00e9fenseurs": "Defender",
-};
 
 // ── Section wrapper with individual error boundary ─────────────────────────
 function Section({ children }) {
@@ -108,6 +103,7 @@ export default function PlayerPage({ playerName, league = "Ligue_1", players, on
           tmProfileUrl={tm?.profile_url ?? ""}
           minutes={us.minutes ?? 0}
           fallbackName={us.player_name ?? playerName}
+          positionGroup={posGroup}
           players={players}
           onCompare={onCompare}
           currentLeague={league}
@@ -172,7 +168,7 @@ export default function PlayerPage({ playerName, league = "Ligue_1", players, on
                 <RadarChart
                   percentileRecord={pct}
                   playerName={us.player_name ?? playerName}
-                  posGroup={POS_SINGULAR[posGroup] ?? posGroup}
+                  posGroup={posGroup}
                   minutes={us.minutes ?? 0}
                   avgPercentile={avgPct}
                   leagueAverages={posAvgs}
